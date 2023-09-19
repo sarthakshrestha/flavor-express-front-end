@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero_section {
+  position: relative;
+  background-image: url("../images/dietary-salad-with-mussels-quail-eggs-cucumbers-radish-lettuce-healthy-food-seafood-salad-top-view-flat-lay.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.29);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding-right: 4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 390px;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 40px;
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.content {
+  position: absolute;
+  bottom: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.heading {
+  font-family: "Pacifico", cursive;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.search_bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search_input {
+  position: relative;
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 40px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #000;
+}
+
+.search_icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 60%;
+  color: black;
+}
+
+.search_button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 19px;
+  margin-left: 10px;
+}
+.button1,
+.button2,
+.search_button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 19px;
+  transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.button1:hover,
+.button2:hover {
+  background-color: #ff4444;
+  color: white;
+}
+
+.search_button:hover {
+  background-color: white;
+  color: black;
+}

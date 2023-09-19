@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.limited_promos_section {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.limited_promos_content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+.limited_promos_content h1 {
+  font-family: "Gentium Plus", serif;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.promo_box {
+  background-color: #000;
+  color: #fff;
+
+  padding: 80px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo_box p {
+  font-weight: bold;
+  font-size: 30px;
+}

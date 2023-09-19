@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.how_it_works_section {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 950px;
+  padding-bottom: 40px;
+}
+.how_it_works_content {
+  padding-top: 5rem;
+  margin-bottom: 2rem;
+}
+.how_it_works_content h1 {
+  font-family: "Gentium Plus", serif;
+  font-size: 45px;
+  font-weight: bold;
+  margin: 1rem;
+}
+.how_it_works_content p {
+  font-family: "Jost", sans-serif;
+  font-size: 23px;
+  padding-bottom: 4rem;
+}
+
+.how_it_works_steps {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.step1,
+.step2,
+.step3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.step1 img,
+.step2 img,
+.step3 img {
+  width: 460px;
+  height: 460px;
+}
+.step1 h3,
+.step2 h3,
+.step3 h3 {
+  font-family: "Gentium Plus", serif;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 20px;
+}
+
+.step1 p,
+.step2 p,
+.step3 p {
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  margin: 20px;
+}

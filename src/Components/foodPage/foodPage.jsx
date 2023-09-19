@@ -55,9 +55,6 @@ export default function FoodPage() {
                     Non-Vegetarian
                 </label>
             </div>
-
-
-
             <div className="products-container">
                 <div className="product">
                     <img className="product-image" src={pizza} alt="Pizza"/>

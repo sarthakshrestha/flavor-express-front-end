@@ -17,14 +17,13 @@
 .top {
     display: flex;
     align-items: center;
-    margin-left: 12%;
 }
 
 .links ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 55px;
+    gap: 35px;
 }
 
 .links li {
@@ -34,6 +33,7 @@
 .links a {
     font-family: 'DM Sans', sans-serif;
     text-decoration: none;
+    font-weight: bold;
     color: white;
     font-size: 26px;
     transition: color 0.3s ease;
@@ -45,21 +45,48 @@
 
 .user-actions {
     display: flex;
-    gap: 10px;
+    gap: 40px;
     margin-right: 24px;
 }
 
 .action-button {
+    display: flex;
+    font-family: 'DM Sans', sans-serif;
     text-decoration: none;
-    background-color: white;
+    align-items: center;
+    /*background-color: white;*/
     color: black;
-    font-size: 17px;
-    border: 1px solid black;
+    font-size: 25px;
+    border: 1px solid grey;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: background-color 0.3s ease;
 }
 
 .action-button:hover {
-    background-color: grey;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.accountButton{
+    background-color: lightsalmon;
+    border-radius: 15px;
+}
+
+.accIcon{
+    height: 22px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.cartIcon{
+    height: 22px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.cartButton{
+    background-color: #00a63f;
+    border-radius: 15px;
 }

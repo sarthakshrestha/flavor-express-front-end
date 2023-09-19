@@ -3,9 +3,10 @@ import {Routes, Route} from "react-router-dom";
 import HomePage from "./Components/homePage/HomePage";
 import LoginPage from "./Components/loginPage/LoginPage";
 import AdminLoginPage from "./Components/loginPage/AdminLoginPage";
-import RestaurantsPage from "./Components/restaurantsPage/RestaurantsPage";
+import RestaurantsPage from "./Components/foodPage/foodPage";
 import RegistrationPage from "./Components/registrationPage/RegistrationPage";
 import Header from "./sharedComponents/header/Header";
+import FoodPage from "./Components/foodPage/foodPage";
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
                 <Route path="/adminLoginPage" element={<AdminLoginPage/>}/>
                 {/*<Route path="/restaurantLoginPage" element={<RestaurantLoginPage />} />*/}
                 <Route path="/registrationPage" element={<RegistrationPage/>}/>
-                <Route path="/restaurantsPage" element={<RestaurantsPage/>}/>
+                <Route path="/foodPage" element={<FoodPage/>}/>
 
                 {/*<Route path="/restaurantAboutPage" element={<RestaurantAboutPage />} />*/}
                 {/*<Route path="/foodItemsPage" element={<FoodItemsPage />} />*/}

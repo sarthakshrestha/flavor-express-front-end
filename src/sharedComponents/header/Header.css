@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: #001f3f;
+    background-color: black;
     color: white;
     padding: 10px 20px;
     height: 140px;
@@ -55,7 +55,7 @@
     text-decoration: none;
     align-items: center;
     /*background-color: white;*/
-    color: black;
+    color: white;
     font-size: 25px;
     border: 1px solid grey;
     padding: 5px 10px;
@@ -63,15 +63,22 @@
     transition: background-color 0.3s ease;
 }
 
-.action-button:hover {
-    background-color: black;
+.accountButton:hover {
+    background-color: cornflowerblue;
+    color: white;
+    border: 1px solid white;
+}
+
+.cartButton:hover {
+    background-color: #5A5A5A;
     color: white;
     border: 1px solid white;
 }
 
 .accountButton{
-    background-color: lightsalmon;
-    border-radius: 15px;
+    background-color: #2E5A88;
+    color: black;
+    border-radius: 12px;
 }
 
 .accIcon{
@@ -89,4 +96,5 @@
 .cartButton{
     background-color: #00a63f;
     border-radius: 15px;
+    color: white;
 }

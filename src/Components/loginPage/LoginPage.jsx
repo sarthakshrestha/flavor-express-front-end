@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import picture from "../loginPage/images/picture.jpg";
-import Footer from "../../shared/footer/Footer";
+import Footer from "../../sharedComponents/footer/Footer";
 import "./LoginPage.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";

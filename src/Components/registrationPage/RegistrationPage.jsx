@@ -5,7 +5,7 @@ import "./RegistrationPage.css";
 import { CiBurger } from "react-icons/ci";
 import registerimage from "./images/registerimage.jpg";
 import axios from "axios";
-import Footer from "../../shared/footer/Footer";
+import Footer from "../../sharedComponents/footer/Footer";
 
 export default function RegistrationPage() {
   const [firstName, setFirstName] = useState("");

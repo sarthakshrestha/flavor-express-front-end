@@ -6,7 +6,7 @@ import LimitedPromos from "./subComponents/LimitedPromos";
 import PreferredRestaurants from "./subComponents/PreferredRestaurants";
 import MealPlan from "./subComponents/MealPlan";
 import CustomerReview from "./subComponents/CustomerReview";
-import Footer from "../../shared/footer/Footer";
+import Footer from "../../sharedComponents/footer/Footer";
 
 export default function HomePage() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import picture from "../loginPage/images/picture.jpg";
-import Footer from "../../shared/footer/Footer";
+import Footer from "../../sharedComponents/footer/Footer";
 import "./AdminLoginPage.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
@@ -37,7 +37,7 @@ export default function AdminLoginPage() {
         </div>
         <div className="LoginContainer">
           <h4>Login to your account</h4>
-          <p>Welcome back, enter your ceredentials to access your account</p>
+          <p>Welcome back, enter your credentials to access your account</p>
           <div className="emailDiv">
             <p>Email</p>
             <input

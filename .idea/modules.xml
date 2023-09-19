@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fe-fe.iml" filepath="$PROJECT_DIR$/.idea/fe-fe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/flavor-express-v1.iml" filepath="$PROJECT_DIR$/.idea/flavor-express-v1.iml" />
     </modules>
   </component>
 </project>

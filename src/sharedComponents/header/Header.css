@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Position logo and links at the ends */
+    background-color: #001f3f; /* Lighter navy background color */
+    color: white;
+    padding: 10px 20px;
+    height: 220px; /* Fixed height for the navbar */
+    align-items: center; /* Vertically align contents */
+}
+
+.logo {
+    height: 210px;
+    width: auto;
+    margin-top: -40px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    margin-left: 240px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 55px;
+}
+
+.links li {
+    margin: 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: red;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+    margin-right: 24px;
+}
+
+.action-button {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-size: 22px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: grey;
+}

@@ -84,6 +84,34 @@ export default function FoodPage() {
                     <br/>
                 </div>
                 <div className="product">
+                    <img className="product-image" src={pizza} alt="Pizza"/>
+                    <h3 className="product-title">Baconizer Pizza</h3>
+                    <p className="product-description">A mouthwatering pizza with your favorite toppings.</p><br/>
+                    <p className="restaurant-name">Offered by: Restaurant Zozo Pizza</p>
+                    <br/>
+                    <p className="allergies">CONTAINS DAIRY PRODUCTS</p>
+                    <br/>
+                    <p className="price">Rs. 50</p><br/>
+                    <button className="description-button">Description</button>
+                    {' '}
+                    <button className="add-to-cart-button">Add to Cart</button>
+                    <br/>
+                </div>
+                <div className="product">
+                    <img className="product-image" src={pizza} alt="Pizza"/>
+                    <h3 className="product-title">Baconizer Pizza</h3>
+                    <p className="product-description">A mouthwatering pizza with your favorite toppings.</p><br/>
+                    <p className="restaurant-name">Offered by: Restaurant Zozo Pizza</p>
+                    <br/>
+                    <p className="allergies">CONTAINS DAIRY PRODUCTS</p>
+                    <br/>
+                    <p className="price">Rs. 50</p><br/>
+                    <button className="description-button">Description</button>
+                    {' '}
+                    <button className="add-to-cart-button">Add to Cart</button>
+                    <br/>
+                </div>
+                <div className="product">
                     <img className="product-image" src={coffeeImage} alt="Chocolate Drink"/>
                     <h3 className="product-title">Coffee</h3>
                     <p className="product-description">Creamy and rich latte to satisfy your cravings.</p><br/>

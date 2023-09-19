@@ -1,23 +1,23 @@
 .navbar {
     display: flex;
-    justify-content: space-between; /* Position logo and links at the ends */
-    background-color: #001f3f; /* Lighter navy background color */
+    justify-content: space-between;
+    background-color: #001f3f;
     color: white;
     padding: 10px 20px;
-    height: 220px; /* Fixed height for the navbar */
-    align-items: center; /* Vertically align contents */
+    height: 140px;
+    align-items: center;
 }
 
 .logo {
     height: 210px;
     width: auto;
-    margin-top: -40px;
+    margin-top: -30px;
 }
 
 .top {
     display: flex;
     align-items: center;
-    margin-left: 240px;
+    margin-left: 12%;
 }
 
 .links ul {
@@ -32,9 +32,10 @@
 }
 
 .links a {
+    font-family: 'DM Sans', sans-serif;
     text-decoration: none;
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     transition: color 0.3s ease;
 }
 
@@ -52,7 +53,7 @@
     text-decoration: none;
     background-color: white;
     color: black;
-    font-size: 22px;
+    font-size: 17px;
     border: 1px solid black;
     padding: 5px 10px;
     border-radius: 5px;

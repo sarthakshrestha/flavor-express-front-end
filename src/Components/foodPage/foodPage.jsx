@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Header from "../../sharedComponents/header/Header";
 import "./foodPage.css";
 import Footer from "../../sharedComponents/footer/Footer";
@@ -13,7 +13,7 @@ export default function FoodPage() {
 
     return (
         <>
-            <Header />
+            <Header/>
             <div className="container">
                 <p className="subText"></p>
                 <h2 className="userLine">Welcome to Flavor Express, User User</h2>
@@ -21,7 +21,7 @@ export default function FoodPage() {
 
                 <div className="filter-box">
                     <h1 className="filter-h1">Filter Categories</h1>
-                    <br />
+                    <br/>
                     <label>
                         <input
                             type="radio"
@@ -64,22 +64,22 @@ export default function FoodPage() {
                             />
                             <h3 className="product-title">{product.name}</h3>
                             <p className="product-description">{product.description}</p>
-                            <br />
+                            <br/>
                             <p className="restaurant-name">Offered by: {product.restaurant}</p>
-                            <br />
+                            <br/>
                             <p className="allergies">{product.allergies}</p>
-                            <br />
+                            <br/>
                             <p className="price">{product.price}</p>
-                            <br />
+                            <br/>
                             <button className="description-button">Description</button>
                             {" "}
                             <button className="add-to-cart-button">Add to Cart</button>
-                            <br />
+                            <br/>
                         </div>
                     ))}
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </>
     );
 }

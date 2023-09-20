@@ -7,15 +7,15 @@ import restaurantData from "./restaurant.json"; // Import the JSON data
 export default function RestaurantPage() {
     return (
         <>
-            <Header />
+            <Header/>
             <div className="restaurant-container">
                 <h1 className="restaurant-page-title">
-                    Flavor Express: The Go-To Delivery Choice for These Restaurants!
+                    Flavor Express: The Go-To Delivery Choice for <br/> These Restaurants! 🔥
                 </h1>
                 <div className="restaurant-box-container">
                     {restaurantData.map((restaurant, index) => (
                         <div className="restaurant-box" key={index}>
-                            <img src={require(`./images/${restaurant.imageUrl}`)} alt="Restaurant Image" />
+                            <img src={require(`./images/${restaurant.imageUrl}`)} alt="Restaurant Image"/>
                             <div className="restaurant-description">
                                 <div className="restaurant-title">{restaurant.name}</div>
                                 <div className="restaurant-info">
@@ -29,7 +29,7 @@ export default function RestaurantPage() {
                     ))}
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </>
     );
 }

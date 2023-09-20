@@ -24,7 +24,7 @@
     height: auto;
 }
 
-.restaurant-title{
+.restaurant-title {
     font-family: 'DM Sans', sans-serif;
     color: red;
     font-weight: bold;
@@ -49,9 +49,9 @@
     font-weight: bolder;
     text-align: center;
     font-size: 72px;
-    font-family: "Jost", sans-serif;
+    font-family: 'Koulen', cursive;
     color: red;
-    text-shadow: 2px 2px 1px navy;
+    /*text-shadow: 2px 2px 1px navy;*/
 }
 
 
@@ -62,7 +62,7 @@
     color: red;
 }
 
-.restaurant-location{
+.restaurant-location {
     font-size: 18px;
     font-family: 'DM Sans', sans-serif;
     font-weight: bold;
@@ -70,7 +70,7 @@
     padding: 10px;
 }
 
-.restaurant-specialty{
+.restaurant-specialty {
     font-size: 18px;
     font-family: 'DM Sans', sans-serif;
     color: black;
@@ -79,7 +79,7 @@
     padding: 10px;
 }
 
-.restaurant-description{
+.restaurant-description {
     font-size: 28px;
     font-family: 'DM Sans', sans-serif;
     font-weight: bold;

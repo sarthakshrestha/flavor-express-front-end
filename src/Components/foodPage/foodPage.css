@@ -1,142 +1,143 @@
-.container{
+.container {
     /*max-width: 1390px;*/
-    margin:0 auto;
-    padding:3rem 2rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
 }
 
-.headLine{
+.headLine {
     font-size: 35px;
     font-family: "Jost", sans-serif;
     color: black;
 }
 
-.userLine{
+.userLine {
     font-size: 72px;
     font-family: 'Koulen', cursive;
     color: red;
 }
 
-.restaurant-name{
+.restaurant-name {
     font-family: "Jost", sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: grey;
 }
 
-.subText{
+.subText {
     font-size: 22px;
     font-family: "Jost", sans-serif;
     font-weight: bold;
 }
 
-.container .title{
+.container .title {
     font-size: 3.5rem;
-    color:#444;
+    color: #444;
     margin-bottom: 3rem;
     text-transform: uppercase;
     text-align: center;
     font-family: "Jost", sans-serif;
 }
 
-.container .products-container{
+.container .products-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    gap:2rem;
+    gap: 2rem;
 }
 
-.container .products-container .product{
+.container .products-container .product {
     text-align: center;
-    padding:3rem 2rem;
+    padding: 3rem 2rem;
     background: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     outline: .1rem solid #ccc;
     outline-offset: -1.5rem;
     cursor: pointer;
 }
 
-.container .products-container .product:hover{
+.container .products-container .product:hover {
     outline-offset: 0;
 }
 
-.container .products-container .product img{
+.container .products-container .product img {
     height: 12rem;
     width: auto;
     transition: transform 0.3s ease;
 }
 
-.container .products-container .product:hover img{
+.container .products-container .product:hover img {
     transform: scale(1.4);
 }
 
-.container .products-container .product h3{
-    padding:.5rem 0;
+.container .products-container .product h3 {
+    padding: .5rem 0;
     font-size: 2rem;
-    color:#444;
+    color: #444;
     font-family: "Jost", sans-serif;
 }
 
-.container .products-container .product:hover h3{
-    color:#27ae60;
+.container .products-container .product:hover h3 {
+    color: #27ae60;
 }
 
-.container .products-container .product .price{
+.container .products-container .product .price {
     font-size: 2rem;
-    color:#444;
+    color: #444;
 }
 
-.products-preview{
+.products-preview {
     position: fixed;
-    top:0; left:0;
+    top: 0;
+    left: 0;
     min-height: 100vh;
     width: auto;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
     display: none;
     align-items: center;
     justify-content: center;
 }
 
-.products-preview .preview{
+.products-preview .preview {
     display: none;
-    padding:2rem;
+    padding: 2rem;
     text-align: center;
     background: #fff;
     position: relative;
-    margin:2rem;
+    margin: 2rem;
     width: 40rem;
 }
 
-.products-preview .preview.active{
+.products-preview .preview.active {
     display: inline-block;
 }
 
-.products-preview .preview img{
+.products-preview .preview img {
     height: 30rem;
 }
 
-.products-preview .preview .fa-times{
+.products-preview .preview .fa-times {
     position: absolute;
-    top:1rem; right:1.5rem;
+    top: 1rem;
+    right: 1.5rem;
     cursor: pointer;
-    color:#444;
+    color: #444;
     font-size: 4rem;
 }
 
-.products-preview .preview .fa-times:hover{
+.products-preview .preview .fa-times:hover {
     transform: rotate(90deg);
 }
 
-.product-description{
+.product-description {
     font-family: "Jost", sans-serif;
 }
 
-.products-preview .preview h3{
-    color:#444;
-    padding:.5rem 0;
+.products-preview .preview h3 {
+    color: #444;
+    padding: .5rem 0;
     font-size: 2.5rem;
 }
 
-.description-button
-{
+.description-button {
     color: white;
     background-color: grey;
     border-radius: 12px;
@@ -144,8 +145,7 @@
     font-family: 'Koulen', cursive;
 }
 
-.description-button:hover
-{
+.description-button:hover {
     color: white;
     background-color: black;
     border-radius: 12px;
@@ -153,54 +153,54 @@
     font-family: 'Koulen', cursive;
 }
 
-.allergies{
+.allergies {
     font-family: 'Koulen', cursive;
     color: red;
     font-size: 21px;
 }
 
-.products-preview .preview .stars{
-    padding:1rem 0;
+.products-preview .preview .stars {
+    padding: 1rem 0;
     font-size: 1.7rem;
 }
 
-.products-preview .preview .stars i{
-    color:#27ae60;
+.products-preview .preview .stars i {
+    color: #27ae60;
 }
 
-.products-preview .preview .stars span{
-    color:#999;
+.products-preview .preview .stars span {
+    color: #999;
 }
 
-.products-preview .preview p{
+.products-preview .preview p {
     line-height: 1.5;
-    padding:1rem 0;
+    padding: 1rem 0;
     font-size: 1.6rem;
-    color:#777;
+    color: #777;
 }
 
-.products-preview .preview .price{
-    padding:1rem 0;
+.products-preview .preview .price {
+    padding: 1rem 0;
     font-size: 2.5rem;
-    color:#27ae60;
+    color: #27ae60;
 }
 
-.products-preview .preview .buttons{
+.products-preview .preview .buttons {
     display: flex;
-    gap:1.5rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
     margin-top: 1rem;
 }
 
-.products-preview .preview .buttons a{
-    flex:1 1 16rem;
-    padding:1rem;
+.products-preview .preview .buttons a {
+    flex: 1 1 16rem;
+    padding: 1rem;
     font-size: 1.8rem;
-    color:#444;
-    border:.1rem solid #444;
+    color: #444;
+    border: .1rem solid #444;
 }
 
-.add-to-cart-button{
+.add-to-cart-button {
     background-color: green;
     margin-top: 10px;
     border-radius: 12px;
@@ -209,7 +209,7 @@
     color: white;
 }
 
-.add-to-cart-button:hover{
+.add-to-cart-button:hover {
     background-color: navy;
     color: white;
 }
@@ -219,12 +219,12 @@
 /*    background: #111;*/
 /*}*/
 
-.products-preview .preview .buttons a.buy:hover{
+.products-preview .preview .buttons a.buy:hover {
     background: #444;
-    color:#fff;
+    color: #fff;
 }
 
-.filter-h1{
+.filter-h1 {
     font-family: "Jost", sans-serif;
     font-size: 24px;
 }
@@ -260,25 +260,25 @@
 }
 
 
-@media (max-width:991px){
+@media (max-width: 991px) {
 
-    html{
+    html {
         font-size: 55%;
     }
 
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .products-preview .preview img{
+    .products-preview .preview img {
         height: 25rem;
     }
 
 }
 
-@media (max-width:450px){
+@media (max-width: 450px) {
 
-    html{
+    html {
         font-size: 50%;
     }
 

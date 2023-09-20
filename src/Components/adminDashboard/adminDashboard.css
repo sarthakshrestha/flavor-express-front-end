@@ -23,33 +23,39 @@
     position: relative;
 }
 
-/* Order box styles */
-.order-box {
-
-}
-
 .number {
     font-size: 65px;
     font-family: "Jost", sans-serif;
 }
 
-.innerBox {
-    border: 2px solid #ccc;
-    padding: 45px;
-    font-family: "Jost", sans-serif;
-
-    position: absolute; /* Position absolutely within the relative container */
-    top: 4rem;
+.order-box {
+    display: flex;
+    gap: 20px; /* Adjust the gap size as needed */
     left: 20rem;
+    top: 4rem;
+    position: fixed;
+}
+
+.innerBox {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.number {
+    font-size: 82px;
+    font-weight: bold;
 }
 
 .numUsers {
-    font-size: 32px;
+    font-size: 22px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 @media screen and (min-width: 1200px) {
     .s-view {
         margin-left: 0;
-        flex: 1;
+        flex: 2;
     }
 }

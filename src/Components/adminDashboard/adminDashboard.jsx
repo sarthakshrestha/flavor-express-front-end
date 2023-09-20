@@ -3,22 +3,29 @@ import ReactDOM from "react-dom";
 import Sidebar from "./sideBar/sideBar";
 import "./adminDashboard.css";
 
-export default function adminDashboard() {
-    return (<>
+const jsonData = [
+    { label: "Number of users registered", value: 42 },
+    { label: "Number of orders made", value: 62 },
+    { label: "Revenue Made  (in Rs.)", value: 1500 },
+    { label: "Active Restaurants", value: 62 },
+];
 
+export default function AdminDashboard() {
+    return (
+        <>
             <div className="center-container">
                 <div className="s-view">
-                    <Sidebar/>
+                    <Sidebar />
                 </div>
                 <div className="order-box">
-                    <div className="innerBox">
-                        <div className="number">
-                            42
-                            <br/>
+                    {jsonData.map((item, index) => (
+                        <div className="innerBox" key={index}>
+                            <div className="number">{item.value}</div>
+                            <h1 className="numUsers">{item.label}</h1>
                         </div>
-                        <h1 className="numUsers">Number of users</h1>
-                    </div>
+                    ))}
                 </div>
             </div>
-        </>);
+        </>
+    );
 }

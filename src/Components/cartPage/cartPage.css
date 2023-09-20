@@ -1,0 +1,75 @@
+.cartHeading{
+    font-size: 62px;
+    color: red;
+    font-family: 'Koulen', cursive;
+    margin-left: 10%;
+    position: relative;
+}
+
+/* NutritionalBreakdown.css */
+
+.nutritional-breakdown {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f9f9f9;
+    margin: -5% 5% 2% 70%;
+    width: 25%;
+}
+
+.n-heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 42px;
+    color: navy;
+}
+
+.nutrient {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.nutrient-label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nutrient-total {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.nutrient-total-cal{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.nutrient-value {
+    color: darkgreen;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nutrient-protein{
+    font-size: 22px;
+}
+
+.nutrient-carb{
+    font-size: 22px;
+}
+
+.nutrient-sugar{
+    font-size: 22px;
+}
+
+.nutrient-sodium{
+    font-size: 22px;
+}
+
+
+
+

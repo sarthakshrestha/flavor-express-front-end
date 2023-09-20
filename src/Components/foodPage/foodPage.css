@@ -231,7 +231,7 @@
 
 .filter-box {
     position: absolute;
-    top: 55%; /* Adjust the top position as needed */
+    top: 390px; /* Adjust the top position as needed */
     left: 2%; /* Set the left position */
     width: 180px;
     max-height: 60vh; /* Set a maximum height using viewport height units */

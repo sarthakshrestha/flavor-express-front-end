@@ -8,6 +8,7 @@ import RegistrationPage from "./Components/registrationPage/RegistrationPage";
 import Header from "./sharedComponents/header/Header";
 import FoodPage from "./Components/foodPage/foodPage";
 import RestaurantPage from "./Components/restaurantPage/restaurantPage";
+import Cart from "./Components/cartPage/cart";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 {/*<Route path="/restaurantLoginPage" element={<RestaurantLoginPage />} />*/}
                 <Route path="/registrationPage" element={<RegistrationPage/>}/>
                 <Route path="/foodPage" element={<FoodPage/>}/>
+                <Route path="/cart" element={<Cart/>}/>
                 <Route path="/restaurant" element={<RestaurantPage/>}/>
 
                 {/*<Route path="/restaurantAboutPage" element={<RestaurantAboutPage />} />*/}

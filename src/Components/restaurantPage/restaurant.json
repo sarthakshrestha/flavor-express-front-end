@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "imageUrl": "restaurant1.png",
     "name": "Restaurant Name 1",
     "location": "City 1, Country 1",
@@ -7,6 +8,7 @@
     "rating": 4.5
   },
   {
+    "id": 2,
     "imageUrl": "restaurant1.png",
     "name": "Restaurant Name 2",
     "location": "City 2, Country 2",
@@ -14,8 +16,17 @@
     "rating": 4.2
   },
   {
+    "id": 3,
     "imageUrl": "restaurant1.png",
     "name": "Restaurant Name 3",
+    "location": "City 3, Country 3",
+    "cuisine": "Cuisine Type 3",
+    "rating": 4.8
+  },
+  {
+    "id": 4,
+    "imageUrl": "restaurant1.png",
+    "name": "Restaurant Name 4",
     "location": "City 3, Country 3",
     "cuisine": "Cuisine Type 3",
     "rating": 4.8

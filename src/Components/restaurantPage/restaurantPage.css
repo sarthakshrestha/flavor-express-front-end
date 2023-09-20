@@ -15,7 +15,7 @@
 .restaurant-box {
     width: calc(32.33% - 20px);
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     /*background-color: #ECECEC;*/
     box-shadow: 0 0 10px rgba(64, 64, 64, 0.7);
     overflow: hidden;
@@ -23,6 +23,7 @@
     border-color: black;
     border-radius: 12px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
 }
 
 .restaurant-box img {

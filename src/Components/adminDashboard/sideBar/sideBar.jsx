@@ -30,7 +30,6 @@ function Sidebar() {
     };
 
     return (
-        <div className="sidebar-container">
             <nav className="sidebar-nav">
                 <div className="sidebar-top">
                     <h1 className="titleMain">Administrator Dashboard</h1>
@@ -82,12 +81,10 @@ function Sidebar() {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav>);
             {/*<div className="logo-top">*/}
             {/*    <img src="Logo2.png" alt="logo" />*/}
             {/*</div>*/}
-        </div>
-    );
 }
 
 export default Sidebar;

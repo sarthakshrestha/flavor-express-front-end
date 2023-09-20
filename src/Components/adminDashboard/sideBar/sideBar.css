@@ -30,7 +30,7 @@
 /* Sidebar styles */
 .sidebar-nav {
     position: sticky;
-    top: 0;
+    top: 1rem;
     left: 0;
     height: 120vh;
     background-color: #444444;
@@ -57,7 +57,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 2rem;
 }
 
 .sidebar-top .logo {

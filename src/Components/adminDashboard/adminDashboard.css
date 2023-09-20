@@ -1,15 +1,23 @@
 /* Center container styles */
 .center-container {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     height: 100vh;;
+}
+
+.text-header{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: navy;
 }
 
 /* Content box styles */
 .content-box {
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 24px;
     border: 2px solid #3498db;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -30,10 +38,12 @@
 
 .order-box {
     display: flex;
-    gap: 20px; /* Adjust the gap size as needed */
+    gap: 20px;
     left: 20rem;
     top: 4rem;
     position: fixed;
+    border: 1px solid #ccc;
+    padding: 36px;
 }
 
 
@@ -54,9 +64,78 @@
     font-family: 'DM Sans', sans-serif;
 }
 
+
+.table1 {
+    margin-top: 18rem;
+    margin-right: 720px;
+    position: marker;
+    margin-left: 60px;
+    padding: 20px;
+
+}
+
+.table1 h1{
+    margin-top: 10%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 68px;
+    font-weight: bold;
+}
+
+.table1 .order-table {
+    width: 940px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.table1 .order-table th,
+.table1 .order-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: center;
+}
+
+.table1 .order-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.table1 .order-table tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.table1 .order-table tr:hover {
+    background-color: #e5e5e5;
+}
+
+.table1 .order-table td button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.table1 .order-table td button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
 @media screen and (min-width: 1200px) {
     .s-view {
         margin-left: 0;
         flex: 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .table1 {
+        margin-top: 2rem; /* Adjust the margin-top for smaller screens */
+        margin-right: auto; /* Center the table horizontally */
+        margin-left: auto; /* Center the table horizontally */
+        padding: 10px; /* Adjust the padding for smaller screens */
     }
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "imageUrl": "restaurant1.png",
+    "name": "Restaurant Name 1",
+    "location": "City 1, Country 1",
+    "cuisine": "Cuisine Type 1",
+    "rating": 4.5
+  },
+  {
+    "imageUrl": "restaurant1.png",
+    "name": "Restaurant Name 2",
+    "location": "City 2, Country 2",
+    "cuisine": "Cuisine Type 2",
+    "rating": 4.2
+  },
+  {
+    "imageUrl": "restaurant1.png",
+    "name": "Restaurant Name 3",
+    "location": "City 3, Country 3",
+    "cuisine": "Cuisine Type 3",
+    "rating": 4.8
+  }
+]

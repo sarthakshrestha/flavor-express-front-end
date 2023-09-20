@@ -63,8 +63,9 @@ export default function AdminDashboard() {
                                 <td>{order.totalAmount}</td>
                                 <td>{order.status}</td>
                                 <td>
-                                    <button onClick={() => handleAction("Accept")}>Accept</button>
-                                    <button onClick={() => handleAction("Reject")}>Reject</button>
+                                    <button className="accept-btn" style={{backgroundColor: 'darkgreen'}} onClick={() => handleAction("Accept")}>Accept</button>
+                                    <span style={{ marginRight: '11px' }}></span>
+                                    <button className="reject-btn" style={{backgroundColor: 'red'}} onClick={() => handleAction("Reject")}>Reject</button>
                                 </td>
                             </tr>))}
                         </tbody>

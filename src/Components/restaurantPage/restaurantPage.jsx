@@ -10,7 +10,7 @@ export default function RestaurantPage() {
             <Header />
             <div className="restaurant-container">
                 <h1 className="restaurant-page-title">
-                    Flavor Express: The Go-To Delivery <br /> Choice for These Restaurants!
+                    Flavor Express: The Go-To Delivery Choice for These Restaurants!
                 </h1>
                 <div className="restaurant-box-container">
                     {restaurantData.map((restaurant, index) => (
@@ -19,9 +19,10 @@ export default function RestaurantPage() {
                             <div className="restaurant-description">
                                 <div className="restaurant-title">{restaurant.name}</div>
                                 <div className="restaurant-info">
-                                    <p>Location: {restaurant.location}</p>
-                                    <p>Cuisine: {restaurant.cuisine}</p>
-                                    <p>Rating: {restaurant.rating}/5</p>
+                                    <p className="restaurant-description">Description: Restaurant Description</p>
+                                    <p className="restaurant-location">Location: {restaurant.location}</p>
+                                    <p className="restaurant-specialty">Specialty: {restaurant.cuisine}</p>
+                                    {/*<p>Rating: {restaurant.rating}/5</p>*/}
                                 </div>
                             </div>
                         </div>

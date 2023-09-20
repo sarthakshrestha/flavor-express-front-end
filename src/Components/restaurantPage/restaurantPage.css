@@ -1,18 +1,22 @@
 .restaurant-box-container {
     display: flex;
-    flex-wrap: wrap; /* Wrap to the next line if there's not enough space */
-    justify-content: space-between; /* Space between the boxes */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 1%;
+    margin-left: 2%;
+    margin-bottom: 5%;
 }
 
 .restaurant-box {
-    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    width: calc(32.33% - 20px);
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*background-color: #ECECEC;*/
+    box-shadow: 0 0 10px rgba(64, 64, 64, 0.7);
     overflow: hidden;
     text-align: center;
+    border-color: black;
+    border-radius: 12px;
 }
 
 .restaurant-box img {
@@ -24,33 +28,60 @@
     font-family: 'DM Sans', sans-serif;
     color: red;
     font-weight: bold;
-    font-size: 82px;
+    font-size: 42px;
+    text-align: left;
+    padding: 10px;
 }
 
 .restaurant-description {
-    padding: 15px;
     font-size: 24px;
+    text-align: left;
+    padding: 10px;
 }
 
-.restaurant-page-title{
+.restaurant-page-title {
     margin-top: 2%;
+    margin-right: 65%;
     position: relative;
-    font-size: 48px;
+    width: 1500px;
+    margin-bottom: 2%;
     align-items: center;
     font-weight: bolder;
-    color: black;
     text-align: center;
-    font-family: "Jost", sans-serif
-    /*text-shadow: 2px 2px 0px red;*/
-    /*font-family: 'Koulen', cursive;*/
+    font-size: 72px;
+    font-family: "Jost", sans-serif;
+    color: red;
+    text-shadow: 2px 2px 1px navy;
 }
+
 
 .restaurant-title {
-    font-size: 20px;
+    font-size: 38px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: red;
 }
 
-.restaurant-info {
-    font-size: 14px;
+.restaurant-location{
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+}
+
+.restaurant-specialty{
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    color: black;
+    font-weight: bold;
+    margin-right: 2%;
+    padding: 10px;
+}
+
+.restaurant-description{
+    font-size: 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+
 }

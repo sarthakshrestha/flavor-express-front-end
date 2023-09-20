@@ -4,6 +4,7 @@
     font-family: 'Koulen', cursive;
     margin-left: 10%;
     position: relative;
+    margin-top: 2%;
 }
 
 /* NutritionalBreakdown.css */
@@ -15,7 +16,7 @@
     text-align: center;
     font-family: 'DM Sans', sans-serif;
     background-color: #f9f9f9;
-    margin: -5% 5% 2% 70%;
+    margin: -22% 5% 2% 70%;
     width: 25%;
 }
 
@@ -69,7 +70,103 @@
 .nutrient-sodium{
     font-size: 22px;
 }
+/* Add your styles to the CSS file */
+.food-image {
+    max-width: 200px; /* Adjust the image size as needed */
+    height: auto;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+/* Style for the table */
+.food-table { /* Updated class name */
+    width: 85%;
+    border-collapse: collapse;
+    padding: 22px;
+    margin: 3rem 3rem 8rem 7rem;
+}
+
+.food-table tr{
+    border: 1px solid white;
+    background-color: white;
+}
+
+.table-row{
+    border: 1px solid white;
+}
+
+.food-table th,
+.food-table td { /* Updated class name */
+    /*border: 1px solid #ddd;*/
+    padding: 8px;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+}
+
+.first-row{
+    color: white;
+}
+
+.food-table th{
+    background-color: #2E5A88;
+    text-align: center;
+}
+
+.cart-items h3{
+    font-size: 29px;
+}
+
+.cart-items p{
+    font-size: 20px;
+}
 
 
+.food-table td{
+    text-align: center;
+}
+
+.remove-item{
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.allergy{
+    color: red;
+    font-size: 18px;
+}
+
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    margin-top: -7%;
+    margin-bottom: 5%;
+    width: 89%;
+    margin-left: 6%;
+}
+
+.calculation{
+    font-size: 42px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 55%;
+    position: relative;
+    margin-bottom: 4%;
+    margin-top: -5%;
+}
+
+.calculation h1{
+    color: #2E5A88;
+}
+
+.calculation p{
+    font-size: 32px;
+}
 
 

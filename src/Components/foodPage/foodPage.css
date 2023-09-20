@@ -229,20 +229,21 @@
 }
 
 .filter-box {
-    position: fixed;
-    left: 10px;
-    top: 40%;
+    position: absolute;
+    top: 55%; /* Adjust the top position as needed */
+    left: 2%; /* Set the left position */
     width: 180px;
-    background-color: #f5f5f5;
+    max-height: 60vh; /* Set a maximum height using viewport height units */
+    overflow-y: auto; /* Add scrollbars if the content overflows */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
-    margin-bottom: 60%;
-    margin-left: 1%;
+    z-index: 1000; /* Set a high z-index to ensure it's on top */
 }
+
 
 .filter-box label {
     margin-bottom: 10px;

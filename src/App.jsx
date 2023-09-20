@@ -3,11 +3,11 @@ import {Routes, Route} from "react-router-dom";
 import HomePage from "./Components/homePage/HomePage";
 import LoginPage from "./Components/loginPage/LoginPage";
 import AdminLoginPage from "./Components/loginPage/AdminLoginPage";
-import RestaurantsPage from "./Components/foodPage/foodPage";
+// import RestaurantsPage from "./Components/foodPage/foodPage";
 import RegistrationPage from "./Components/registrationPage/RegistrationPage";
 import Header from "./sharedComponents/header/Header";
 import FoodPage from "./Components/foodPage/foodPage";
-
+import RestaurantPage from "./Components/restaurantPage/restaurantPage";
 
 function App() {
     return (
@@ -20,6 +20,7 @@ function App() {
                 {/*<Route path="/restaurantLoginPage" element={<RestaurantLoginPage />} />*/}
                 <Route path="/registrationPage" element={<RegistrationPage/>}/>
                 <Route path="/foodPage" element={<FoodPage/>}/>
+                <Route path="/restaurant" element={<RestaurantPage/>}/>
 
                 {/*<Route path="/restaurantAboutPage" element={<RestaurantAboutPage />} />*/}
                 {/*<Route path="/foodItemsPage" element={<FoodItemsPage />} />*/}

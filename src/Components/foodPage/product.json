@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Baconizer Pizza",
+    "image": "pizza.png",
+    "description": "A mouthwatering pizza with your favorite toppings.",
+    "restaurant": "Restaurant Zozo Pizza",
+    "allergies": "CONTAINS DAIRY PRODUCTS",
+    "price": "Rs. 50"
+  },
+  {
+    "id": 2,
+    "name": "Coffee",
+    "image": "coffee.png",
+    "description": "Creamy and rich latte to satisfy your cravings.",
+    "restaurant": "BrewCoffee Cafe",
+    "allergies": "CONTAINS DAIRY PRODUCTS",
+    "price": "Rs. 50"
+  }
+  ,
+  {
+    "id": 3,
+    "name": "Filler",
+    "image": "coffee.png",
+    "description": "Filler description",
+    "restaurant": "Filler Cafe",
+    "allergies": "CONTAINS DAIRY PRODUCTS",
+    "price": "Rs. 50"
+  }
+  ,
+  {
+    "id": 4,
+    "name": "Baconizer Pizza",
+    "image": "pizza.png",
+    "description": "A mouthwatering pizza with your favorite toppings.",
+    "restaurant": "Restaurant Zozo Pizza",
+    "allergies": "CONTAINS DAIRY PRODUCTS",
+    "price": "Rs. 50"
+  }
+]

@@ -7,6 +7,11 @@
     margin-bottom: 5%;
 }
 
+.restaurant-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(64, 64, 64, 0.7);
+}
+
 .restaurant-box {
     width: calc(32.33% - 20px);
     margin-right: 20px;
@@ -17,11 +22,17 @@
     text-align: center;
     border-color: black;
     border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .restaurant-box img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.restaurant-box:hover img {
+    transform: scale(1.1);
 }
 
 .restaurant-title {

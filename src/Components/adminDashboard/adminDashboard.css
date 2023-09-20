@@ -18,19 +18,38 @@
     position: relative;
 }
 
-.s-view{
-    margin-left: -68%;
+.s-view {
+    margin-left: -63%;
     position: relative;
 }
 
 /* Order box styles */
 .order-box {
-    /* Your existing styles for the order box go here */
+
 }
 
-.innerBox{
-    margin-left: 20%;
-    margin-top: -80%;
+.number {
+    font-size: 65px;
+    font-family: "Jost", sans-serif;
 }
 
-/* Rest of your CSS... */
+.innerBox {
+    border: 2px solid #ccc;
+    padding: 45px;
+    font-family: "Jost", sans-serif;
+
+    position: absolute; /* Position absolutely within the relative container */
+    top: 4rem;
+    left: 20rem;
+}
+
+.numUsers {
+    font-size: 32px;
+}
+
+@media screen and (min-width: 1200px) {
+    .s-view {
+        margin-left: 0;
+        flex: 1;
+    }
+}

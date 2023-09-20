@@ -13,7 +13,7 @@ export default function RestaurantPage() {
                 {/*    Flavor Express: The Go-To Delivery Choice for <br/> These Restaurants! 💯*/}
                 {/*</h1>*/}
                 <h1 className="restaurant-page-title">
-                    We put 💯 of our heart and soul into <br/> every dish at Flavor Express Restaurants!
+                    We pour our heart and soul into delivering every dish from Flavor Express restaurants!
                 </h1>
                 <div className="restaurant-box-container">
                     {restaurantData.map((restaurant, index) => (

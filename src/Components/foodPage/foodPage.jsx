@@ -3,6 +3,7 @@ import Header from "../../sharedComponents/header/Header";
 import "./foodPage.css";
 import Footer from "../../sharedComponents/footer/Footer";
 import productsData from "./product.json";
+import {Link} from "react-router-dom";
 
 export default function FoodPage() {
     const [filter, setFilter] = useState("all");
@@ -72,8 +73,10 @@ export default function FoodPage() {
                             <p className="price">{product.price}</p>
                             <br/>
                             <button className="description-button">Description</button>
-                            {" "}
-                            <button className="add-to-cart-button">Add to Cart</button>
+                            <button className="add-to-cart-button">
+                                <Link to={`/cart/${product.id}`}>Add to Cart</Link>
+                            </button>
+                            {/*<button className="add-to-cart-button">Add to Cart</button>*/}
                             <br/>
                         </div>
                     ))}

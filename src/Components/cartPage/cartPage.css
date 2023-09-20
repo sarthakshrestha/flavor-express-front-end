@@ -1,30 +1,31 @@
-.cartHeading{
-    font-size: 62px;
-    color: red;
-    font-family: 'Koulen', cursive;
+/* CartHeading.css */
+.cartHeading {
+    font-size: 72px;
+    color: #FF5733;
+    font-family: "Poppins", sans-serif;
     margin-left: 10%;
     position: relative;
     margin-top: 2%;
 }
 
 /* NutritionalBreakdown.css */
-
 .nutritional-breakdown {
-    border: 2px solid #ccc;
+    border: 4px solid #4CAF50;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 13px;
     text-align: center;
     font-family: 'DM Sans', sans-serif;
     background-color: #f9f9f9;
-    margin: -22% 5% 2% 70%;
-    width: 25%;
+    margin: -21% 9% 8% 65%;
+    width: 28%;
 }
 
 .n-heading {
-    font-weight: bold;
+    font-weight: bolder;
     margin-bottom: 20px;
-    font-size: 42px;
-    color: navy;
+    font-size: 38px;
+    color: #4CAF50;
+    font-family: "Poppins", sans-serif;
 }
 
 .nutrient {
@@ -44,32 +45,33 @@
     font-weight: bolder;
 }
 
-.nutrient-total-cal{
+.nutrient-total-cal {
     font-size: 30px;
     font-weight: bolder;
 }
 
 .nutrient-value {
-    color: darkgreen;
+    color: #006400;
     font-size: 22px;
     font-weight: bold;
 }
 
-.nutrient-protein{
+.nutrient-protein {
     font-size: 22px;
 }
 
-.nutrient-carb{
+.nutrient-carb {
     font-size: 22px;
 }
 
-.nutrient-sugar{
+.nutrient-sugar {
     font-size: 22px;
 }
 
-.nutrient-sodium{
+.nutrient-sodium {
     font-size: 22px;
 }
+
 /* Add your styles to the CSS file */
 .food-image {
     max-width: 200px; /* Adjust the image size as needed */
@@ -85,61 +87,59 @@
 }
 
 /* Style for the table */
-.food-table { /* Updated class name */
+.food-table {
     width: 85%;
     border-collapse: collapse;
     padding: 22px;
-    margin: 3rem 3rem 8rem 7rem;
+    margin: -2rem 5rem 9rem 7rem;
 }
 
-.food-table tr{
+.food-table tr {
     border: 1px solid white;
     background-color: white;
 }
 
-.table-row{
+.table-row {
     border: 1px solid white;
 }
 
 .food-table th,
-.food-table td { /* Updated class name */
-    /*border: 1px solid #ddd;*/
+.food-table td {
     padding: 8px;
     text-align: left;
     font-family: "Poppins", sans-serif;
     font-size: 24px;
 }
 
-.first-row{
+.first-row {
     color: white;
 }
 
-.food-table th{
+.food-table th {
     background-color: #2E5A88;
     text-align: center;
 }
 
-.cart-items h3{
+.cart-items h3 {
     font-size: 29px;
 }
 
-.cart-items p{
+.cart-items p {
     font-size: 20px;
 }
 
-
-.food-table td{
+.food-table td {
     text-align: center;
 }
 
-.remove-item{
+.remove-item {
     font-size: 20px;
     font-family: Arial, sans-serif;
     color: white;
 }
 
-.allergy{
-    color: red;
+.allergy {
+    color: #FF5733;
     font-size: 18px;
 }
 
@@ -152,8 +152,8 @@ hr.rounded {
     margin-left: 6%;
 }
 
-.calculation{
-    font-size: 42px;
+.calculation {
+    font-size: 38px;
     font-family: "Poppins", sans-serif;
     margin-left: 55%;
     position: relative;
@@ -161,12 +161,10 @@ hr.rounded {
     margin-top: -5%;
 }
 
-.calculation h1{
+.calculation h1 {
     color: #2E5A88;
 }
 
-.calculation p{
+.calculation p {
     font-size: 32px;
 }
-
-

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
 import Header from "../../sharedComponents/header/Header";
 import Footer from "../../sharedComponents/footer/Footer";
@@ -26,6 +26,13 @@ export default function Cart() {
             price: 8.49,
         },
     ];
+
+    //Create a async function to load cart items from backend
+
+    useEffect(() => {
+        //call above function from here
+        console.log("hello")
+    }, []);
 
     return (<>
             <Header/>

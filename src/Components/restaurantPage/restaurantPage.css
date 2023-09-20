@@ -2,8 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 1%;
-    margin-left: 2%;
+    margin-right: 2%;
+    margin-left: 6%;
     margin-bottom: 5%;
 }
 
@@ -41,14 +41,14 @@
 
 .restaurant-page-title {
     margin-top: 2%;
-    margin-right: 65%;
+    margin-left: 6%;
     position: relative;
     width: 1500px;
     margin-bottom: 2%;
-    align-items: center;
+    /*align-items: center;*/
     font-weight: bolder;
-    text-align: center;
-    font-size: 72px;
+    /*text-align: center;*/
+    font-size: 62px;
     font-family: 'Koulen', cursive;
     color: red;
     /*text-shadow: 2px 2px 1px navy;*/

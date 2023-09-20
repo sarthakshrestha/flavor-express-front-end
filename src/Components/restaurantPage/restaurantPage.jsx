@@ -9,8 +9,11 @@ export default function RestaurantPage() {
         <>
             <Header/>
             <div className="restaurant-container">
+                {/*<h1 className="restaurant-page-title">*/}
+                {/*    Flavor Express: The Go-To Delivery Choice for <br/> These Restaurants! 💯*/}
+                {/*</h1>*/}
                 <h1 className="restaurant-page-title">
-                    Flavor Express: The Go-To Delivery Choice for <br/> These Restaurants! 🔥
+                    We put 💯 of our heart and soul into <br/> every dish at Flavor Express Restaurants!
                 </h1>
                 <div className="restaurant-box-container">
                     {restaurantData.map((restaurant, index) => (

@@ -29,6 +29,7 @@
 .restaurant-box img {
     width: 100%;
     height: auto;
+    border-radius: 14px;
     transition: transform 0.3s ease-in-out;
 }
 

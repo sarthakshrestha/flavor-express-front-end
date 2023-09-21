@@ -68,9 +68,6 @@ input[type="password"] {
 .register-button {
   margin-top: 15px;
   text-align: center;
-}
-
-button {
   padding: 10px 20px;
   background-color: #ff4444;
   color: #ffffff;

@@ -106,8 +106,6 @@ export default function Cart() {
             <h1>Your Total: </h1>
             <p>Note: 5% is for the delivery charge</p>
         </div>
-
-
             <Footer/>
         </>)
 }

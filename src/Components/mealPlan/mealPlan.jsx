@@ -1,5 +1,4 @@
-import react from "react";
-import reactDOM from "react-dom";
+import React from "react";
 import Header from "../../sharedComponents/header/Header";
 import Footer from "../../sharedComponents/footer/Footer";
 import "./mealPlan.css";
@@ -9,7 +8,7 @@ const productData = [
         id: 1,
         name: 'Breakfast',
         description: 'Roti along with boiled vegetables',
-        image: 'product1.jpg',
+        image: 'p1breakfast.jpg',
         nutrition: {
             calories: 250,
             protein: 10,
@@ -21,7 +20,7 @@ const productData = [
         id: 2,
         name: 'Lunch',
         description: 'Roti along with boiled vegetables',
-        image: 'product2.jpg',
+        image: 'p1lunch.jpg',
         nutrition: {
             calories: 300,
             protein: 15,
@@ -33,7 +32,7 @@ const productData = [
         id: 3,
         name: 'Dinner',
         description: 'Roti along with boiled vegetables',
-        image: 'product3.jpg',
+        image: 'p1breakfast.jpg',
         nutrition: {
             calories: 280,
             protein: 12,
@@ -60,12 +59,11 @@ export default function MealPlan() {
                 <div className="product-cards">
                     {productData.map((product) => (
                         <div key={product.id} className="product-card">
-                            <img src={product.image} alt={product.name} />
+                            <img src={require(`./images/${product.image}`).default} alt={'Main Image'} />
                             <div className="product-name">{product.name}</div>
                             <div className="product-description">{product.description}</div>
                             <h1 className="table-heading">Nutritional Breakdown</h1>
                             <table className="nutrition-table">
-
                                 <thead>
                                 <tr>
                                     <th>Nutrient</th>

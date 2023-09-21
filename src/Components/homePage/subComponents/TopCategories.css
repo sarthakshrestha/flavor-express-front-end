@@ -43,12 +43,12 @@
 }
 .category_box img {
   max-width: 100px;
-  height: auto;
+  height: 85px;
   border-radius: 50%;
 }
 
 .category_box p {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 20px;
   margin: 10px 0;
   padding-top: 20px;

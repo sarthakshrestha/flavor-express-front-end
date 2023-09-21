@@ -52,7 +52,7 @@
 }
 
 .restaurant p {
-  font-family: "DM Sans", serif;
+  font-family: "Jost", serif;
   margin-top: 10px;
   font-weight: bold;
   font-size: 28px;
@@ -62,7 +62,6 @@
   background-color: #ff4444;
   color: white;
   padding: 10px 20px;
-  border: none;
   border-radius: 10px;
   font-size: 25px;
   cursor: pointer;

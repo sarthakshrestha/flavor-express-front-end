@@ -8,6 +8,7 @@ const productData = [
     {
         id: 1,
         name: 'Breakfast',
+        description: 'Roti along with boiled vegetables',
         image: 'product1.jpg',
         nutrition: {
             calories: 250,
@@ -19,6 +20,7 @@ const productData = [
     {
         id: 2,
         name: 'Lunch',
+        description: 'Roti along with boiled vegetables',
         image: 'product2.jpg',
         nutrition: {
             calories: 300,
@@ -30,6 +32,7 @@ const productData = [
     {
         id: 3,
         name: 'Dinner',
+        description: 'Roti along with boiled vegetables',
         image: 'product3.jpg',
         nutrition: {
             calories: 280,
@@ -51,7 +54,7 @@ export default function MealPlan() {
                     We have FE-Kitchen
                 </div>
                 <div className="plan-number">
-                    <h1 className="plan-title">Plan number 1</h1>
+                    <h1 className="plan-title">Plan #1</h1>
                 </div>
 
                 <div className="product-cards">
@@ -59,7 +62,10 @@ export default function MealPlan() {
                         <div key={product.id} className="product-card">
                             <img src={product.image} alt={product.name} />
                             <div className="product-name">{product.name}</div>
+                            <div className="product-description">{product.description}</div>
+                            <h1 className="table-heading">Nutritional Breakdown</h1>
                             <table className="nutrition-table">
+
                                 <thead>
                                 <tr>
                                     <th>Nutrient</th>

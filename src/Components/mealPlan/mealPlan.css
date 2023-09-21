@@ -1,0 +1,49 @@
+
+.meal-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.meal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.meal-restaurant {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+}
+
+.product-card img {
+    max-width: 100%;
+}
+
+.product-name {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.nutrition-table {
+    width: 100%;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+    padding: 5px;
+    text-align: left;
+}
+
+/* Add your other styles and media queries as needed */

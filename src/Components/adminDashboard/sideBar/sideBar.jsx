@@ -70,7 +70,7 @@ function Sidebar() {
                     <div className="admin-profile hide">
                         <img src="./img/face-1.png" alt=""/>
                         <div className="admin-info">
-                            <h1 className="bottom-title">Managed by</h1>
+                            <h1 className="bottom-title">Powered by</h1>
                             <a>Flavor Express</a>
                         </div>
                     </div>

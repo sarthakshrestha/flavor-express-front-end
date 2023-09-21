@@ -22,7 +22,7 @@
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
     background-color: white;
-    min-height: 100vh;
+    min-height: 180vh;
     display: flex;
     position: relative;
 }
@@ -32,7 +32,7 @@
     position: sticky;
     top: 1rem;
     left: 0;
-    height: 120vh;
+    height: 180vh;
     background-color: #444444;
     width: 16rem;
     padding: 1.8rem 0.85rem;

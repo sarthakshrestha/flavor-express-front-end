@@ -64,14 +64,11 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-
 .table1 {
     margin-top: 19rem;
-    margin-right: 720px;
-    position: marker;
-    margin-left: -72%;
+    margin-left: -70rem;
+    position: relative;
     /*padding: 20px;*/
-
 }
 
 .table1 h1{
@@ -82,11 +79,12 @@
 }
 
 .table1 .order-table {
-    width: 1100px;
+    width: 980px;
     border-collapse: collapse;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-radius: 5px;
+    margin-right: 80rem;
 }
 
 .table1 .order-table th,

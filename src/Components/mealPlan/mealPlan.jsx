@@ -7,7 +7,7 @@ import "./mealPlan.css";
 const productData = [
     {
         id: 1,
-        name: 'Product 1',
+        name: 'Breakfast',
         image: 'product1.jpg',
         nutrition: {
             calories: 250,
@@ -18,7 +18,7 @@ const productData = [
     },
     {
         id: 2,
-        name: 'Product 2',
+        name: 'Lunch',
         image: 'product2.jpg',
         nutrition: {
             calories: 300,
@@ -29,7 +29,7 @@ const productData = [
     },
     {
         id: 3,
-        name: 'Product 3',
+        name: 'Dinner',
         image: 'product3.jpg',
         nutrition: {
             calories: 280,
@@ -47,8 +47,11 @@ export default function MealPlan() {
             <div className="meal-content">
                 <div className="meal-title">Create a daily meal plan of your choice</div>
                 <div className="meal-restaurant">
-                    Serving the best daily meal plans, <br />
+                    For Serving the best daily meal plans, <br />
                     We have FE-Kitchen
+                </div>
+                <div className="plan-number">
+                    <h1 className="plan-title">Plan number 1</h1>
                 </div>
 
                 <div className="product-cards">

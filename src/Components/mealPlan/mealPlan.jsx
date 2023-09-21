@@ -76,20 +76,60 @@ const productData = [
             fat: 18,
         },
     },
+    {
+        id: 7,
+        name: 'Breakfast',
+        description: 'Greek yogurt with berries',
+        image: 'p1breakfast.png',
+        nutrition: {
+            calories: 180,
+            protein: 12,
+            carbs: 20,
+            fat: 6,
+        },
+    },
+    {
+        id: 8,
+        name: 'Lunch',
+        description: 'Vegetable stir-fry with tofu',
+        image: 'p1lunch.png',
+        nutrition: {
+            calories: 320,
+            protein: 16,
+            carbs: 30,
+            fat: 14,
+        },
+    },
+    {
+        id: 9,
+        name: 'Dinner',
+        description: 'Spaghetti with marinara sauce',
+        image: 'p1breakfast.png',
+        nutrition: {
+            calories: 350,
+            protein: 12,
+            carbs: 45,
+            fat: 10,
+        },
+    },
 ];
 
 export default function MealPlan() {
     return (
         <>
-            <Header />
+            <Header/>
             <div className="meal-content">
                 <div className="meal-title">Create a daily meal plan of your choice</div>
                 <div className="meal-restaurant">
-                    For Serving the best daily meal plans, <br />
-                    We have FE-Kitchen
+                    Short on time but hungry for great food? <br/> Feast your way through the day with FE-Kitchen's
+                    daily meal
+                    wonders!
+                </div>
+                <div className="meal-text">
+                    Presented in hassle-free, microwave-friendly containers for effortless dining.
                 </div>
                 <div className="plan-number">
-                    <h1 className="plan-title">Plan #1</h1>
+                    <h1 className="plan-title">Plan #1 <span className="veg-option">(Veg-Option)</span></h1>
                 </div>
 
                 <div className="product-cards">
@@ -134,10 +174,10 @@ export default function MealPlan() {
                 </div>
                 <button className="plan-add-btn">Add Plan to Cart</button>
                 <div className="plan-number">
-                    <h1 className="plan-title">Plan #2</h1>
+                    <h1 className="plan-title">Plan #2 <span className="nonveg-option">(Non-Veg Option)</span></h1>
                 </div>
                 <div className="product-cards">
-                    {productData.slice(3).map((product) => (
+                    {productData.slice(3, 6).map((product) => (
                         <div key={product.id} className="product-card">
                             <img
                                 className="food-image"
@@ -176,8 +216,53 @@ export default function MealPlan() {
                         </div>
                     ))}
                 </div>
+                <button className="plan-add-btn">Add Plan to Cart</button>
+                <div className="plan-number">
+                    <h1 className="plan-title">Plan #3 <span className="nonveg-option">(Mix Option)</span></h1>
+                </div>
+                <div className="product-cards">
+                    {productData.slice(6, 9).map((product) => (
+                        <div key={product.id} className="product-card">
+                            <img
+                                className="food-image"
+                                src={require(`./images/${product.image}`)}
+                                alt={product.name}
+                            />
+                            <div className="product-name">{product.name}</div>
+                            <div className="product-description">{product.description}</div>
+                            <h1 className="table-heading">Nutritional Breakdown</h1>
+                            <table className="nutrition-table">
+                                <thead>
+                                <tr>
+                                    <th>Nutrient</th>
+                                    <th>Amount</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Calories</td>
+                                    <td>{product.nutrition.calories} kcal</td>
+                                </tr>
+                                <tr>
+                                    <td>Protein</td>
+                                    <td>{product.nutrition.protein} g</td>
+                                </tr>
+                                <tr>
+                                    <td>Carbs</td>
+                                    <td>{product.nutrition.carbs} g</td>
+                                </tr>
+                                <tr>
+                                    <td>Fat</td>
+                                    <td>{product.nutrition.fat} g</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    ))}
+                </div>
+                <button className="plan-add-btn">Add Plan to Cart</button>
             </div>
-            <Footer />
+            <Footer/>
         </>
     );
 }

@@ -33,6 +33,11 @@ export default function Cart() {
                     <span className="nutrient-total-cal">250</span>
                 </div>
             </div>
+            <div className="food-cart">
+
+
+            </div>
+
             <Footer/>
         </>)
 }

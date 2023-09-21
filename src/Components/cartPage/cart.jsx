@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 import Header from "../../sharedComponents/header/Header";
 import Footer from "../../sharedComponents/footer/Footer";
@@ -6,7 +6,9 @@ import "./cartPage.css";
 
 export default function Cart() {
 
-    const cartItems = [
+    const [promoCode, setPromoCode] = useState("");
+
+    const [cartItems, setCartItems] = useState([
         {
             id: 1,
             photo: 'coffee.png',
@@ -25,7 +27,7 @@ export default function Cart() {
             quantity: 3,
             price: 8.49,
         },
-    ];
+    ]);
 
     //Create a async function to load cart items from backend
 
@@ -33,6 +35,29 @@ export default function Cart() {
         //call above function from here
         console.log("hello")
     }, []);
+
+    const incrementQuantity = (itemId) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+            )
+        );
+    };
+
+    const handlePromoCodeChange = (event) => {
+        setPromoCode(event.target.value);
+    };
+
+    const decrementQuantity = (itemId) => {
+        setCartItems((prevItems) =>
+            prevItems.map((item) =>
+                item.id === itemId && item.quantity > 1
+                    ? { ...item, quantity: item.quantity - 1 }
+                    : item
+            )
+        );
+    };
+
 
     return (<>
             <Header/>
@@ -94,7 +119,21 @@ export default function Cart() {
                                     <button className="remove-item">Remove Items</button>
                                 </div>
                             </td>
-                            <td>{item.quantity}</td>
+                            <td>
+                                    <button
+                                        className="quantity-button"
+                                        onClick={() => decrementQuantity(item.id)}
+                                    >
+                                        -
+                                    </button>
+                                    <span className="quantity">{item.quantity}</span>
+                                    <button
+                                        className="quantity-button"
+                                        onClick={() => incrementQuantity(item.id)}
+                                    >
+                                        +
+                                    </button>
+                            </td>
                             <td className="price-td">${item.price.toFixed(2)}</td>
                         </tr>
                     ))}
@@ -105,6 +144,17 @@ export default function Cart() {
         <div className="calculation">
             <h1>Your Total: </h1>
             <p>Note: 5% is for the delivery charge</p>
+        </div>
+        <hr className="rounded-bar"></hr>
+        <div className="promo-code-box">
+            <input
+                type="text"
+                placeholder="Enter Your Promo Code"
+                value={promoCode}
+                onChange={handlePromoCodeChange}
+                className="promo-code-input"
+            />
+            <button className="apply-promo-button">Apply</button>
         </div>
             <Footer/>
         </>)

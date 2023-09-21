@@ -10,7 +10,7 @@ export default function PreferredRestaurants() {
   return (
     <div className="preferred_section">
       <div className="preferred_content">
-        <h1>Preferred Restaurants</h1>
+        <h1>Featured Restaurants</h1>
         <div className="restaurant_list">
           <div className="restaurant-row">
             <div className="restaurant">

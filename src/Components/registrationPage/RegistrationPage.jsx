@@ -171,7 +171,7 @@ export default function RegistrationPage() {
                         </div>
                         <br/>
                         <div className="register-button">
-                            <button>Create Account</button>
+                            <button className="register-button">Create Account</button>
                         </div>
                     </form>
                     <div className="already">

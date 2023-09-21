@@ -12,7 +12,7 @@
 }
 
 .top_categories_section h1 {
-  font-family: "Gentium Plus", serif;
+  font-family: "Poppins", serif;
   font-size: 45px;
   padding-bottom: 3rem;
 }
@@ -43,7 +43,7 @@
 }
 .category_box img {
   max-width: 100px;
-  height: auto;
+  height: 85px;
   border-radius: 50%;
 }
 

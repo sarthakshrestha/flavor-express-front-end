@@ -16,7 +16,7 @@
     text-align: center;
     font-family: 'DM Sans', sans-serif;
     background-color: #f9f9f9;
-    margin: -18% 9% 8% 65%;
+    margin: -15% 9% 8% 65%;
     width: 28%;
 }
 
@@ -136,6 +136,10 @@
     font-size: 20px;
     font-family: Arial, sans-serif;
     color: white;
+    padding: 10px;
+    background-color: darkred;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 .allergy {
@@ -146,11 +150,21 @@
 hr.rounded {
     border-top: 8px solid #bbb;
     border-radius: 5px;
-    margin-top: -7%;
-    margin-bottom: 5%;
-    width: 89%;
-    margin-left: 6%;
+    margin-top: -3%;
+    margin-bottom: 8%;
+    width: 78%;
+    margin-left: 10%;
 }
+
+hr.rounded-bar {
+    border-top: 8px solid darkgray;
+    border-radius: 5px;
+    margin-top: 3%;
+    margin-bottom: 8%;
+    width: 78%;
+    margin-left: 10%;
+}
+
 
 .calculation {
     font-size: 38px;
@@ -168,3 +182,85 @@ hr.rounded {
 .calculation p {
     font-size: 32px;
 }
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-button {
+    background-color: #2E5A88;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-button:hover {
+    background-color: #0056b3;
+}
+
+.quantity {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.promo-code-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+}
+
+.promo-code-box input[type="text"] {
+    flex: 1;
+    border: 4px solid #ccc;
+    border-radius: 4px;
+    color: white;
+    background-color: #5A5A5A;
+    padding: 22px;
+    font-size: 26px;
+    font-family: 'Koulen', cursive;
+}
+
+.apply-promo-button {
+    background-color: #00a63f;
+    margin-left: 2%;
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    padding: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Koulen', cursive;
+    border-radius: 14px;
+    width: 120px;
+}
+
+.apply-promo-button:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+.promo-text{
+    font-size: 32px;
+    font-family: 'Koulen', cursive;
+    margin-right: -40%;
+    position: relative;
+}
+
+.promo-code-input::placeholder {
+    font-size: 25px;
+    font-family: 'Koulen', cursive;
+    color: white;
+}
+
+

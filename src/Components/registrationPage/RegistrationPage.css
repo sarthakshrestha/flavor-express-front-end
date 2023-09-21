@@ -66,14 +66,15 @@ input[type="password"] {
 }
 
 .register-button {
-  margin-top: 15px;
   text-align: center;
-  padding: 10px 20px;
+  padding: 9px 7px;
   background-color: #ff4444;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
 }
 
 .register-button button:hover {

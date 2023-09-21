@@ -17,7 +17,7 @@
   justify-content: space-around;
 }
 .customer_content h1 {
-  font-family: "Gentium Plus", serif;
+  font-family: "Poppins", serif;
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 45px;
@@ -31,7 +31,7 @@
 
 .review {
   width: calc(30% - 20px);
-  margin: 20px;
+  margin: 0px 20px 20px 20px;
   padding: 20px;
   text-align: center;
 }
@@ -43,7 +43,7 @@
 }
 
 .review h3 {
-  font-family: "Gentium Plus", serif;
+  font-family: "DM Sans", serif;
   margin: 10px 0;
   font-size: 28px;
 }

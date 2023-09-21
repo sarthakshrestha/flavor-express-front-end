@@ -10,7 +10,7 @@
 }
 
 .preferred_content h1 {
-  font-family: "Gentium Plus", serif;
+  font-family: "Poppins", serif;
   padding-top: 20px;
   font-size: 45px;
   margin-bottom: 20px;
@@ -34,16 +34,25 @@
   flex-basis: calc(33.33% - 20px);
   margin: 0 10px;
   padding: 50px;
+  transition: transform 1.5s ease;
+  overflow: hidden;
 }
 
 .restaurant img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover;
+}
+
+.restaurant img:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+
 }
 
 .restaurant p {
-  font-family: "Gentium Plus", serif;
+  font-family: "DM Sans", serif;
   margin-top: 10px;
   font-weight: bold;
   font-size: 28px;

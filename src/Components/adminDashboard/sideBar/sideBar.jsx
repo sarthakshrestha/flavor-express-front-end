@@ -1,14 +1,15 @@
-import React, {useState} from "react";
-import "./sideBar.css"; // Make sure to import your CSS file
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./sideBar.css";
 
 function Sidebar() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const sidebarLinks = [
-        {label: "Dashboard", icon: "tachometer"},
-        {label: "Users", icon: "folder"},
-        {label: "Restaurants", icon: "message-square-detail"},
-        {label: "Drivers", icon: "bar-chart-square"},
+        { label: "Dashboard", icon: "tachometer", to: "/" },
+        { label: "Users", icon: "folder", to: "/admin/users" },
+        { label: "Restaurants", icon: "message-square-detail", to: "/admin/restaurants" },
+        { label: "Drivers", icon: "bar-chart-square", to: "/admin/drivers" },
     ];
 
     const changeLink = (index) => {
@@ -37,14 +38,9 @@ function Sidebar() {
             <div className="sidebar-links">
                 <ul>
                     {sidebarLinks.map((link, index) => (
-                        <li
-                            className="tooltip-element"
-                            data-tooltip={index}
-                            key={index}
-                            onClick={() => changeLink(index)}
-                        >
-                            <a
-                                href="#"
+                        <li className="tooltip-element" data-tooltip={index} key={index}>
+                            <Link
+                                to={link.to}
                                 className={index === activeIndex ? "active" : ""}
                                 data-active={index}
                                 onMouseOver={() => showTooltip(index)}
@@ -55,10 +51,9 @@ function Sidebar() {
                                     <i className={`bx bxs-${link.icon}`}></i>
                                 </div>
                                 <span className="link hide">{link.label}</span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
-
                 </ul>
             </div>
 
@@ -68,7 +63,7 @@ function Sidebar() {
                 </a>
                 <div className="admin-user tooltip-element" data-tooltip="1">
                     <div className="admin-profile hide">
-                        <img src="./img/face-1.png" alt=""/>
+                        <img src="./img/face-1.png" alt="" />
                         <div className="admin-info">
                             <h1 className="bottom-title">Powered by</h1>
                             <a>Flavor Express</a>
@@ -76,11 +71,12 @@ function Sidebar() {
                     </div>
                 </div>
             </div>
-            <br/>
+            <br />
             <div className="log-out">
                 <button className="logout-btn">Logout</button>
             </div>
-        </nav>);
+        </nav>
+    );
 }
 
 export default Sidebar;

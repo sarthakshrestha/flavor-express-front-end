@@ -14,6 +14,9 @@ import RestaurantLoginPage from "./Components/loginPage/restaurantLoginPage/Rest
 import CustomerSidebar from "./Components/customerDashboard/customerSidebar/customerSidebar";
 import { CartProvider } from "./Components/cartPage/cartContext"; // Import CartProvider
 import DriverLoginPage from "./Components/loginPage/driverLoginPage/DriverLoginPage";
+import AllRestaurants from "./Components/adminDashboard/restaurantDashboard/restaurantDashboard";
+
+
 function App() {
     return (
         <CartProvider> {/* Wrap your entire app with CartProvider */}
@@ -28,6 +31,7 @@ function App() {
                     <Route path="/customer" element={<CustomerSidebar/>} />
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/registrationPage" element={<RegistrationPage />} />
+                    <Route path="/admin/restaurants" element={<AllRestaurants/>} />
 
                     <Route path="/foodPage" element={<FoodPage />} />
                     <Route path="/cart" element={<Cart />} />

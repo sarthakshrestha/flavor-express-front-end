@@ -62,8 +62,8 @@ export default function LoginPage() {
             Log in
           </button>
           <div className="already">
-            <p>Don't have an account?</p>
-            <NavLink to="/registrationPage">Sign Up</NavLink>
+            <p>Don't have an account? <NavLink to="/registrationPage">Sign Up</NavLink></p>
+
           </div>
         </div>
       </div>

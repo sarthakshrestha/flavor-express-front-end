@@ -98,6 +98,7 @@ input[type="password"] {
   background-color: #ff4444;
 }
 
+
 .already {
   display: flex;
   align-items: center;
@@ -106,11 +107,12 @@ input[type="password"] {
 
 .already p {
   margin-right: 10px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .already a{
   margin-bottom: 10px;
-  font-family: "Poppins", serif;
+  font-family: "Jost", sans-serif text-shadow;
 }
 
 .EmptyBox {

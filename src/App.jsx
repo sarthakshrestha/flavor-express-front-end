@@ -14,8 +14,8 @@ import RestaurantLoginPage from "./Components/loginPage/restaurantLoginPage/Rest
 import CustomerSidebar from "./Components/customerDashboard/customerSidebar/customerSidebar";
 import { CartProvider } from "./Components/cartPage/cartContext"; // Import CartProvider
 import DriverLoginPage from "./Components/loginPage/driverLoginPage/DriverLoginPage";
-import AllRestaurants from "./Components/adminDashboard/restaurantDashboard/restaurantDashboard";
-
+import AllRestaurants from "./Components/adminDashboard/restaurantView/restaurantView";
+import AllCustomers from "./Components/adminDashboard/usersView/usersView";
 
 function App() {
     return (
@@ -32,6 +32,8 @@ function App() {
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/registrationPage" element={<RegistrationPage />} />
                     <Route path="/admin/restaurants" element={<AllRestaurants/>} />
+                    <Route path="/admin/customers" element={<AllCustomers/>} />
+
 
                     <Route path="/foodPage" element={<FoodPage />} />
                     <Route path="/cart" element={<Cart />} />

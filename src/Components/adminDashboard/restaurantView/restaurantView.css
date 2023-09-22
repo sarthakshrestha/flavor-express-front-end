@@ -1,17 +1,18 @@
-/* restaurantDashboard.css */
+
 
 /* Styles for the AllRestaurants component */
 .restaurant_info_admin {
     padding: 20px;
-    position: relative;
-    margin-right: 950px;
-    margin-bottom: 700px;
-    margin-top: 350px;
+    margin-left: 250px;
+    margin-top: 90px;
+    margin-bottom: 390px;
 }
 
 .admin_header h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: "Jost", sans-serif;
+    font-size: 72px;
 }
 
 .restaurant_info_admin table {

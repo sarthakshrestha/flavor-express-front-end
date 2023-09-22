@@ -26,7 +26,7 @@
 }
 
 .s-view {
-    margin-left: -63%;
+    margin-right: 2%;
     position: relative;
 }
 
@@ -69,7 +69,7 @@
 .table1 {
     margin-top: 19rem;
     margin-left: -61rem;
-    position: relative;
+    position: static;
     /*padding: 20px;*/
 }
 
@@ -131,7 +131,7 @@
 @media screen and (min-width: 1200px) {
     .s-view {
         margin-left: 0;
-        flex: 2;
+        flex: 1;
     }
 }
 

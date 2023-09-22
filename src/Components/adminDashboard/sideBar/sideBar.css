@@ -57,7 +57,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 10ch;
 }
 
 .sidebar-top .logo {
@@ -208,8 +208,7 @@
 
 /* Title Main styles */
 .titleMain {
-    margin-top: 25%;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
     font-family: 'DM Sans', sans-serif;
     font-size: 2rem;
     margin-right: 5%;

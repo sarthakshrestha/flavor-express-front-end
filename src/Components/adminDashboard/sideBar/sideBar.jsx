@@ -6,8 +6,8 @@ function Sidebar() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const sidebarLinks = [
-        { label: "Dashboard", icon: "tachometer", to: "/" },
-        { label: "Users", icon: "folder", to: "/admin/users" },
+        { label: "Dashboard", icon: "tachometer", to: "/admin" },
+        { label: "Customers", icon: "folder", to: "/admin/customers" },
         { label: "Restaurants", icon: "message-square-detail", to: "/admin/restaurants" },
         { label: "Drivers", icon: "bar-chart-square", to: "/admin/drivers" },
     ];

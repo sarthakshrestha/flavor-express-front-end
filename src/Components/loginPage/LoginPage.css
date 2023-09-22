@@ -38,6 +38,7 @@
 }
 
 .LoginContainer p {
+  font-family: "Jost", serif;
   font-size: 16px;
   margin-bottom: 20px;
   /* margin-left: 20px; */
@@ -75,7 +76,7 @@ input[type="password"] {
   text-decoration: none;
   color: black;
   margin-bottom: 30px;
-  font-family: "Poppins", serif;
+  font-family: "Jost", serif;
 }
 
 .forgot-password a:hover {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-import picture from "../loginPage/images/picture.jpg";
+import admin from "../loginPage/images/admin.jpg";
 import Footer from "../../sharedComponents/footer/Footer";
 import "./AdminLoginPage.css";
 import { NavLink } from "react-router-dom";
@@ -33,7 +33,7 @@ export default function AdminLoginPage() {
     <>
       <div className="loginbody">
         <div className="login-image">
-          <img src={picture} alt="" />
+          <img src={admin} alt="" />
         </div>
         <div className="LoginContainer">
           <h4>Login to your account</h4>

@@ -14,11 +14,13 @@
 .login-image {
   flex: 1;
   padding: 20px;
+  width: 700px;
 }
 
 .login-image img {
   max-width: 100%;
   display: block;
+  width: 600px;
   margin: 0 auto;
 }
 

@@ -1,75 +1,78 @@
-import React from "react";
-import { useRef } from "react";
-import picture from "../loginPage/images/picture.jpg";
+import React, {useRef} from "react";
+import restaurant from "../loginPage/images/restaurant.jpg";
 import Footer from "../../sharedComponents/footer/Footer";
-import "./AdminLoginPage.css";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import axios from "axios";
-export default function AdminLoginPage() {
-  let emailRef = useRef("");
-  let passwordRef = useRef("");
+import Header from "../../sharedComponents/header/Header";
+import "./RestaurantLoginPage.css";
+
+export default function RestaurantLoginPage() {
+
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   function loginHandle() {
     const data = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
-      role: "ROLE_ADMIN",
+      role: "ROLE_RESTAURANT",
     };
 
     axios
-      .post("http://localhost:8081/auth/login", data)
-      .then((response) => {
-        console.log(response.data.jwtToken);
-        localStorage.setItem(
-          "FlavorExpressUserToken",
-          JSON.stringify(response.data.jwtToken)
-        );
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+        .post("http://localhost:8081/auth/login", data)
+        .then((response) => {
+          console.log(response.data.jwtToken);
+          localStorage.setItem(
+              "FlavorExpressUserToken",
+              JSON.stringify(response.data.jwtToken)
+          );
+        })
+        .catch((error) => {
+          console.error(error);
+        });
   }
+
   return (
-    <>
-      <div className="loginbody">
-        <div className="login-image">
-          <img src={picture} alt="" />
+      <>
+        <Header/>
+        <div className="loginbody">
+          <div className="login-image">
+            <img src={restaurant} alt=""/>
+          </div>
+          <div className="LoginContainer">
+            <h4>Login to access your restaurant</h4>
+            <p>Please enter the correct credentials to access restaurant dashboard.</p>
+            <div className="emailDiv">
+              <p>Email</p>
+              <input
+                  type="email"
+                  required
+                  placeholder="flavorexpress@gmail.com"
+                  ref={emailRef}
+              />
+            </div>
+            <div className="passwordDiv">
+              <p>Password</p>
+              <input
+                  type="password"
+                  required
+                  placeholder="password"
+                  ref={passwordRef}
+              />
+            </div>
+            <div className="forgot-password">
+              <NavLink to="/registrationPage"> Forgot Password</NavLink>
+            </div>
+            <button className="logInButton" onClick={loginHandle}>
+              Log in
+            </button>
+            <div className="already-r">
+              <p>Don't have an account associated with Flavor Express? Please email the admin to register!</p>
+            </div>
+          </div>
         </div>
-        <div className="LoginContainer">
-          <h4>Login to your account</h4>
-          <p>Welcome back, enter your credentials to access your account</p>
-          <div className="emailDiv">
-            <p>Email</p>
-            <input
-              type="email"
-              required
-              placeholder="flavorexpress@gmail.com"
-              ref={emailRef}
-            />
-          </div>
-          <div className="passwordDiv">
-            <p>Password</p>
-            <input
-              type="password"
-              required
-              placeholder="password"
-              ref={passwordRef}
-            />
-          </div>
-          <div className="forgot-password">
-            <NavLink to="/registrationPage"> Forgot Password</NavLink>
-          </div>
-          <button className="logInButton" onClick={loginHandle}>
-            Log in
-          </button>
-          <div className="already">
-            <p>Don't have an account?</p>
-            <NavLink to="/registrationPage">Sign Up</NavLink>
-          </div>
-        </div>
-      </div>
-      <div className="EmptyBox"></div>
-      <Footer />
-    </>
+        <div className="EmptyBox"></div>
+        <Footer/>
+      </>
   );
 }

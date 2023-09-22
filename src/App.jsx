@@ -3,6 +3,8 @@ import {Routes, Route} from "react-router-dom";
 import HomePage from "./Components/homePage/HomePage";
 import LoginPage from "./Components/loginPage/LoginPage";
 import AdminLoginPage from "./Components/loginPage/AdminLoginPage";
+import RestaurantLoginPage from "./Components/loginPage/RestaurantLoginPage";
+import DriverLoginPage from "./Components/loginPage/DriverLoginPage"
 // import RestaurantsPage from "./Components/foodPage/foodPage";
 import RegistrationPage from "./Components/registrationPage/RegistrationPage";
 import Header from "./sharedComponents/header/Header";
@@ -19,7 +21,8 @@ function App() {
                 <Route path="/loginPage" element={<LoginPage/>}/>
                 <Route path="/adminLoginPage" element={<AdminLoginPage/>}/>
                 <Route path="/admin" element={<AdminDashboard/>}/>
-                {/*<Route path="/restaurantLoginPage" element={<RestaurantLoginPage />} />*/}
+                <Route path="/restaurantLoginPage" element={<RestaurantLoginPage />} />
+                <Route path="/driverLoginPage" element={<DriverLoginPage />} />
                 <Route path="/registrationPage" element={<RegistrationPage/>}/>
                 <Route path="/foodPage" element={<FoodPage/>}/>
                 <Route path="/cart" element={<Cart/>}/>

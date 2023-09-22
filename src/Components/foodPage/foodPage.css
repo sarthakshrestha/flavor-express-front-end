@@ -152,8 +152,10 @@
     background-color: grey;
     border-radius: 12px;
     font-size: 16px;
-    font-family: 'Koulen', cursive;
+    font-family: 'DM Sans', sans-serif;
     margin-right: 12px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .description-button:hover {
@@ -161,7 +163,8 @@
     background-color: black;
     border-radius: 12px;
     font-size: 16px;
-    font-family: 'Koulen', cursive;
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px;
 }
 
 .allergies {
@@ -216,7 +219,8 @@
     margin-top: 10px;
     border-radius: 12px;
     font-size: 16px;
-    font-family: 'Koulen', cursive;
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px;
     color: white;
     text-decoration: none;
 }

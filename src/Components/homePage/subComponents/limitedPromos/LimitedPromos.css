@@ -8,7 +8,9 @@
   align-items: center;
   justify-content: center;
   height: 500px;
+  margin-bottom: 5%;
 }
+
 
 .limited_promos_content {
   text-align: center;
@@ -17,13 +19,15 @@
   align-items: center;
   justify-content: center;
   padding-top: 5rem;
+  margin-bottom: -14%;
 }
 .limited_promos_content h1 {
   font-family: "Poppins", serif;
-  font-size: 45px;
+  font-size: 82px;
   font-weight: bold;
   margin-top: 1rem;
   padding-bottom: 3rem;
+  color: #D32F2F;
 }
 
 .promo_box {
@@ -32,7 +36,6 @@
 
   padding: 80px;
   border-radius: 10px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,5 +44,6 @@
 
 .promo_box p {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 63px;
+  font-family: 'Koulen', cursive;
 }

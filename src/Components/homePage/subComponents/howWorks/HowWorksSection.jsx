@@ -1,7 +1,7 @@
 import React from "react";
-import MyLocationImage from "../images/Location tracking-pana.png";
-import OnlineGrocery from "../images/Order food-amico.png";
-import OnTheWay from "../images/Delivery-amico.png";
+import MyLocationImage from "../../images/Location tracking-pana.png";
+import OnlineGrocery from "../../images/Order food-amico.png";
+import OnTheWay from "../../images/Delivery-amico.png";
 
 import "./HowWorksSection.css";
 

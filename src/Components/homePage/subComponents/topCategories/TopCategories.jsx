@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./TopCategories.css";
 
-import Pizza from "../images/hawaiian-pizza.jpg";
-import Burger from "../images/big-tasty-burger.jpg";
-import Drinks from "../images/refreshing-drink.jpg";
-import Japanese from "../images/fresh-tuna-diet-dinner-salmon.jpg";
-import Biryani from "../images/dish-with-rice.jpg";
-import Chinese from "../images/delicious-food-black-board.jpg";
+import Pizza from "../../images/hawaiian-pizza.jpg";
+import Burger from "../../images/big-tasty-burger.jpg";
+import Drinks from "../../images/refreshing-drink.jpg";
+import Japanese from "../../images/fresh-tuna-diet-dinner-salmon.jpg";
+import Biryani from "../../images/dish-with-rice.jpg";
+import Chinese from "../../images/delicious-food-black-board.jpg";
 
 export default function TopCategories() {
   const allCategories = [

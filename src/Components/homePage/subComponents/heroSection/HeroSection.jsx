@@ -30,9 +30,9 @@ export default function HeroSection() {
         <h1 className="heading">Your Cravings, Our Delivery</h1>
         <div className="search_bar">
           <div className="search_input">
-            <span className="search_icon">
-              <FaSearch />
-            </span>
+            {/*<span className="search_icon">*/}
+            {/*  <FaSearch />*/}
+            {/*</span>*/}
             <input type="text" placeholder="Search for Restaurants or Items" />
           </div>
           <button className="search_button">Search</button>

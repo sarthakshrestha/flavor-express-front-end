@@ -1,8 +1,8 @@
 import React from "react";
 import "./CustomerReview.css";
-import Profile1 from "../images/profile 8.png";
-import Profile2 from "../images/profile 9.png";
-import Profile3 from "../images/profile 10.png";
+import Profile1 from "../../images/profile 8.png";
+import Profile2 from "../../images/profile 9.png";
+import Profile3 from "../../images/profile 10.png";
 
 export default function CustomerReview() {
   return (

@@ -1,0 +1,78 @@
+.small_meal_plan_section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.veg{
+    color: #00a63f;
+    text-decoration: underline;
+}
+
+.meal-title-one {
+    margin-top: 5%;
+    font-size: 56px;
+    color: #444444;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 4%;
+}
+
+.category_container {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal display */
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    margin-bottom: 4%;
+}
+
+.category_box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px 20px; /* Adjust margins for spacing */
+    transition: transform 0.3s;
+    max-width: 890px; /* Limit the maximum width of each box */
+    display: flex; /* Add this to center content vertically */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.category_box:hover {
+    transform: scale(1.05);
+}
+
+.category_content {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.red-v{
+    color: darkred;
+    text-decoration: underline;
+}
+
+.category_content img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 380px;
+}
+
+.category_content .description {
+    margin-top: 20px; /* Adjust as needed */
+    font-size: 43px;
+    color: #333;
+}
+
+.category_content p{
+    font-size: 21px;
+}

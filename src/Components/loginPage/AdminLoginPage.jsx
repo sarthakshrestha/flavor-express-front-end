@@ -5,6 +5,9 @@ import Footer from "../../sharedComponents/footer/Footer";
 import "./AdminLoginPage.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import Header from "../../sharedComponents/header/Header";
+
+
 export default function AdminLoginPage() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
@@ -31,6 +34,7 @@ export default function AdminLoginPage() {
   }
   return (
     <>
+      <Header/>
       <div className="loginbody">
         <div className="login-image">
           <img src={picture} alt="" />

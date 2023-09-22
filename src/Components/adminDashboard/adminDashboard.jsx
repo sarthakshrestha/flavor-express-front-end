@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Sidebar from "./sideBar/sideBar";
 import "./adminDashboard.css";
+import Header from "../../sharedComponents/header/Header";
 
 const jsonData = [{label: "Number of users registered", value: 42}, {
     label: "Number of orders made",

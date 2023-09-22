@@ -1,19 +1,19 @@
 import React from "react";
-import HeroSection from "./subComponents/HeroSection";
-import HowWorksSection from "./subComponents/HowWorksSection";
-import TopCategories from "./subComponents/TopCategories";
-import LimitedPromos from "./subComponents/LimitedPromos";
-import PreferredRestaurants from "./subComponents/PreferredRestaurants";
-import MealPlan from "./subComponents/MealPlan";
-import CustomerReview from "./subComponents/CustomerReview";
+import HeroSection from "./subComponents/heroSection/HeroSection";
+import HowWorksSection from "./subComponents/howWorks/HowWorksSection";
+import TopCategories from "./subComponents/topCategories/TopCategories";
+import LimitedPromos from "./subComponents/limitedPromos/LimitedPromos";
+import PreferredRestaurants from "./subComponents/preferRestro/PreferredRestaurants";
+import MealPlan from "./subComponents/mealPlan/MealPlan";
+import CustomerReview from "./subComponents/customerReview/CustomerReview";
 import Footer from "../../sharedComponents/footer/Footer";
-
+import SmallMealPlan from "./subComponents/smallMealPlan/smallMealPlans";
 export default function HomePage() {
   return (
     <div>
       <HeroSection />
       <HowWorksSection />
-      <TopCategories />
+      <SmallMealPlan/>
       <LimitedPromos />
       <PreferredRestaurants />
       <MealPlan />

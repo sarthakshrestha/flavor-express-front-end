@@ -6,7 +6,7 @@
 
 .hero_section {
   position: relative;
-  background-image: url("../images/dietary-salad-with-mussels-quail-eggs-cucumbers-radish-lettuce-healthy-food-seafood-salad-top-view-flat-lay.jpg");
+  background-image: url("../../images/dietary-salad-with-mussels-quail-eggs-cucumbers-radish-lettuce-healthy-food-seafood-salad-top-view-flat-lay.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -71,7 +71,7 @@
 
 .content {
   position: absolute;
-  bottom: 25%;
+  bottom: 22%;
   left: 25%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -80,15 +80,17 @@
 
 .heading {
   font-family: "Pacifico", cursive;
-  font-size: 60px;
+  font-size: 52px;
+  margin-left: 190px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-top: -240px;
 }
 
 .search_bar {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 190px;
   margin-top: 20px;
 }
 
@@ -133,7 +135,7 @@ input[type="text"] {
   border-radius: 10px;
   padding: 15px 30px;
   cursor: pointer;
-  font-size: 19px;
+  font-size: 21px;
   transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
 }
 

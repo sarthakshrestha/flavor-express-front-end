@@ -1,11 +1,11 @@
 import React from "react";
 import "./PreferredRestaurants.css";
-import Restaurant1 from "../images/abhishek-sanwa-limbu-5Q-7kgG7xbo-unsplash.jpg";
-import Restaurant2 from "../images/abhishek-sanwa-limbu-LR559Dcst70-unsplash.jpg";
-import Restaurant3 from "../images/ivan-torres-MQUqbmszGGM-unsplash.jpg";
-import Restaurant4 from "../images/abhishek-sanwa-limbu-TiWT_OQ6dnA-unsplash.jpg";
-import Restaurant5 from "../images/sk-uVPV_nV17Tw-unsplash.jpg";
-import Restaurant6 from "../images/shardar-tarikul-islam-YPLcEMcEqaA-unsplash.jpg";
+import Restaurant1 from "../../images/abhishek-sanwa-limbu-5Q-7kgG7xbo-unsplash.jpg";
+import Restaurant2 from "../../images/abhishek-sanwa-limbu-LR559Dcst70-unsplash.jpg";
+import Restaurant3 from "../../images/ivan-torres-MQUqbmszGGM-unsplash.jpg";
+import Restaurant4 from "../../images/abhishek-sanwa-limbu-TiWT_OQ6dnA-unsplash.jpg";
+import Restaurant5 from "../../images/sk-uVPV_nV17Tw-unsplash.jpg";
+import Restaurant6 from "../../images/shardar-tarikul-islam-YPLcEMcEqaA-unsplash.jpg";
 export default function PreferredRestaurants() {
   return (
     <div className="preferred_section">

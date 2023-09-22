@@ -25,7 +25,7 @@ export default function Cart() {
                 <h1 className="n-heading">Nutritional Breakdown</h1>
                 <div className="nutrient">
                     <span className="nutrient-protein">Protein:</span>
-                    <span className="nutrient-value">20g</span>
+                    <span className="nutrient-value"></span>
                 </div>
                 {/* Rest of your code */}
             </div>

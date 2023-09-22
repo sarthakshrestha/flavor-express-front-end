@@ -5,7 +5,7 @@
     font-family: "Poppins", sans-serif;
     margin-left: 10%;
     position: relative;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 /* NutritionalBreakdown.css */
@@ -70,6 +70,10 @@
 
 .nutrient-sodium {
     font-size: 22px;
+}
+
+.food-cart{
+    margin-top: 45px;
 }
 
 /* Add your styles to the CSS file */

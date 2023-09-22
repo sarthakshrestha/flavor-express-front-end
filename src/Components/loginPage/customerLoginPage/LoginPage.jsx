@@ -1,11 +1,11 @@
 import React from "react";
 import { useRef } from "react";
-import picture from "../loginPage/images/picture.jpg";
-import Footer from "../../sharedComponents/footer/Footer";
+import picture from "../images/picture.jpg";
+import Footer from "../../../sharedComponents/footer/Footer";
 import "./LoginPage.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import Header from "../../sharedComponents/header/Header";
+import Header from "../../../sharedComponents/header/Header";
 export default function LoginPage() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
@@ -39,7 +39,7 @@ export default function LoginPage() {
         </div>
         <div className="LoginContainer">
           <h4>Login to your account</h4>
-          <p>Welcome back, enter your ceredentials to access your account</p>
+          <p>Welcome back, enter your credentials to access your account</p>
           <div className="emailDiv">
             <p>Email</p>
             <input
@@ -57,9 +57,6 @@ export default function LoginPage() {
               placeholder="password"
               ref={passwordRef}
             />
-          </div>
-          <div className="forgot-password">
-            <NavLink to="/registrationPage"> Forgot Password</NavLink>
           </div>
           <button className="logInButton" onClick={loginHandle}>
             Log in

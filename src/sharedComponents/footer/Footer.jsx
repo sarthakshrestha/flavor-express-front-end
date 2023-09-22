@@ -58,6 +58,9 @@ export default function Footer() {
               <li>
                 <NavLink to="/restaurantLoginPage">Restaurant Login</NavLink>
               </li>
+              <li>
+                <NavLink to="/driverLoginPage">Driver Login</NavLink>
+              </li>
             </ul>
             <div className="social_icons">
               <h3>Connect with Us on:</h3>

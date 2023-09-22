@@ -1,10 +1,13 @@
 import React from "react";
 import { useRef } from "react";
-import picture from "../loginPage/images/picture.jpg";
-import Footer from "../../sharedComponents/footer/Footer";
+import picture from "../images/admin.jpg";
+import Footer from "../../../sharedComponents/footer/Footer";
 import "./AdminLoginPage.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import Header from "../../../sharedComponents/header/Header";
+
+
 export default function AdminLoginPage() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
@@ -31,12 +34,13 @@ export default function AdminLoginPage() {
   }
   return (
     <>
+      <Header/>
       <div className="loginbody">
         <div className="login-image">
           <img src={picture} alt="" />
         </div>
         <div className="LoginContainer">
-          <h4>Login to your account</h4>
+          <h4>Administrator Login</h4>
           <p>Welcome back, enter your credentials to access your account</p>
           <div className="emailDiv">
             <p>Email</p>
@@ -62,10 +66,6 @@ export default function AdminLoginPage() {
           <button className="logInButton" onClick={loginHandle}>
             Log in
           </button>
-          <div className="already">
-            <p>Don't have an account?</p>
-            <NavLink to="/registrationPage">Sign Up</NavLink>
-          </div>
         </div>
       </div>
       <div className="EmptyBox"></div>

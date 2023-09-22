@@ -89,14 +89,10 @@ input[type="password"] {
   background-color: #ff4444;
 }
 
-.already {
+.already-r {
+  margin-top: 25px;
   display: flex;
   align-items: center;
-  margin-left: 70px;
-}
-
-.already p {
-  margin-right: 10px;
 }
 
 .EmptyBox {

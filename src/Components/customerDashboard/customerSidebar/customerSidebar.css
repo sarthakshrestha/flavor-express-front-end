@@ -1,0 +1,99 @@
+.sidebar {
+    background-color: #444444; /* Dark background color */
+    color: white; /* Text color */
+    font-family: "Poppins", sans-serif;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px; /* Increased padding */
+    overflow-y: auto; /* Add scroll for long lists */
+    font-size: 16px; /* Change font size */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+}
+
+.sidebar .title h1 {
+    font-size: 52px;
+}
+
+.dash{
+    font-size: 68px;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+    font-size: 29px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-right: -30px;
+}
+
+.sidebar li {
+    margin-bottom: 21px; /* Increased spacing between list items */
+    background-color: #5A5A5A;
+    border-radius: 14px;
+    width: 210px;
+}
+
+.sidebar a {
+    color: white; /* Regular link color */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 23px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transition for hover and active effects */
+}
+
+.sidebar a:hover {
+    background-color: white; /* Darker hover color */
+    color: black;
+    border-radius: 12px;
+}
+
+/* Active link style */
+.sidebar a.active {
+    background-color: white; /* Darker hover color */
+    color: black;
+    border-radius: 12px;
+}
+
+/* Icon classes */
+.sidebar .fas {
+    margin-right: 15px; /* Add margin between icon and text */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Additional icons for each menu item */
+.sidebar .fas.fa-tachometer-alt::before {
+    content: "\f3fd"; /* Font Awesome icon code for a dashboard */
+}
+
+.sidebar .fas.fa-users::before {
+    content: "\f0c0"; /* Font Awesome icon code for users */
+}
+
+.sidebar .fas.fa-exchange-alt::before {
+    content: "\f063"; /* Font Awesome icon code for transactions */
+}
+
+.sidebar .fas.fa-user-tie::before {
+    content: "\f508"; /* Font Awesome icon code for agents */
+}
+
+.admin-info{
+    font-family: "Racing Sans One", serif;
+    font-size: 55px;
+    margin-top: 1px;
+}
+
+.admin-info a{
+    color: red;
+}

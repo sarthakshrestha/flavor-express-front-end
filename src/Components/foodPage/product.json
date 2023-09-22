@@ -6,7 +6,8 @@
     "description": "A mouthwatering pizza with your favorite toppings.",
     "restaurant": "Restaurant Zozo Pizza",
     "allergies": "CONTAINS DAIRY PRODUCTS",
-    "price": "Rs. 50"
+    "price": "Rs. 50",
+    "quantity": 0
   },
   {
     "id": 2,
@@ -15,9 +16,9 @@
     "description": "Creamy and rich latte to satisfy your cravings.",
     "restaurant": "BrewCoffee Cafe",
     "allergies": "CONTAINS DAIRY PRODUCTS",
-    "price": "Rs. 50"
-  }
-  ,
+    "price": "Rs. 50",
+    "quantity": 1
+  },
   {
     "id": 3,
     "name": "Filler",
@@ -25,16 +26,17 @@
     "description": "Filler description",
     "restaurant": "Filler Cafe",
     "allergies": "CONTAINS DAIRY PRODUCTS",
-    "price": "Rs. 50"
-  }
-  ,
+    "price": "Rs. 50",
+    "quantity": 1
+  },
   {
     "id": 4,
-    "name": "Baconizer Pizza",
+    "name": "Sausage Pizza",
     "image": "pizza.png",
     "description": "A mouthwatering pizza with your favorite toppings.",
     "restaurant": "Restaurant Zozo Pizza",
     "allergies": "CONTAINS DAIRY PRODUCTS",
-    "price": "Rs. 50"
+    "price": "Rs. 50",
+    "quantity": 1
   }
 ]

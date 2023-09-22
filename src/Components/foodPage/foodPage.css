@@ -223,6 +223,7 @@
     padding: 10px;
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .add-to-cart-button:hover {

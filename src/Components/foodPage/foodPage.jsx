@@ -1,28 +1,42 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Header from "../../sharedComponents/header/Header";
 import "./foodPage.css";
 import Footer from "../../sharedComponents/footer/Footer";
 import productsData from "./product.json";
-import {Link} from "react-router-dom";
+import { useCart } from "../cartPage/cartContext";
+import {toast, ToastContainer} from "react-toastify";
 
 export default function FoodPage() {
     const [filter, setFilter] = useState("all");
-
     const handleFilterChange = (event) => {
         setFilter(event.target.value);
     };
 
+    // Use the useCart hook to access cart-related functions
+    const { cartItems, addToCart } = useCart();
+
+    const handleAddToCart = (product) => {
+        const existingItem = cartItems.find((item) => item.id === product.id);
+
+        if (existingItem) {
+            // If the item already exists in the cart, increment its quantity
+            toast.info("Item already exists in cart");
+        } else {
+            // Otherwise, add the item to the cart with a quantity of 1
+            addToCart({ ...product, quantity: 1 });
+        }
+    };
+
     return (
         <>
-            <Header/>
+            <Header />
             <div className="container">
                 <p className="subText"></p>
                 <h2 className="userLine">Welcome to Flavor Express, User User</h2>
                 <h1 className="headLine">Explore and order mouthwatering meals!</h1>
-
                 <div className="filter-box">
                     <h1 className="filter-h1">Filter Categories</h1>
-                    <br/>
+                    <br />
                     <label>
                         <input
                             type="radio"
@@ -60,29 +74,29 @@ export default function FoodPage() {
                             {/* Use require to import image paths */}
                             <img
                                 className="product-image"
-                                src={require(`./images/${product.image}`)} // Adjust the path to your images
+                                src={require(`./images/${product.image}`)}  // Adjust the path to your images
                                 alt={product.name}
                             />
                             <h3 className="product-title">{product.name}</h3>
                             <p className="product-description">{product.description}</p>
-                            <br/>
+                            <br />
                             <p className="restaurant-name">Offered by: {product.restaurant}</p>
-                            <br/>
+                            <br />
                             <p className="allergies">{product.allergies}</p>
-                            <br/>
+                            <br />
                             <p className="price">{product.price}</p>
-                            <br/>
+                            <br />
                             <button className="description-button">Description</button>
-                            <button className="add-to-cart-button">
-                                <Link to={`/cart/${product.id}`}>Add to Cart</Link>
-                            </button>
-                            {/*<button className="add-to-cart-button">Add to Cart</button>*/}
-                            <br/>
+                            {/* Call the handleAddToCart function to add items to the cart */}
+                            <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+                            <br />
                         </div>
                     ))}
                 </div>
             </div>
-            <Footer/>
+            <ToastContainer position="top-right" autoClose={3000} />
+            <Footer />
+
         </>
     );
 }

@@ -13,7 +13,7 @@ export default function Cart() {
     const handlePromoCodeChange = (event) => {
         setPromoCode(event.target.value);
     };
-
+    // Changes
     return (
         <>
             <Header />

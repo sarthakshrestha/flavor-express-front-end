@@ -17,7 +17,7 @@ function EditProfile() {
         <div>
             <CustomerSidebar />
             <div className="edit_profile">
-                <div className="top">
+                <div className="top-s">
                     <h1>Make Changes to your Profile</h1>
                 </div>
                 <div className="edit_section">
@@ -94,7 +94,7 @@ function EditProfile() {
                         <button className="upload">Upload</button>
                     </div>
                 </form>
-                <p className="pls">Please do not update the existing email</p>
+                {/* <p className="pls">Please do not update the existing email</p> */}
             </div>
         </div>
     );

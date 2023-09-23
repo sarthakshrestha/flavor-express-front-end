@@ -9,16 +9,16 @@
     height: 100%;
     margin-top: 40px;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
-.top {
-    margin-top: 40px;
+.top-s {
+    margin-top: -30px;
     margin-bottom: 20px;
-    margin-right: 900px;
-    margin-left: 200px;
+    margin-right: 650px;
+    margin-left: 900px;
     width: 510px;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .top h1 {
@@ -49,9 +49,9 @@
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
-    width: 400px;
+    width: 520px;
     /*margin-left: 415px;*/
-    margin-right: 800px;
+    margin-right: -270px;
     position: relative;
     /*margin-bottom: 1450px;*/
 }
@@ -115,6 +115,8 @@ input[type="date"] {
     text-align: center;
     margin-top: -580px;
     position: relative;
+    margin-left: 610px;
+    width: 450px;
 }
 
 .pls{

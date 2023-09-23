@@ -14,7 +14,7 @@ export default function Footer() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <NavLink to="/">About Us</NavLink>
+                <NavLink to="/aboutUs">About Us</NavLink>
               </li>
               <li>
                 <NavLink to="/">Reviews</NavLink>

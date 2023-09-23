@@ -5,6 +5,7 @@ import LoginPage from "./Components/loginPage/LoginPage";
 import AdminLoginPage from "./Components/loginPage/AdminLoginPage";
 import RestaurantLoginPage from "./Components/loginPage/RestaurantLoginPage";
 import DriverLoginPage from "./Components/loginPage/DriverLoginPage"
+import AboutUsPage from "./Components/aboutUsPage/AboutUsPage"
 // import RestaurantsPage from "./Components/foodPage/foodPage";
 import RegistrationPage from "./Components/registrationPage/RegistrationPage";
 import Header from "./sharedComponents/header/Header";
@@ -12,6 +13,7 @@ import FoodPage from "./Components/foodPage/foodPage";
 import RestaurantPage from "./Components/restaurantPage/restaurantPage";
 import Cart from "./Components/cartPage/cart";
 import AdminDashboard from "./Components/adminDashboard/adminDashboard";
+
 function App() {
     return (
         <div className="appContainer">
@@ -27,6 +29,7 @@ function App() {
                 <Route path="/foodPage" element={<FoodPage/>}/>
                 <Route path="/cart" element={<Cart/>}/>
                 <Route path="/restaurant" element={<RestaurantPage/>}/>
+                <Route path="/aboutUs" element={<AboutUsPage/>}/>
 
                 {/*<Route path="/restaurantAboutPage" element={<RestaurantAboutPage />} />*/}
                 {/*<Route path="/foodItemsPage" element={<FoodItemsPage />} />*/}

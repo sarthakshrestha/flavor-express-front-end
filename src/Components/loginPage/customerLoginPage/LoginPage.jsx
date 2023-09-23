@@ -25,35 +25,23 @@ export default function LoginPage() {
                 console.log(response.data.jwtToken);
                 console.log(response);
 
-                // Check if the response indicates a successful login (customize this based on your API response)
-                if (response.status === 200) {
+                if (response.data && response.data.jwtToken) {
                     localStorage.setItem(
                         "FlavorExpressUserToken",
                         JSON.stringify(response.data.jwtToken)
                     );
                     localStorage.setItem("UserData", JSON.stringify(response.data.person));
-
-                    // Show a success toast notification
-                    toast.success("Successfully logged in", {
+                    toast.success("Successfully Logged In", {
                         position: toast.POSITION.TOP_RIGHT,
                     });
-
-                    // Redirect to another page if needed
-                    // history.push("/dashboard");
                 } else {
-                    // Handle other status codes if needed
-                    // For example, you can show an error message here for other status codes.
-                    // If you have specific error messages from your API, you can access them in response.data.
-                    // Example: toast.error(response.data.errorMessage);
-
-                    // Set login error message
-                    setLoginError("An error occurred. Please try again later");
+                    toast.error("Wrong credentials, please check properly", {
+                        position: toast.POSITION.TOP_RIGHT,
+                    });
                 }
             })
             .catch((error) => {
                 console.error("Error:", error);
-
-                // Show an error toast notification for wrong credentials
                 toast.error("Wrong credentials, please check again", {
                     position: toast.POSITION.TOP_RIGHT,
                 });

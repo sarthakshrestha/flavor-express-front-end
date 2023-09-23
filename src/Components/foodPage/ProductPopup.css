@@ -1,0 +1,73 @@
+/* ProductPopup.css */
+
+.product-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's on top of other elements */
+}
+
+.popup-content {
+    background-color: #fff; /* White background for the popup */
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%; /* Adjust as needed */
+    text-align: center;
+    position: relative;
+}
+
+.popup-content h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 39px;
+}
+
+.product-image-popup {
+    width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.nutritional-table {
+    /* Add styles for the nutritional table here */
+    font-family: "Jost", sans-serif;
+}
+
+.nutritional-table h3{
+    /* Add styles for the nutritional table here */
+    font-size: 45px;
+    color: #009933;
+}
+
+.n-table{
+    font-family: "DM Sans", serif;
+    font-size: 23px;
+}
+
+.close-button {
+    background-color: #D32F2F; /* Red close button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.close-button:hover {
+    background-color: #e64a19; /* Darker red on hover */
+}

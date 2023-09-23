@@ -24,7 +24,7 @@
 .top h1 {
     font-size: 42px;
     color: #333;
-    margin-right: 0;
+    margin-left: 120px;
     font-family: "DM Sans", serif;
 }
 
@@ -51,7 +51,7 @@
     border-radius: 5px;
     width: 400px;
     /*margin-left: 415px;*/
-    margin-right: 800px;
+    margin-right: 590px;
     position: relative;
     /*margin-bottom: 1450px;*/
 }
@@ -115,6 +115,7 @@ input[type="date"] {
     text-align: center;
     margin-top: -580px;
     position: relative;
+    margin-left: 120px;
 }
 
 .pls{

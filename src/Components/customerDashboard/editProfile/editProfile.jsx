@@ -94,7 +94,7 @@ function EditProfile() {
                         <button className="upload">Upload</button>
                     </div>
                 </form>
-                <p className="pls">Please do not update the existing email</p>
+                {/*<p className="pls">Please do not update the existing email</p>*/}
             </div>
         </div>
     );

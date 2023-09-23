@@ -15,17 +15,17 @@ export default function CustomerSidebar() {
                 <h2>Welcome to User's Dashboard</h2>
                 <ul>
                     <li>
-                        <Link to="/User">
+                        <Link to="/customer">
                             <i className="fas fa-tachometer-alt"></i> Dashboard
                         </Link>
                     </li>
                     <li>
-                        <Link to="/User/Edit">
+                        <Link to="/customer/edit">
                             <i className="fas fa-users"></i> Edit Profile
                         </Link>
                     </li>
                     <li>
-                        <Link to="/User/Transaction">
+                        <Link to="/customer/orders">
                             <i className="fas fa-exchange-alt"></i> Order History
                         </Link>
                     </li>

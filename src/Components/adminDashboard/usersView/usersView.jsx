@@ -33,11 +33,11 @@ export default function AllCustomers() {
                     <Sidebar />
                 </div>
 
-                <div className="restaurant_info_admin">
-                    <div className="admin_header">
-                        <h1>Registered Customers of Flavor Express</h1>
+                <div className="customer_info_admin">
+                    <div className="customer_header">
+                        <h1 className="c-title">Registered Customers of Flavor Express</h1>
                     </div>
-                    <table>
+                    <table className="u-table">
                         <thead>
                         <tr>
                             <th>ID</th>

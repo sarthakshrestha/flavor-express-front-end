@@ -22,27 +22,56 @@ import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-    return (<CartProvider> {/* Wrap your entire app with CartProvider */}
+    return (<CartProvider>
             <div className="appContainer">
-                <ToastContainer/> {/* Add the ToastContainer here */}
+                <ToastContainer/>
                 <Routes>
+
+                    //Home Page
                     <Route path="/" element={<HomePage/>}/>
+
+                    //Header
                     <Route path="/nav" element={<Header/>}/>
+
+                    // Customer Login Page
                     <Route path="/loginPage" element={<LoginPage/>}/>
+
+                    //Admin Login Page
                     <Route path="/adminLoginPage" element={<AdminLoginPage/>}/>
+
+                    // Restaurant Login Page
                     <Route path="/restaurantLoginPage" element={<RestaurantLoginPage/>} />
+
+                    // Driver Login Page
                     <Route path="/driverLoginPage" element={<DriverLoginPage/>}/>
-                    <Route path="/customer" element={<CustomerSidebar/>}/>
-                    <Route path="/admin" element={<AdminDashboard/>}/>
+
+                    // Customer Registration Page
                     <Route path="/registrationPage" element={<RegistrationPage/>}/>
+
+                    // Customer Dashboard
+                    <Route path="/customer" element={<CustomerSidebar/>}/>
+
+                    // Admin Dashboard
+                    <Route path="/admin" element={<AdminDashboard/>}/>
                     <Route path="/admin/restaurants" element={<AllRestaurants/>}/>
                     <Route path="/admin/customers" element={<AllCustomers/>}/>
                     <Route path="/admin/drivers" element={<AllDrivers/>}/>
+
+                    //Food page
                     <Route path="/foodPage" element={<FoodPage/>}/>
+
+                    //Cart
                     <Route path="/cart" element={<Cart/>}/>
+
+                    //Restaurant Page
                     <Route path="/restaurant" element={<RestaurantPage/>}/>
+
+                    // Meal Plan Page
                     <Route path="/meal-plans" element={<MealPlan/>}/>
+
+                    // Non-existent Pages
                     <Route path="*" element={<h1>PageNotFound! :(</h1>}/>
+
                 </Routes>
                 //Changes
             </div>

@@ -1,18 +1,17 @@
-
-
 /* Styles for the AllRestaurants component */
 .restaurant_info_admin {
     padding: 20px;
-    margin-left: 250px;
+    margin-left: 150px;
     margin-top: 90px;
-    margin-bottom: 390px;
+    margin-bottom: 30px;
 }
 
 .admin_header h1 {
-    text-align: center;
+    margin-right: 420px;
     margin-bottom: 20px;
     font-family: "Jost", sans-serif;
-    font-size: 72px;
+    font-size: 36px;
+    color: #333;
 }
 
 .restaurant_info_admin table {
@@ -21,20 +20,20 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
 }
 
 .restaurant_info_admin th,
 .restaurant_info_admin td {
     padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 .restaurant_info_admin th {
     background-color: #f5f5f5;
     font-weight: bold;
-    border-bottom: 2px solid #ddd;
 }
-
 
 .restaurant_info_admin tbody tr:nth-child(even) {
     background-color: #f9f9f9;
@@ -54,7 +53,102 @@
     transition: background-color 0.3s ease;
 }
 
+.restaurant-form {
+    position: relative;
+    margin-top: 340px;
+    margin-bottom: 50px;
+    background-color: #3a3737;
+    float: left;
+    padding: 20px;
+    margin-left: -200px;
+    margin-right: 40px;
+    border-radius: 21px;
+}
+
+.restaurant-form h2 {
+
+    font-size: 62px;
+    font-family: "DM Sans", serif;
+    color: #D32F2F;
+    padding: 35px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increase margin for better spacing */
+    padding: 15px; /* Adjust padding for consistency */
+}
+
+.form-group label {
+    font-size: 21px;
+    color: white;
+}
+
+.input-field {
+    padding: 10px; /* Adjust padding for consistent input field size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.tel-n {
+    width: 100%; /* Make the input field expand to full width */
+    height: 35px;
+}
+
+.add-r {
+    margin-top: 20px; /* Increase margin for better spacing */
+    font-size: 16px; /* Increase font size for better readability */
+    align-content: center;
+    position: relative;
+    margin-left: 0; /* Remove margin-left to center align */
+}
+
 .restaurant_info_admin button:hover {
+    background-color: #c0392b;
+}
+
+.r-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Add margin to create space around the table */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.r-table th,
+.r-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add a border-bottom for better separation */
+}
+
+.r-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.r-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.r-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.r-table button {
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-content: center;
+    justify-content: center;
+}
+
+.r-table button:hover {
     background-color: #c0392b;
 }
 
@@ -63,6 +157,10 @@
     .restaurant_info_admin {
         margin-left: 0;
         padding: 10px;
+    }
+
+    .admin_header h1 {
+        font-size: 24px;
     }
 
     .restaurant_info_admin th,

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../sideBar/sideBar";
 import "./restaurantView.css";
 
 function AllRestaurants() {
     // Hardcoded fake restaurant data
-    const fakeRestaurants = [
+    const [restaurants, setRestaurants] = useState([
         {
             id: 1,
             name: "Restaurant 1",
@@ -24,7 +24,28 @@ function AllRestaurants() {
             phoneNumber: "555-987-6543",
         },
         // Add more fake restaurants here
-    ];
+    ]);
+
+    const [newRestaurant, setNewRestaurant] = useState({
+        name: "",
+        address: "",
+        phoneNumber: "",
+    });
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setNewRestaurant({
+            ...newRestaurant,
+            [name]: value,
+        });
+    };
+
+    const handleAddRestaurant = () => {
+        // Add the new restaurant to the list
+        setRestaurants([...restaurants, { id: restaurants.length + 1, ...newRestaurant }]);
+        // Clear the form
+        setNewRestaurant({ name: "", address: "", phoneNumber: "" });
+    };
 
     return (
         <>
@@ -34,10 +55,53 @@ function AllRestaurants() {
                 </div>
 
                 <div className="restaurant_info_admin">
-                    <div className="admin_header">
-                        <h1>Registered Restaurants</h1>
+                    <form className="restaurant-form">
+                        <h2>Add New Restaurant</h2>
+                        <div className="form-group">
+                            <label htmlFor="name">Name:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={newRestaurant.name}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="address">Address:</label>
+                            <input
+                                type="text"
+                                id="address"
+                                name="address"
+                                value={newRestaurant.address}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phoneNumber">Phone Number:</label>
+                            <input
+                                type="tel"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                className="tel-n"
+                                value={newRestaurant.phoneNumber}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <button type="button" className="add-r" onClick={handleAddRestaurant}>
+                            Add Restaurant
+                        </button>
+                    </form>
+                </div>
+
+                <div className="table-container">
+                    <div className="r_header">
+                        <h1 className="r-title">Registered Restaurants</h1>
                     </div>
-                    <table>
+                    <table className="r-table">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -48,7 +112,7 @@ function AllRestaurants() {
                         </tr>
                         </thead>
                         <tbody>
-                        {fakeRestaurants.map((restaurant) => (
+                        {restaurants.map((restaurant) => (
                             <tr key={restaurant.id}>
                                 <td>{restaurant.id}</td>
                                 <td>{restaurant.name}</td>

@@ -1,7 +1,7 @@
 
 
 /* Styles for the AllRestaurants component */
-.restaurant_info_admin {
+.customer_info_admin {
     padding: 20px;
     margin-left: 250px;
     margin-right: 205px;
@@ -76,4 +76,38 @@
     .restaurant_info_admin button {
         padding: 6px 12px;
     }
+}
+
+.u-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Add margin to create space around the table */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.u-table th,
+.u-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add a border-bottom for better separation */
+}
+
+.u-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.u-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.c-title{
+    font-size: 52px;
+    font-family: "Jost", sans-serif;
+}
+
+.u-table tbody tr:hover {
+    background-color: #e0e0e0;
 }

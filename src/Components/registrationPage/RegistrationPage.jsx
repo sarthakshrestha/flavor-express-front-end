@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
 import "./RegistrationPage.css";
-import {CiBurger} from "react-icons/ci";
 import registerimage from "./images/registerimage.jpg";
 import axios from "axios";
 import Footer from "../../sharedComponents/footer/Footer";
@@ -182,19 +181,12 @@ export default function RegistrationPage() {
                 <div className="registration-info">
                     <h1>Create Account</h1>
                     <h3>What will you get?</h3>
-                    <p>
-                        <CiBurger style={{marginRight: "25px"}}/>
-                        Know exactly what’s in your food with our transparent ingredient lists.
-                    </p>
-                    <p>
-                        Tailor your meal plans to suit your dietary preferences and health goals.
-                    </p>
-                    <p>
-                        Exclusive offers and discounts for our registered members - start saving!
-                    </p>
-                    <p>
-                        Explore the diverse menu of dishes from experts, all to keep you healthy.
-                    </p>
+                    <ul>
+                        <li>Know exactly what’s in your food with our transparent ingredient lists.</li>
+                        <li>Tailor your meal plans to suit your dietary preferences and health goals.</li>
+                        <li>Exclusive offers and discounts for our registered members - start saving!</li>
+                        <li>Explore the diverse menu of dishes from experts, all to keep you healthy.</li>
+                    </ul>
                     <img src={registerimage} alt=""/>
                 </div>
 

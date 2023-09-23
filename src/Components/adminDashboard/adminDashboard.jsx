@@ -41,7 +41,7 @@ export default function AdminDashboard() {
                 </div>
                 <div className="table1">
                     <br/>
-                    <h1>Order Table</h1>
+                    <h1>Recent Orders</h1>
                     <br/>
                     <table className="order-table">
                         <thead>

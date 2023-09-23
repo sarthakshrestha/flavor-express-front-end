@@ -60,9 +60,6 @@ export default function AdminLoginPage() {
               ref={passwordRef}
             />
           </div>
-          <div className="forgot-password">
-            <NavLink to="/registrationPage"> Forgot Password</NavLink>
-          </div>
           <button className="logInButton" onClick={loginHandle}>
             Log in
           </button>

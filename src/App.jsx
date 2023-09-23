@@ -1,4 +1,4 @@
-import "./App.css";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Components/homePage/HomePage";
 import LoginPage from "./Components/loginPage/customerLoginPage/LoginPage";
@@ -16,25 +16,29 @@ import { CartProvider } from "./Components/cartPage/cartContext"; // Import Cart
 import DriverLoginPage from "./Components/loginPage/driverLoginPage/DriverLoginPage";
 import AllRestaurants from "./Components/adminDashboard/restaurantView/restaurantView";
 import AllCustomers from "./Components/adminDashboard/usersView/usersView";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     return (
         <CartProvider> {/* Wrap your entire app with CartProvider */}
             <div className="appContainer">
+                <ToastContainer /> {/* Add the ToastContainer here */}
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/nav" element={<Header />} />
                     <Route path="/loginPage" element={<LoginPage />} />
                     <Route path="/adminLoginPage" element={<AdminLoginPage />} />
-                    <Route path="/restaurantLoginPage" element={<RestaurantLoginPage/>} />
-                    <Route path="/driverLoginPage" element={<DriverLoginPage/>} />
-                    <Route path="/customer" element={<CustomerSidebar/>} />
+                    <Route
+                        path="/restaurantLoginPage"
+                        element={<RestaurantLoginPage />}
+                    />
+                    <Route path="/driverLoginPage" element={<DriverLoginPage />} />
+                    <Route path="/customer" element={<CustomerSidebar />} />
                     <Route path="/admin" element={<AdminDashboard />} />
                     <Route path="/registrationPage" element={<RegistrationPage />} />
-                    <Route path="/admin/restaurants" element={<AllRestaurants/>} />
-                    <Route path="/admin/customers" element={<AllCustomers/>} />
-
-
+                    <Route path="/admin/restaurants" element={<AllRestaurants />} />
+                    <Route path="/admin/customers" element={<AllCustomers />} />
                     <Route path="/foodPage" element={<FoodPage />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/restaurant" element={<RestaurantPage />} />

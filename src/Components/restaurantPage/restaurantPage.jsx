@@ -15,7 +15,7 @@ export default function RestaurantPage() {
                 <div className="restaurant-box-container">
                     {restaurantData.map((restaurant) => (
                         <div className="restaurant-box" key={restaurant.id}>
-                            <img src={(`./images/${restaurant.imageUrl}`)} alt="Restaurant Image"/>
+                            <img src={require(`./images/${restaurant.imageUrl}`)} alt="Restaurant Image"/>
                             <div className="restaurant-description">
                                 <div className="restaurant-title">{restaurant.name}</div>
                                 <div className="restaurant-info">

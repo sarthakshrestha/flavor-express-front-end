@@ -23,7 +23,7 @@
 }
 .limited_promos_content h1 {
   font-family: "Poppins", serif;
-  font-size: 82px;
+  font-size: 42px;
   font-weight: bold;
   margin-top: 1rem;
   padding-bottom: 3rem;
@@ -44,6 +44,6 @@
 
 .promo_box p {
   font-weight: bold;
-  font-size: 63px;
+  font-size: 45px;
   font-family: 'Koulen', cursive;
 }

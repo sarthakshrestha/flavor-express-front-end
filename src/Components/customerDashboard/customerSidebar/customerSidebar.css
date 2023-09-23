@@ -14,16 +14,16 @@
 }
 
 .sidebar .title h1 {
-    font-size: 52px;
+    font-size: 42px;
 }
 
 .dash{
-    font-size: 68px;
+    font-size: 52px;
 }
 
 .sidebar h2 {
     margin-bottom: 25px;
-    font-size: 29px;
+    font-size: 24px;
 }
 
 .sidebar ul {
@@ -46,7 +46,7 @@
     display: block;
     padding: 10px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 23px;
+    font-size: 18px;
     border-radius: 12px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transition for hover and active effects */
 }
@@ -95,5 +95,15 @@
 }
 
 .admin-info a{
+    color: red;
+}
+
+.c-info{
+    font-family: 'DM Sans', 'sans-serif';
+}
+
+.c-info p{
+    font-family: "Racing Sans One", serif;
+    font-size: 42px;
     color: red;
 }

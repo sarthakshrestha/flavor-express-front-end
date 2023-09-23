@@ -25,7 +25,7 @@ export default function Header() {
                 <div className="user-actions">
                     <div className="accountButton">
 
-                        <NavLink to="/customer" className="action-button">Account<FontAwesomeIcon className="accIcon"
+                        <NavLink to="/customer" className="action-button">Profile<FontAwesomeIcon className="accIcon"
                                                                                                      icon={faUser}/></NavLink>
 
                     </div>

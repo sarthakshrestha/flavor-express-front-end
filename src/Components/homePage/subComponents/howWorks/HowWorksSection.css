@@ -43,8 +43,8 @@
 .step1 img,
 .step2 img,
 .step3 img {
-  width: auto;
-  height: 380px;
+  width: 250px;
+  height: auto
 }
 .step1 h3,
 .step2 h3,

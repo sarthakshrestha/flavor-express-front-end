@@ -13,14 +13,14 @@ export default function HeroSection() {
           <div className="logo">
             <img src="Logo2.png" alt="Logo" />
           </div>
-          <div className="buttons">
+          <div className="hero-button">
             <button
-              className="button1"
+              className="button-signup"
               onClick={() => navTo("/registrationPage")}
             >
               Sign Up
             </button>
-            <button className="button2" onClick={() => navTo("/loginPage")}>
+            <button className="button-login" onClick={() => navTo("/loginPage")}>
               Login
             </button>
           </div>

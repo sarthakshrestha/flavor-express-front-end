@@ -8,10 +8,6 @@ export default function CustomerSidebar() {
         <div>
             {/* <Header /> */}
             <div className="sidebar">
-                <div className="logo">
-                    <img src={logo} alt="Logo" />{" "}
-                    {/* Replace with the actual path to your logo image */}
-                </div>
                 <h2>Welcome to Your Profile</h2>
                 <ul>
                     <li>

@@ -44,29 +44,37 @@
   height: auto;
 }
 
-.buttons {
+.hero-button {
   display: flex;
   align-items: center;
 }
 
-.button1 {
-  background-color: white;
-  color: black;
+.button-signup {
+  background-color: red;
+  color: white;
   border: none;
   border-radius: 20px;
-  padding: 15px 30px;
+  padding: 12px 30px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 40px;
+  transition: background-color 0.3s, color 0.3s;
 }
-.button2 {
-  background-color: white;
-  color: black;
+.button-login {
+  background-color: red;
+  color: white;
   border-radius: 20px;
-  padding: 15px 30px;
+  padding: 12px 30px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-signup:hover,
+.button-login:hover {
+  background-color: white;
+  color: red;
 }
 
 .t-content {
@@ -80,10 +88,10 @@
 
 .heading {
   font-family: "Pacifico", cursive;
-  font-size: 52px;
+  font-size: 42px;
   margin-left: 190px;
   font-weight: bold;
-  margin-top: -240px;
+  margin-top: -60px;
 }
 
 .search_bar {
@@ -123,27 +131,12 @@ input[type="text"] {
   color: white;
   border: none;
   border-radius: 20px;
-  padding: 15px 30px;
+  padding: 12px 30px;
   cursor: pointer;
-  font-size: 19px;
+  font-size: 14px;
   margin-left: 10px;
 }
-.button1,
-.button2,
-.search_button {
-  border: none;
-  border-radius: 10px;
-  padding: 15px 30px;
-  cursor: pointer;
-  font-size: 21px;
-  transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
-}
 
-.button1:hover,
-.button2:hover {
-  background-color: #ff4444;
-  color: white;
-}
 
 .search_button:hover {
   background-color: white;

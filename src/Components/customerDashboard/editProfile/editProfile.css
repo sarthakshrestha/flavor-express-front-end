@@ -14,20 +14,26 @@
 }
 
 .top {
-    text-align: center;
+    margin-top: 40px;
     margin-bottom: 20px;
+    margin-right: 900px;
+    margin-left: 200px;
+    width: 510px;
 }
 
 .top h1 {
-    font-size: 34px;
+    font-size: 42px;
     color: #333;
     margin-right: 0;
+    font-family: "DM Sans", serif;
 }
 
-.content {
+.e-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    /*margin-top: 490px;*/
+    position: relative;
 }
 
 .update_form {
@@ -44,13 +50,17 @@
     padding: 20px;
     border-radius: 5px;
     width: 400px;
-    margin-left: 90px;
+    /*margin-left: 415px;*/
+    margin-right: 800px;
+    position: relative;
+    /*margin-bottom: 1450px;*/
 }
 
 .edit_section h3 {
-    font-size: 18px;
+    font-size: 32px;
     color: #333;
     margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
 }
 
 .input_fields {
@@ -103,8 +113,13 @@ input[type="date"] {
     flex-direction: column;
     align-items: center; /* Center items horizontally */
     text-align: center;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-top: -580px;
+    position: relative;
+}
+
+.pls{
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
 }
 
 .image_change img {
@@ -123,13 +138,14 @@ input[type="date"] {
 
 .upload {
     margin-top: 10px;
-    background-color: lightgreen;
+    background-color: #009933;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: "Jost", sans-serif;
 }
 
 .upload:hover {

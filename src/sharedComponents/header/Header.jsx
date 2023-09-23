@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <header>
             <nav className="navbar">
-                <div className="top">
+                <div className="navtop">
                     <img src={logoImage} alt="logo" className="logo"/>
                     <div className="links">
                         <ul>

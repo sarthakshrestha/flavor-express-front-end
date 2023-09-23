@@ -26,7 +26,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="content">
+      <div className="t-content">
         <h1 className="heading">Your Cravings, Our Delivery</h1>
         <div className="search_bar">
           <div className="search_input">

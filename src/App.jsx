@@ -17,6 +17,7 @@ import DriverLoginPage from "./Components/loginPage/driverLoginPage/DriverLoginP
 import AllRestaurants from "./Components/adminDashboard/restaurantView/restaurantView";
 import AllCustomers from "./Components/adminDashboard/usersView/usersView";
 import AllDrivers from "./Components/adminDashboard/driverView/driverView";
+import EditProfile from "./Components/customerDashboard/editProfile/editProfile";
 
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -50,6 +51,7 @@ function App() {
 
                     // Customer Dashboard
                     <Route path="/customer" element={<CustomerSidebar/>}/>
+                    <Route path="/customer/edit" element={<EditProfile/>}/>
 
                     // Admin Dashboard
                     <Route path="/admin" element={<AdminDashboard/>}/>

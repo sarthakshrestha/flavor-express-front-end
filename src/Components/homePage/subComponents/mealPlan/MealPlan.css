@@ -45,6 +45,7 @@
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
   border: 2px solid transparent;
+  font-style: normal;
 }
 .viewmore_button:hover {
   background-color: white;

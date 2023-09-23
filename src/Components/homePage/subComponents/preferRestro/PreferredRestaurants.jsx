@@ -6,6 +6,7 @@ import Restaurant3 from "../../images/ivan-torres-MQUqbmszGGM-unsplash.jpg";
 import Restaurant4 from "../../images/abhishek-sanwa-limbu-TiWT_OQ6dnA-unsplash.jpg";
 import Restaurant5 from "../../images/sk-uVPV_nV17Tw-unsplash.jpg";
 import Restaurant6 from "../../images/shardar-tarikul-islam-YPLcEMcEqaA-unsplash.jpg";
+import {Link} from "react-router-dom";
 export default function PreferredRestaurants() {
   return (
     <div className="preferred_section">
@@ -41,7 +42,11 @@ export default function PreferredRestaurants() {
             </div>
           </div>
         </div>
-        <button className="view_more_button">View More</button>
+        <button className="viewmore_button">
+          <Link to="/restaurant" style={{ textDecoration: 'none', color: 'white'}}>
+            View More
+          </Link>
+        </button>
       </div>
     </div>
   );

@@ -28,54 +28,54 @@ function App() {
                 <ToastContainer/>
                 <Routes>
 
-                    //Home Page
+                    {/*//Home Page*/}
                     <Route path="/" element={<HomePage/>}/>
 
-                    //Header
+                    {/*//Header*/}
                     <Route path="/nav" element={<Header/>}/>
 
-                    // Customer Login Page
+                    {/*// Customer Login Page*/}
                     <Route path="/loginPage" element={<LoginPage/>}/>
 
-                    //Admin Login Page
+                    {/*//Admin Login Page*/}
                     <Route path="/adminLoginPage" element={<AdminLoginPage/>}/>
 
-                    // Restaurant Login Page
+                    {/*// Restaurant Login Page*/}
                     <Route path="/restaurantLoginPage" element={<RestaurantLoginPage/>} />
 
-                    // Driver Login Page
+                    {/*// Driver Login Page*/}
                     <Route path="/driverLoginPage" element={<DriverLoginPage/>}/>
 
-                    // Customer Registration Page
+                    {/*// Customer Registration Page*/}
                     <Route path="/registrationPage" element={<RegistrationPage/>}/>
 
-                    // Customer Dashboard
+                    {/*// Customer Dashboard*/}
                     <Route path="/customer" element={<CustomerSidebar/>}/>
                     <Route path="/customer/edit" element={<EditProfile/>}/>
 
-                    // Admin Dashboard
+                    {/*// Admin Dashboard*/}
                     <Route path="/admin" element={<AdminDashboard/>}/>
                     <Route path="/admin/restaurants" element={<AllRestaurants/>}/>
                     <Route path="/admin/customers" element={<AllCustomers/>}/>
                     <Route path="/admin/drivers" element={<AllDrivers/>}/>
 
-                    //Food page
+                    {/*//Food page*/}
                     <Route path="/foodPage" element={<FoodPage/>}/>
 
-                    //Cart
+                    {/*//Cart*/}
                     <Route path="/cart" element={<Cart/>}/>
 
-                    //Restaurant Page
+                    {/*//Restaurant Page*/}
                     <Route path="/restaurant" element={<RestaurantPage/>}/>
 
-                    // Meal Plan Page
+                    {/*// Meal Plan Page*/}
                     <Route path="/meal-plans" element={<MealPlan/>}/>
 
-                    // Non-existent Pages
+                    {/*// Non-existent Pages*/}
                     <Route path="*" element={<h1>PageNotFound! :(</h1>}/>
 
                 </Routes>
-                //Changes
+                {/*//Changes*/}
             </div>
         </CartProvider>);
 }

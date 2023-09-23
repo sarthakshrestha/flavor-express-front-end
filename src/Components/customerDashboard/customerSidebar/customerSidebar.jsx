@@ -12,7 +12,7 @@ export default function CustomerSidebar() {
                     <img src={logo} alt="Logo" />{" "}
                     {/* Replace with the actual path to your logo image */}
                 </div>
-                <h2>Welcome to User's Dashboard</h2>
+                <h2>Welcome to Your Profile</h2>
                 <ul>
                     <li>
                         <Link to="/customer">

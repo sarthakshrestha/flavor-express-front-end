@@ -45,6 +45,7 @@ function App() {
                     <Route path="/meal-plans" element={<MealPlan />} />
                     <Route path="*" element={<h1>PageNotFound! :(</h1>} />
                 </Routes>
+                //Changes
             </div>
         </CartProvider>
     );

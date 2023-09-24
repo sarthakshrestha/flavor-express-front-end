@@ -55,7 +55,7 @@ export default function AllCustomers() {
                                 <td>{customer.address}</td>
                                 <td>{customer.phoneNumber}</td>
                                 <td>
-                                    <button>Delete</button>
+                                    <button className="del">Delete</button>
                                 </td>
                             </tr>
                         ))}

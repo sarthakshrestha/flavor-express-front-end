@@ -57,6 +57,20 @@
     transition: background-color 0.3s ease;
 }
 
+.del{
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.del:hover{
+    background-color: #c0392b;
+}
+
 .restaurant_info_admin button:hover {
     background-color: #c0392b;
 }

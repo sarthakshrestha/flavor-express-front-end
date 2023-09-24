@@ -17,7 +17,7 @@
 .preferred_content h1 {
   font-family: 'Koulen', cursive;
   padding-top: 20px;
-  font-size: 94px;
+  font-size: 64px;
   margin-bottom: 20px;
   margin-top: 310px;
   font-weight: normal;
@@ -43,14 +43,14 @@
   text-align: center;
   flex-basis: calc(33.33% - 20px);
   margin: 0 10px;
-  padding: 50px;
+  padding: 38px;
   transition: transform 1.5s ease;
   overflow: hidden;
 }
 
 .restaurant img {
-  max-width: 100%;
-  height: auto;
+  height: 250px;
+  width: auto;
   border-radius: 10px;
   object-fit: cover;
   margin-bottom: 12px;
@@ -65,28 +65,28 @@
 .restaurant p {
   font-family: "Jost", serif;
   font-weight: bold;
-  font-size: 28px;
-  padding: 6px;
+  font-size: 32px;
+  padding: 7px;
   /*padding-top: 20px;*/
-  background-color: #D32F2F;
   border-radius: 13px;
-  color: white;
+  color: black;
+
 }
-.view_more_button {
+.viewmore {
   background-color: #ff4444;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 25px;
   cursor: pointer;
-  margin-top: 25px;
-  margin-bottom: 40px;
+  margin-top: 49px;
+  margin-bottom: 50px;
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
   border: 2px solid transparent;
 }
-.view_more_button:hover {
-  background-color: white;
-  color: black;
+.viewmore:hover {
+  background-color: black;
+  color: white;
   border-color: black;
 }

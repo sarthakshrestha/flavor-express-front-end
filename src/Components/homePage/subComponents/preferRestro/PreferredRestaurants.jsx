@@ -42,7 +42,7 @@ export default function PreferredRestaurants() {
             </div>
           </div>
         </div>
-        <button className="viewmore_button">
+        <button className="viewmore">
           <Link to="/restaurant" style={{ textDecoration: 'none', color: 'white'}}>
             View More
           </Link>

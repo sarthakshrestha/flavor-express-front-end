@@ -74,7 +74,7 @@ input[type="password"] {
   text-align: center;
 }
 
-button {
+.rr-button {
   padding: 10px 20px;
   background-color: #ff4444;
   color: #ffffff;
@@ -84,7 +84,8 @@ button {
 }
 
 .register-button button:hover {
-  background-color: #ff4444;
+  background-color: #3a3737;
+  color: white;
 }
 
 .already {

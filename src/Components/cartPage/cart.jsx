@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "../../sharedComponents/header/Header";
@@ -8,11 +8,44 @@ import { useCart } from "./cartContext";
 
 export default function Cart() {
     const [promoCode, setPromoCode] = useState("");
-    const { cartItems, removeFromCart, decrementQuantity, incrementQuantity, addToCart } = useCart(); // Destructure the functions from useCart
+    const { cartItems, removeFromCart, decrementQuantity, incrementQuantity, addToCart } = useCart(); 
+
+    const [totalNutrition, setTotalNutrition] = useState({
+        calories: 0,
+        protein: 0,
+        carbohydrates: 0,
+        fat: 0,
+    });
+
+    useEffect(() => {
+        // Calculate the total nutritional content when the cartItems change
+        const newTotalNutrition = cartItems.reduce(
+            (acc, item) => {
+                acc.calories += item.nutrition.calories * item.quantity;
+                acc.protein += item.nutrition.protein * item.quantity;
+                acc.carbohydrates += item.nutrition.carbohydrates * item.quantity;
+                acc.fat += item.nutrition.fat * item.quantity;
+                return acc;
+            },
+            {
+                calories: 0,
+                protein: 0,
+                carbohydrates: 0,
+                fat: 0,
+            }
+        );
 
     const handlePromoCodeChange = (event) => {
         setPromoCode(event.target.value);
     };
+
+    setTotalNutrition(newTotalNutrition);
+    }, [cartItems]);
+
+    const handlePromoCodeChange = (event) => {
+        setPromoCode(event.target.value);
+    };
+
     // Changes
     return (
         <>
@@ -24,10 +57,21 @@ export default function Cart() {
             <div className="nutritional-breakdown">
                 <h1 className="n-heading">Nutritional Breakdown</h1>
                 <div className="nutrient">
-                    <span className="nutrient-protein"></span>
-                    <span className="nutrient-value"></span>
+                    <span className="nutrient-label">Calories:</span>
+                    <span className="nutrient-value">{totalNutrition.calories} cal</span>
                 </div>
-                {/* Rest of your code */}
+                <div className="nutrient">
+                    <span className="nutrient-label">Protein:</span>
+                    <span className="nutrient-value">{totalNutrition.protein} g</span>
+                </div>
+                <div className="nutrient">
+                    <span className="nutrient-label">Carbohydrates:</span>
+                    <span className="nutrient-value">{totalNutrition.carbohydrates} g</span>
+                </div>
+                <div className="nutrient">
+                    <span className="nutrient-label">Fat:</span>
+                    <span className="nutrient-value">{totalNutrition.fat} g</span>
+                </div>
             </div>
             <div className="food-cart">
                 <table className="food-table">

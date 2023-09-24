@@ -87,7 +87,10 @@ export function CartProvider({ children }) {
 
   // Function to save cart items to local storage when the cart changes
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    // console.log(cartItems);
+    if(cartItems?.length){
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
   }, [cartItems]);
 
   // Calculate the total nutrition based on cart items

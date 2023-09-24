@@ -29,7 +29,7 @@ export default function Cart() {
 
   useEffect(() => {
     // Update local storage with the current cart items
-    Cookies.set("cartItems", JSON.stringify(cartItems));
+    // Cookies.set("cartItems", JSON.stringify(cartItems));
     
     // Calculate and set the total nutrition when cart items change
     const nutrition = calculateTotalNutrition(cartItems); // Calculate the nutrition

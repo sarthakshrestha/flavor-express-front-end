@@ -15,6 +15,8 @@ import CustomerSidebar from "./Components/customerDashboard/customerSidebar/cust
 import {CartProvider} from "./Components/cartPage/cartContext"; // Import CartProvider
 import OrderOnTheWay from "./Components/customerDashboard/mainDashboard/mainDashboard";
 import AboutUspage from "./Components/aboutUsPage/AboutUsPage";
+import OrderHistory from "./Components/customerDashboard/orderHistory/orderHistory";
+
 
 import DriverLoginPage from "./Components/loginPage/driverLoginPage/DriverLoginPage";
 import AllRestaurants from "./Components/adminDashboard/restaurantView/restaurantView";
@@ -56,6 +58,7 @@ function App() {
                     {/*<Route path="/customer" element={<CustomerSidebar/>}/>*/}
                     <Route path="/customer" element={<OrderOnTheWay/>}/>
                     <Route path="/customer/edit" element={<EditProfile/>}/>
+                    <Route path="/customer/orders" element={<OrderHistory/>}/>
 
                     {/*// Admin Dashboard*/}
                     <Route path="/admin" element={<AdminDashboard/>}/>

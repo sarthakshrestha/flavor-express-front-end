@@ -146,6 +146,24 @@
     cursor: pointer;
 }
 
+.checkout-btn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-family: "DM Sans", serif;
+    font-size: 26px;
+    border-radius: 14px;
+    margin-top: 2rem;
+    margin-left: 34rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.checkout-btn:hover{
+    color: white;
+    background-color: #2E5A88;
+}
+
 .allergy {
     color: #FF5733;
     font-size: 18px;

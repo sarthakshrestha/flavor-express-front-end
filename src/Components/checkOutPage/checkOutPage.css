@@ -1,0 +1,150 @@
+/* checkOutPage.css */
+
+/* General styling */
+.ck-checkout-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+}
+
+.ck-cart-summary {
+    width: 60%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.ck-calculation {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Cart summary table */
+.ck-food-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ck-table-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.ck-first-row {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.ck-price-td {
+    text-align: right;
+}
+
+/* Promo code box */
+.ck-promo-code-box {
+    margin-top: 20px;
+    display: flex;
+}
+
+.ck-promo-code-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.ck-allergy{
+    font-family: "DM Sans", "sans-serif";
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.ck-apply-promo-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.ck-food-image {
+    max-width: 100px; /* Set the maximum width */
+    max-height: 100px; /* Set the maximum height */
+    width: auto;
+    height: auto;
+}
+
+/* Checkout form */
+.ck-checkout-form {
+    width: 35%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.ck-checkout-group {
+    margin-bottom: 20px;
+}
+
+.ck-checkout-group label{
+    font-size: 19px;
+}
+
+.ck-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.inner-form{
+    margin-top: 2rem;
+}
+
+.ck-cart-items h3{
+    font-size: 26px;
+    font-family: "DM Sans", "sans-serif";
+}
+
+.ck-cart-items p{
+    font-size: 14px;
+    font-family: "DM Sans", "sans-serif";
+}
+
+.fz-quantity{
+    text-align: left;
+}
+
+.fz-name{
+    text-align: left;
+}
+
+
+.ck-input-text,
+.ck-input-tel,
+.ck-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Checkout button */
+.ck-checkout-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.ck-checkout-btn:hover {
+    background-color: #0056b3;
+}

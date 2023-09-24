@@ -16,7 +16,7 @@ import {CartProvider} from "./Components/cartPage/cartContext"; // Import CartPr
 import OrderOnTheWay from "./Components/customerDashboard/mainDashboard/mainDashboard";
 import AboutUspage from "./Components/aboutUsPage/AboutUsPage";
 import OrderHistory from "./Components/customerDashboard/orderHistory/orderHistory";
-
+import CheckoutPage from "./Components/checkOutPage/checkOutPage";
 
 import DriverLoginPage from "./Components/loginPage/driverLoginPage/DriverLoginPage";
 import AllRestaurants from "./Components/adminDashboard/restaurantView/restaurantView";
@@ -59,6 +59,9 @@ function App() {
                     <Route path="/customer" element={<OrderOnTheWay/>}/>
                     <Route path="/customer/edit" element={<EditProfile/>}/>
                     <Route path="/customer/orders" element={<OrderHistory/>}/>
+
+                    {/*//Checkoutpage*/}
+                    <Route path="/checkout" element={<CheckoutPage/>}/>
 
                     {/*// Admin Dashboard*/}
                     <Route path="/admin" element={<AdminDashboard/>}/>

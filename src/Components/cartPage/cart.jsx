@@ -4,7 +4,8 @@ import Footer from "../../sharedComponents/footer/Footer";
 import "./cartPage.css";
 import Cookies from "js-cookie";
 import { useCart } from "./cartContext";
-import { calculateTotalNutrition } from "./cartContext"; // Import calculateTotalNutrition from cartContext
+import { calculateTotalNutrition } from "./cartContext";
+import {Link} from "react-router-dom"; // Import calculateTotalNutrition from cartContext
 
 const PRICE_PREFIX = "Rs. ";
 const DELIVERY_CHARGE_PERCENTAGE = 5;
@@ -131,7 +132,7 @@ export default function Cart() {
                     +
                   </button>
                 </td>
-                <td className="price-td">{calculateItemTotalPrice(item)}</td>
+                <td className="price-td">Rs. {calculateItemTotalPrice(item)}</td>
               </tr>
             ))}
           </tbody>
@@ -141,7 +142,9 @@ export default function Cart() {
       <div className="calculation">
         <h1>Your Total: {PRICE_PREFIX + calculateTotalPrice().toFixed(2)}</h1>
         <p>Note: {DELIVERY_CHARGE_PERCENTAGE}% is for the delivery charge</p>
+        <Link to="/checkout"><button className="checkout-btn">Head to Checkout</button></Link>
       </div>
+
       <div className="promo-code-box">
         <input
           type="text"

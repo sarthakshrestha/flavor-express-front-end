@@ -18,7 +18,7 @@ const calculateDeliveryCharge = (totalPrice) =>
 
 export default function Cart() {
   const [promoCode, setPromoCode] = useState("");
-  const { cartItems, removeFromCart, decrementQuantity, incrementQuantity, calculateTotalPrice } = useCart();
+  const { cartItems, removeFromCart, decrementQuantity, incrementQuantity } = useCart();
 
   const [totalNutrition, setTotalNutrition] = useState({
     calories: 0,
@@ -26,6 +26,17 @@ export default function Cart() {
     carbohydrates: 0,
     fat: 0,
   });
+
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    for (const item of cartItems) {
+      totalPrice += calculateItemTotalPrice(item);
+    }
+    // Add delivery charge
+    const deliveryCharge = calculateDeliveryCharge(totalPrice);
+    totalPrice += deliveryCharge;
+    return totalPrice;
+  };
 
   useEffect(() => {
     // Update local storage with the current cart items
@@ -107,17 +118,17 @@ export default function Cart() {
                 </td>
                 <td>
                   <button
-                    className="quantity-button"
-                    onClick={() => incrementQuantity(item.id)}
+                      className="quantity-button"
+                      onClick={() => decrementQuantity(item.id)}
                   >
-                    +
+                    -
                   </button>
                   <span className="quantity">{item.quantity}</span>
                   <button
                     className="quantity-button"
-                    onClick={() => decrementQuantity(item.id)}
+                    onClick={() => incrementQuantity(item.id)}
                   >
-                    -
+                    +
                   </button>
                 </td>
                 <td className="price-td">{calculateItemTotalPrice(item)}</td>
@@ -128,8 +139,8 @@ export default function Cart() {
         <hr className="rounded" />
       </div>
       <div className="calculation">
-        <h1>Your Total: {calculateTotalPrice()}</h1>
-        <p>Note: 5% is for the delivery charge</p>
+        <h1>Your Total: {PRICE_PREFIX + calculateTotalPrice().toFixed(2)}</h1>
+        <p>Note: {DELIVERY_CHARGE_PERCENTAGE}% is for the delivery charge</p>
       </div>
       <div className="promo-code-box">
         <input

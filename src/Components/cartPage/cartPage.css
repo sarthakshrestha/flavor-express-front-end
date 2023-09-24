@@ -1,7 +1,7 @@
 /* CartHeading.css */
 .cartHeading {
-    font-size: 72px;
-    color: #FF5733;
+    font-size: 62px;
+    color: #e74c3c;
     font-family: "Poppins", sans-serif;
     margin-left: 10%;
     position: relative;
@@ -173,7 +173,7 @@ hr.rounded-bar {
 .calculation {
     font-size: 38px;
     font-family: "Poppins", sans-serif;
-    margin-left: 55%;
+    margin-left: 55rem;
     position: relative;
     margin-bottom: 4%;
     margin-top: -5%;
@@ -185,6 +185,7 @@ hr.rounded-bar {
 
 .calculation p {
     font-size: 32px;
+    margin-left: 16rem;
 }
 
 .quantity-controls {

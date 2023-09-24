@@ -9,11 +9,6 @@
     max-width: 720px; /* Limit the maximum width for better readability */
 }
 
-.driver-info{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 .order-title {
     font-family: "Poppins", "sans-serif";
     font-size: 34px;
@@ -22,32 +17,16 @@
 }
 
 .order-details {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.order-info {
-    width: 100%;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.order-info h2 {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.order-info p {
-    margin: 10px 0;
-}
-
 .order-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px; /* Add spacing between the table and other content */
 }
 
 .order-table th,
@@ -58,8 +37,9 @@
 }
 
 .order-table th {
-    background-color: #e74c3c;
+    background-color: #5A5A5A;
     color: #fff;
+    font-size: 18px;
 }
 
 .order-table tr:nth-child(even) {
@@ -67,6 +47,33 @@
 }
 
 .order-table td {
+    background-color: #f1f1f1;
+    color: black;
+    font-weight: bold;
+}
+
+.item-table {
+    width: 100%; /* Make the nested item table full width */
+    border-collapse: collapse;
+}
+
+.item-table th,
+.item-table td {
+    padding: 8px; /* Adjust padding for the nested table */
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.item-table th {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.item-table tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+.item-table td {
     background-color: #fff;
     color: #333;
 }

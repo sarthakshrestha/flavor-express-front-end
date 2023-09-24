@@ -81,7 +81,7 @@ function EditProfile() {
                 <form className="update_form">
                     <div className="image_change">
                         {/*<img src={placeholder} alt="" />*/}
-                        <h2>Upload New Profile Avatar</h2>
+                        <h2 className="profile-t">Upload New Profile Avatar</h2>
                         <br/>
                         <br/>
                         <input

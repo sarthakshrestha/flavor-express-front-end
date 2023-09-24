@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../sideBar/sideBar";
 import "./restaurantView.css";
+import AddRestaurantForm from "./addRestaurantForm";
 
 function AllRestaurants() {
     // Hardcoded fake restaurant data
@@ -45,6 +46,14 @@ function AllRestaurants() {
         setRestaurants([...restaurants, { id: restaurants.length + 1, ...newRestaurant }]);
         // Clear the form
         setNewRestaurant({ name: "", address: "", phoneNumber: "" });
+        // Close the popup
+        togglePopup();
+    };
+
+    const [isPopupOpen, setPopupOpen] = useState(false);
+
+    const togglePopup = () => {
+        setPopupOpen(!isPopupOpen);
     };
 
     return (
@@ -54,79 +63,54 @@ function AllRestaurants() {
                     <Sidebar />
                 </div>
 
-                <div className="restaurant_info_admin">
-                    <form className="restaurant-form">
-                        <h2>Add New Restaurant</h2>
-                        <div className="form-group">
-                            <label htmlFor="name">Name:</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={newRestaurant.name}
-                                onChange={handleInputChange}
-                                required
-                            />
+                <div className="restaurant-info-admin">
+                    <div className="table-container">
+                        <div className="r-header">
+                            <h1 className="r-title">Registered Restaurants</h1>
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="address">Address:</label>
-                            <input
-                                type="text"
-                                id="address"
-                                name="address"
-                                value={newRestaurant.address}
-                                onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="phoneNumber">Phone Number:</label>
-                            <input
-                                type="tel"
-                                id="phoneNumber"
-                                name="phoneNumber"
-                                className="tel-n"
-                                value={newRestaurant.phoneNumber}
-                                onChange={handleInputChange}
-                                required
-                            />
-                        </div>
-                        <button type="button" className="add-r" onClick={handleAddRestaurant}>
+                        <table className="r-table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Phone Number</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {restaurants.map((restaurant) => (
+                                <tr key={restaurant.id}>
+                                    <td>{restaurant.id}</td>
+                                    <td>{restaurant.name}</td>
+                                    <td>{restaurant.address}</td>
+                                    <td>{restaurant.phoneNumber}</td>
+                                    <td>
+                                        <button>Delete</button>
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                        <button type="button" className="add-button" onClick={togglePopup}>
                             Add Restaurant
                         </button>
-                    </form>
-                </div>
-
-                <div className="table-container">
-                    <div className="r_header">
-                        <h1 className="r-title">Registered Restaurants</h1>
                     </div>
-                    <table className="r-table">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Phone Number</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {restaurants.map((restaurant) => (
-                            <tr key={restaurant.id}>
-                                <td>{restaurant.id}</td>
-                                <td>{restaurant.name}</td>
-                                <td>{restaurant.address}</td>
-                                <td>{restaurant.phoneNumber}</td>
-                                <td>
-                                    <button>Delete</button>
-                                </td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
                 </div>
             </div>
+
+            {isPopupOpen && (
+                <div className="popup-container">
+                    <div className="popup-content">
+                        <AddRestaurantForm
+                            newRestaurant={newRestaurant}
+                            handleInputChange={handleInputChange}
+                            handleAddRestaurant={handleAddRestaurant}
+                            togglePopup={togglePopup}
+                        />
+                    </div>
+                </div>
+            )}
         </>
     );
 }

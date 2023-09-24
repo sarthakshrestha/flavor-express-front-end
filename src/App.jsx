@@ -52,8 +52,8 @@ function App() {
                     <Route path="/registrationPage" element={<RegistrationPage/>}/>
 
                     {/*// Customer Dashboard*/}
-                    <Route path="/customer" element={<CustomerSidebar/>}/>
-                    <Route path="/customer/order" element={<OrderOnTheWay/>}/>
+                    {/*<Route path="/customer" element={<CustomerSidebar/>}/>*/}
+                    <Route path="/customer" element={<OrderOnTheWay/>}/>
                     <Route path="/customer/edit" element={<EditProfile/>}/>
 
                     {/*// Admin Dashboard*/}

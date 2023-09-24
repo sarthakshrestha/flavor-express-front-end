@@ -1,0 +1,91 @@
+/* Styles for the OrderOnTheWay component */
+.order-on-the-way {
+    padding: 20px; /* Center horizontally by using auto margins */
+    margin-left: 25rem;
+    margin-right: 20rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 720px; /* Limit the maximum width for better readability */
+}
+
+.driver-info{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.order-title {
+    font-family: "Poppins", "sans-serif";
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-info {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.order-info h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.order-info p {
+    margin: 10px 0;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Add border to table cells for consistent gaps */
+}
+
+.order-table th {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.order-table tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+.order-table td {
+    background-color: #fff;
+    color: #333;
+}
+
+.track-order-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.track-button {
+    padding: 12px 24px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.track-button:hover {
+    background-color: #c0392b;
+}

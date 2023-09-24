@@ -13,6 +13,8 @@ import MealPlan from "./Components/mealPlan/mealPlan";
 import RestaurantLoginPage from "./Components/loginPage/restaurantLoginPage/RestaurantLoginPage";
 import CustomerSidebar from "./Components/customerDashboard/customerSidebar/customerSidebar";
 import {CartProvider} from "./Components/cartPage/cartContext"; // Import CartProvider
+import OrderOnTheWay from "./Components/customerDashboard/mainDashboard/mainDashboard";
+
 import DriverLoginPage from "./Components/loginPage/driverLoginPage/DriverLoginPage";
 import AllRestaurants from "./Components/adminDashboard/restaurantView/restaurantView";
 import AllCustomers from "./Components/adminDashboard/usersView/usersView";
@@ -51,6 +53,7 @@ function App() {
 
                     {/*// Customer Dashboard*/}
                     <Route path="/customer" element={<CustomerSidebar/>}/>
+                    <Route path="/customer/order" element={<OrderOnTheWay/>}/>
                     <Route path="/customer/edit" element={<EditProfile/>}/>
 
                     {/*// Admin Dashboard*/}

@@ -57,20 +57,6 @@
     transition: background-color 0.3s ease;
 }
 
-.del{
-    padding: 8px 16px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.del:hover{
-    background-color: #c0392b;
-}
-
 .restaurant_info_admin button:hover {
     background-color: #c0392b;
 }
@@ -101,6 +87,22 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.btn-delete{
+    font-family: "DM Sans", 'sans-serif';
+    font-size: 15px;
+    padding: 7px;
+    background-color: #D32F2F;
+    color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    /*background-color: #3a3737;*/
+    background-color: white;
+    color: red;
+}
+
 .u-table th,
 .u-table td {
     padding: 12px 15px;
@@ -111,6 +113,7 @@
 .u-table th {
     background-color: #f5f5f5;
     font-weight: bold;
+
 }
 
 .u-table tbody tr:nth-child(even) {

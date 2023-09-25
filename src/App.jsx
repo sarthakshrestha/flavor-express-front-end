@@ -24,7 +24,7 @@ import AllCustomers from "./Components/adminDashboard/usersView/usersView";
 import AllDrivers from "./Components/adminDashboard/driverView/driverView";
 import EditProfile from "./Components/customerDashboard/editProfile/editProfile";
 import RestaurantDashboard from "./Components/restaurantDashboard/restaurantDashboard";
-
+import RestroFood from "./Components/restaurantDashboard/restroFoodItems/restroFoodItems";
 
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -73,6 +73,7 @@ function App() {
 
                     {/*// Restro Dashboard*/}
                     <Route path="/restro" element={<RestaurantDashboard/>}/>
+                    <Route path="/restro/food" element={<RestroFood/>}/>
 
                     {/*// About Us Page*/}
                     <Route path="/aboutUs" element={<AboutUspage/>}/>

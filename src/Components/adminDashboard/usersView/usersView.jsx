@@ -1,36 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Sidebar from "../sideBar/sideBar";
 import "./usersView.css";
 
-export default function AllCustomers() {
-    // Hardcoded fake restaurant data
-    const fakeUsers = [
-        {
-            id: 1,
-            name: "Restaurant 1",
-            address: "123 Main Street",
-            phoneNumber: "555-123-4567",
-        },
-        {
-            id: 2,
-            name: "Restaurant 2",
-            address: "456 Elm Street",
-            phoneNumber: "555-987-6543",
-        },
-        {
-            id: 3,
-            name: "Restaurant 3",
-            address: "456 Elm Street",
-            phoneNumber: "555-987-6543",
-        },
-        // Add more fake restaurants here
-    ];
+function AllUsers() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    // Function to fetch and populate data
+    const fetchData = () => {
+        axios.get('http://localhost:8081/customers')
+            .then((response) => {
+                setData(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+    // Function to delete a row
+    const deleteRow = (customer_id) => {
+        // Make a DELETE request to your backend API to delete the record with the given ID
+        axios.delete(`http://localhost:8081/customers/${customer_id}`)
+            .then(() => {
+                // If successful, re-fetch the data to update the table
+                fetchData();
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
 
     return (
         <>
             <div className="center-container">
                 <div className="r-view">
-                    <Sidebar />
+                    <Sidebar/>
                 </div>
 
                 <div className="customer_info_admin">
@@ -43,20 +51,20 @@ export default function AllCustomers() {
                             <th>ID</th>
                             <th>Name</th>
                             <th>Address</th>
+                            <th>Email</th>
                             <th>Phone Number</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {fakeUsers.map((customer) => (
-                            <tr key={customer.id}>
-                                <td>{customer.id}</td>
-                                <td>{customer.name}</td>
+                        {data.map((customer) => (
+                            <tr key={customer.customer_id}>
+                                <td>{customer.customer_id}</td>
+                                <td>{customer.fullName}</td>
                                 <td>{customer.address}</td>
+                                <td>{customer.email}</td>
                                 <td>{customer.phoneNumber}</td>
-                                <td>
-                                    <button className="del">Delete</button>
-                                </td>
+                                <td><button className="btn-delete" onClick={() => deleteRow(customer.customer_id)}>Delete</button></td>
                             </tr>
                         ))}
                         </tbody>
@@ -67,3 +75,4 @@ export default function AllCustomers() {
     );
 }
 
+export default AllUsers;

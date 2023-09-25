@@ -65,6 +65,14 @@
     border-radius: 21px;
 }
 
+.icon-revenue{
+    font-size: 55px;
+}
+
+.icon-orders{
+    font-size: 55px;
+}
+
 .form-group {
     margin-bottom: 20px;
     padding: 15px;
@@ -138,6 +146,11 @@
     transition: background-color 0.3s ease;
     align-content: center;
     justify-content: center;
+}
+
+.r-title{
+    font-family: "DM Sans", serif;
+    font-size: 35px;
 }
 
 .r-table button:hover {

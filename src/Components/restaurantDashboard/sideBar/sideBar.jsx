@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./sideBar.css";
 
-function Sidebar() {
+function RestaurantSidebar() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const sidebarLinks = [
-        { label: "Dashboard", icon: "tachometer", to: "/admin" },
-        { label: "Customers", icon: "folder", to: "/admin/customers" },
-        { label: "Restaurants", icon: "message-square-detail", to: "/admin/restaurants" },
-        { label: "Drivers", icon: "bar-chart-square", to: "/admin/drivers" },
+        { label: "Dashboard", icon: "tachometer", to: "/restro" },
+        { label: "Food Items", icon: "folder", to: "/restro/food" },
+        { label: "Edit Profile", icon: "message-square-detail", to: "/restro/edit" },
+        { label: "Orders", icon: "bar-chart-square", to: "/restro/orders" },
     ];
 
     const changeLink = (index) => {
@@ -33,7 +33,7 @@ function Sidebar() {
     return (
         <nav className="sidebar-nav">
             <div className="sidebar-top">
-                <h1 className="titleMain">Administrator Dashboard</h1>
+                <h1 className="titleMain">Restaurant Dashboard</h1>
             </div>
             <div className="sidebar-links">
                 <ul>
@@ -78,4 +78,4 @@ function Sidebar() {
     );
 }
 
-export default Sidebar;
+export default RestaurantSidebar;

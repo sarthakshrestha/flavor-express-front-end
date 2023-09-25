@@ -1,0 +1,81 @@
+/* restaurantDashboard.css */
+
+/* Main container */
+.r1-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Square box containing revenues, orders, and recent orders */
+.rc-square-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    position: fixed;
+    top: 3rem;
+}
+
+/* Revenues and Orders sections */
+.rc-revenues,
+.rc-orders {
+    text-align: center;
+}
+
+.rc-revenues h3,
+.rc-orders h3 {
+    margin: 0;
+    color: black;
+    font-size: 42px;
+    font-family: "DM Sans", serif;
+}
+
+.rc-revenues p,
+.rc-orders p {
+    margin: 0;
+    font-size: 32px;
+    color: #00a63f;
+}
+
+/* Recent Orders section and table */
+.rc-recent-orders {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.rc-recent-orders h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+/* Table styling */
+.recent-orders-table {
+    position: fixed;
+    top: 17rem;
+    margin-left: 25%;
+    width: 45%;
+    border-collapse: collapse;
+}
+
+.recent-orders-table th,
+.recent-orders-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.recent-orders-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.recent-orders-table tbody tr:hover {
+    background-color: #e0e0e0;
+}

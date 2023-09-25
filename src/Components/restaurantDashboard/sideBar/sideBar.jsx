@@ -8,7 +8,7 @@ function RestaurantSidebar() {
     const sidebarLinks = [
         { label: "Dashboard", icon: "tachometer", to: "/restro" },
         { label: "Food Items", icon: "folder", to: "/restro/food" },
-        { label: "Edit Profile", icon: "message-square-detail", to: "/restro/edit" },
+        { label: "Edit Restaurant Info", icon: "message-square-detail", to: "/restro/edit" },
         { label: "Orders", icon: "bar-chart-square", to: "/restro/orders" },
     ];
 

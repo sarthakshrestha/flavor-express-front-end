@@ -1,0 +1,74 @@
+/* editRestro.css */
+
+/* editRestro.css */
+.restrobar{
+    display: flex;
+    margin-top: -550px;
+}
+
+
+.ed-restro-edit-restaurant {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 900px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Higher z-index value */
+    top: 180px;
+}
+
+.e-form{
+    position: relative;
+}
+
+.ed-restro-edit-restaurant h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Set the form to display as flex with column direction */
+.ed-restro-edit-restaurant form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.ed-restro-edit-restaurant label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ed-restro-edit-restaurant input[type="text"],
+.ed-restro-edit-restaurant textarea,
+.ed-restro-edit-restaurant input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.ed-restro-edit-restaurant input[type="file"] {
+    border: none;
+    padding: 0;
+}
+
+.ed-restro-update-button {
+    background-color: #007bff; /* Button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.ed-restro-update-button:hover {
+    background-color: #0056b3; /* Hover color */
+}
+
+/* Additional styles can be added as needed */

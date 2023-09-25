@@ -75,7 +75,7 @@ export default function RestroFood() {
                     <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Price (USD)</th>
+                        <th>Price (Rs.)</th>
                         <th>Category</th>
                         <th>Image</th>
                     </tr>
@@ -132,7 +132,7 @@ export default function RestroFood() {
                                 onChange={handleInputChange}
                                 required
                             ></textarea>
-                            <label htmlFor="itemPrice">Price (USD):</label>
+                            <label htmlFor="itemPrice">Price (Rs.):</label>
                             <input
                                 type="number"
                                 id="itemPrice"
@@ -152,8 +152,9 @@ export default function RestroFood() {
                                 <option value="non-veg">Non-Veg</option>
                                 <option value="veg">Veg</option>
                                 <option value="drinks">Drinks</option>
-                            </select>
+                            </select>{''}
                             <label htmlFor="itemImage">Upload Image:</label>
+                            <p style={{fontStyle: "italic", fontSize: "16px"}}>Please upload high-res images<br/></p>
                             <input
                                 type="file"
                                 id="itemImage"

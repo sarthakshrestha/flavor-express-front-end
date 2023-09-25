@@ -7,12 +7,12 @@
 }
 
 .item-heading {
-    top: -1020px;
-    font-size: 24px;
+    bottom: 1065px;
+    font-size: 42px;
     margin-bottom: 20px;
     position: relative;
+    font-family: "DM Sans", "sans-serif";
 }
-
 
 /* Food Items Table */
 .item-food-table {
@@ -20,7 +20,7 @@
     border-collapse: collapse;
     margin-left: 25%;
     position: relative;
-    top: -59rem;
+    bottom: 1050px;
 }
 
 .upload-item{
@@ -43,7 +43,6 @@
     font-size: 25px;
     margin-left: 20px;
 }
-
 
 .p-title{
     font-family: "DM Sans", serif;
@@ -75,7 +74,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    top: -50rem;
+    bottom: 1030px;
     position: relative;
 }
 

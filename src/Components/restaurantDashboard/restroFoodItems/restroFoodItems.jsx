@@ -4,33 +4,27 @@ import RestaurantSidebar from "../sideBar/sideBar";
 import "./restroFoodItems.css";
 
 export default function RestroFood() {
-    const [foodItems, setFoodItems] = useState([
-        {
-            id: 1,
-            name: "Pizza",
-            description: "Delicious pizza with various toppings.",
-            price: 12.99,
-            category: "non-veg",
-            image: "/path/to/pizza-image.jpg",
-        },
-        {
-            id: 2,
-            name: "Burger",
-            description: "Classic burger with cheese and vegetables.",
-            price: 8.99,
-            category: "veg",
-            image: "/path/to/burger-image.jpg",
-        },
-        // Add more food items here
+    const [foodItems, setFoodItems] = useState([{
+        id: 1,
+        name: "Pizza",
+        description: "Delicious pizza with various toppings.",
+        price: 12.99,
+        category: "non-veg",
+        image: "/path/to/pizza-image.jpg",
+    }, {
+        id: 2,
+        name: "Burger",
+        description: "Classic burger with cheese and vegetables.",
+        price: 8.99,
+        category: "veg",
+        image: "/path/to/burger-image.jpg",
+    }, // Add more food items here
     ]);
 
     const [showAddFoodPopup, setShowAddFoodPopup] = useState(false);
 
     const [newFoodItem, setNewFoodItem] = useState({
-        name: "",
-        description: "",
-        price: "",
-        category: "non-veg", // Default category
+        name: "", description: "", price: "", category: "non-veg", // Default category
         image: null,
     });
 
@@ -54,19 +48,14 @@ export default function RestroFood() {
 
         // Clear the form fields
         setNewFoodItem({
-            name: "",
-            description: "",
-            price: "",
-            category: "non-veg",
-            image: null,
+            name: "", description: "", price: "", category: "non-veg", image: null,
         });
 
         // Close the popup
         toggleAddFoodPopup();
     };
 
-    return (
-        <>
+    return (<>
             <RestaurantSidebar/>
             <div className="item-container">
                 <h2 className="item-heading">Food Items</h2>
@@ -81,38 +70,33 @@ export default function RestroFood() {
                     </tr>
                     </thead>
                     <tbody>
-                    {foodItems.map((food) => (
-                        <tr key={food.id}>
+                    {foodItems.map((food) => (<tr key={food.id}>
                             <td>{food.name}</td>
                             <td>{food.description}</td>
                             <td>{food.price.toFixed(2)}</td>
                             <td>{food.category}</td>
                             <td>
-                                {food.image && (
-                                    <img
+                                {food.image && (<img
                                         src={food.image}
                                         alt={food.name}
                                         width="50"
                                         height="50"
-                                    />
-                                )}
+                                    />)}
                             </td>
-                        </tr>
-                    ))}
+                        </tr>))}
                     </tbody>
                 </table>
                 <button className="item-add-button" onClick={toggleAddFoodPopup}>
                     Add Food Item
                 </button>
-                {showAddFoodPopup && (
-                    <div className="item-add-popup">
+                {showAddFoodPopup && (<div className="item-add-popup">
                         <form>
                             <h1 className="p-title">
                                 Add a new Item to your restaurant
                                 <button
                                     className="close-button-1"
                                     onClick={toggleAddFoodPopup}
-                                    style={{ fontSize: "25px" }}
+                                    style={{fontSize: "25px"}}
                                 >
                                     &times;
                                 </button>
@@ -168,8 +152,8 @@ export default function RestroFood() {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="itemImage">Upload Image:</label>
-                                    <p style={{ fontStyle: "italic", fontSize: "16px" }}>
-                                        Please upload high-res images<br />
+                                    <p style={{fontStyle: "italic", fontSize: "16px"}}>
+                                        Please upload high-res images<br/>
                                     </p>
                                     <input
                                         type="file"
@@ -203,16 +187,7 @@ export default function RestroFood() {
                                         required
                                     />
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="itemCalories">Calories (kcal):</label>
-                                    <input
-                                        type="number"
-                                        id="itemCalories"
-                                        name="calories"
-                                        step="0.01"
-                                        required
-                                    />
-                                </div>
+
                                 <div className="form-group">
                                     <label htmlFor="itemSugar">Sugar (g):</label>
                                     <input
@@ -223,14 +198,32 @@ export default function RestroFood() {
                                         required
                                     />
                                 </div>
+                                <div className="form-group">
+                                    <label htmlFor="itemFam">Fat (g):</label>
+                                    <input
+                                        type="number"
+                                        id="itemFat"
+                                        name="fat"
+                                        step="0.01"
+                                        required
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="itemCalories">Calories (kcal):</label>
+                                    <input
+                                        type="number"
+                                        id="itemCalories"
+                                        name="calories"
+                                        step="0.01"
+                                        required
+                                    />
+                                </div>
                                 <button className="add-2" type="button" onClick={addFoodItem}>
                                     Add
                                 </button>
                             </div>
                         </form>
-                    </div>
-                )}
+                    </div>)}
             </div>
-        </>
-    );
+        </>);
 }

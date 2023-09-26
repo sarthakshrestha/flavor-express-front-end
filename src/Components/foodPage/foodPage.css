@@ -5,14 +5,19 @@
 }
 
 .headLine {
-    font-size: 35px;
+    font-size: 38px;
+    font-family: "Jost", sans-serif;
+    color: #3498db;
+}
+
+.userLine {
+    font-size: 52px;
     font-family: "Jost", sans-serif;
     color: black;
 }
 
-.userLine {
-    font-size: 42px;
-    font-family: 'Koulen', cursive;
+.flav-flav{
+    font-family: "Racing Sans One", serif;
     color: red;
 }
 

@@ -16,12 +16,14 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    width: 90%;
+    width: 95%;
     max-width: 400px;
     overflow-y: auto;
     background-color: #ffffff;
     position: relative;
 }
+
+
 
 .close-button {
     position: absolute;
@@ -95,3 +97,44 @@
 .add-button:hover {
     background-color: #c0392b;
 }
+
+.fm-heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #D32F2F;
+}
+
+.fm-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fm-add-button{
+    background-color: #4CAF50;
+    color: white;
+    font-family: "DM Sans", "sans-serif";
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.fm-add-button:hover{
+    background-color: #3a3737;
+    color: white;
+}
+
+.fm-column {
+    flex-basis: calc(50% - 10px); /* Adjust the width of each column */
+}
+
+.fm-group {
+    margin-bottom: 10px;
+}
+
+.fm-group label {
+    font-size: 19px;
+    color: #333;
+}
+
+/* Rest of your styles as needed */
+

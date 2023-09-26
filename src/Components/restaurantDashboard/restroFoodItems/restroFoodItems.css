@@ -4,6 +4,7 @@
 .item-container {
     padding: 20px;
     text-align: center;
+    margin-top: 300px;
 }
 
 .item-heading {
@@ -41,7 +42,8 @@
     color: #333; /* You can change the color to your preference */
     cursor: pointer;
     font-size: 25px;
-    margin-left: 20px;
+    margin-left: 570px;
+    border-radius: 7px;
 }
 
 .p-title{
@@ -82,7 +84,7 @@
 .add-2 {
     background-color: #00a63f;
     color: #fff;
-    font-size: 19px;
+    font-size: 15px;
     font-family: "DM Sans", 'sans-serif';
     padding-left: 14px;
     padding-right: 14px;
@@ -114,8 +116,10 @@
 }
 
 .item-add-popup h3 {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
     margin-bottom: 20px;
+    font-family: "DM Sans", 'sans-serif';
 }
 
 .item-add-popup form {
@@ -154,3 +158,20 @@
 .item-add-popup button[type="submit"]:hover {
     background-color: #007f30;
 }
+
+/* restroFoodItems.css */
+
+/* ... (previous styles) ... */
+
+.form-column {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex-basis: calc(50% - 10px); /* Adjust the width of each column */
+}
+
+/* ... (previous styles) ... */
+

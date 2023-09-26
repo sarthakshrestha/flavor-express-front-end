@@ -1,0 +1,58 @@
+.current-delivery{
+    position: relative;
+    padding: 40px;
+    top: -680px;
+    margin-right: 90px;
+}
+
+/* Define styles for the driver table */
+.driver-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table header */
+.driver-table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style alternating rows */
+.driver-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style table cells */
+.driver-table td {
+    padding: 10px;
+}
+
+.dr-square-box{
+    top: 40px;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    position: fixed;
+    top: 3rem;
+    display: flex;
+}
+
+.r2-container{
+    position: relative;
+    margin-left: 450px;
+}
+
+/* Hover effect on rows */
+.driver-table tbody tr:hover {
+    background-color: #ddd;
+}

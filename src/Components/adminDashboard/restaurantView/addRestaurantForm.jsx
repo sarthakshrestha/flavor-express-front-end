@@ -49,96 +49,103 @@ function AddRestaurantForm({ onAddRestaurant, togglePopup }) {
     return (
         <div className="popup-container">
             <div className="popup-box">
-                <form className="popup-form">
-                    <span className="close-button" onClick={togglePopup}>
-                        &times;
-                    </span>
-                    <h2>Add New Restaurant</h2>
-                    <div className="f1-group">
-                        <label htmlFor="name">Name:</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={newRestaurant.name}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="address">Address:</label>
-                        <input
-                            type="text"
-                            id="address"
-                            name="address"
-                            value={newRestaurant.address}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="phoneNumber">Phone Number:</label>
-                        <input
-                            type="tel"
-                            id="phoneNumber"
-                            name="phoneNumber"
-                            className="tel-input"
-                            value={newRestaurant.phoneNumber}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={newRestaurant.email}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={newRestaurant.password}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="description">Description:</label>
-                        <textarea
-                            id="description"
-                            name="description"
-                            value={newRestaurant.description}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="image">Restaurant Image (PNG only):</label>
-                        <input
-                            type="file"
-                            id="image"
-                            name="image"
-                            accept=".png"
-                            onChange={handleImageUpload}
-                        />
-                        <br/>
-                        <p><br/>Please only upload .png files.</p>
-                    </div>
-                    <div className="button-container">
-                        <button
-                            type="button"
-                            className="add-button"
-                            onClick={handleAddRestaurant}
-                        >
-                            Add Restaurant
-                        </button>
+                <form className="rc-form-1">
+                <span className="close-button" onClick={togglePopup}>
+                    &times;
+                </span>
+                    <h2 className="fm-heading">Add New Restaurant</h2>
+                    <div className="fm-columns">
+                        <div className="fm-column">
+                            <div className="fm-group">
+                                <label htmlFor="name">Name:</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={newRestaurant.name}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </div>
+                            <div className="fm-group">
+                                <label htmlFor="address">Address:</label>
+                                <input
+                                    type="text"
+                                    id="address"
+                                    name="address"
+                                    value={newRestaurant.address}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </div>
+                            <div className="fm-group">
+                                <label htmlFor="phoneNumber">Phone Number:</label>
+                                <input
+                                    type="tel"
+                                    id="phoneNumber"
+                                    name="phoneNumber"
+                                    className="tel-input"
+                                    value={newRestaurant.phoneNumber}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </div>
+                            <div className="fm-group">
+                                <label htmlFor="email">Email:</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={newRestaurant.email}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </div>
+                            <div className="fm-group">
+                                <label htmlFor="password">Password:</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    value={newRestaurant.password}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className="fm-column">
+                            <div className="fm-group">
+                                <label htmlFor="description">Description:</label>
+                                <textarea
+                                    id="description"
+                                    name="description"
+                                    value={newRestaurant.description}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div className="fm-group">
+                                <label htmlFor="image">Restaurant Image (PNG only):</label>
+                                <div className="file-input-container">
+                                    <input
+                                        type="file"
+                                        id="image"
+                                        name="image"
+                                        accept=".png"
+                                        onChange={handleImageUpload}
+                                    />
+                                </div>
+                                <p className="fm-note">Please only upload .png files.</p>
+                            </div>
+                            <div className="fm-button-container">
+                                <button
+                                    type="button"
+                                    className="fm-add-button"
+                                    onClick={handleAddRestaurant}
+                                >
+                                    Add Restaurant
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -123,7 +123,7 @@ export default function CheckoutPage() {
                             />
                         </div>
                         <div className="ck-checkout-group">
-                            <label htmlFor="ck-phone">Phone Number:</label>
+                            <label htmlFor="ck-phone" className="phone-no">Phone Number:</label>
                             <input
                                 type="tel"
                                 id="ck-phone"
@@ -133,11 +133,13 @@ export default function CheckoutPage() {
                             />
                         </div>
                         <div className="ck-checkout-group">
-                            <label htmlFor="ck-driver">Select Delivery Driver:</label>
-                            <select id="ck-driver" name="driver" required>
-                                <option value="driver1">Driver 1</option>
-                                <option value="driver2">Driver 2</option>
-                            </select>
+                            <label htmlFor="ck-driver">Delivery Notes: </label>
+                            <input
+                                type="text"
+                                id="ck-driver"
+                                name="notes"
+                                placeholder="Enter Delivery Notes if required "
+                            />
                         </div>
                         <button className="ck-checkout-btn">Confirm Order</button>
                     </form>

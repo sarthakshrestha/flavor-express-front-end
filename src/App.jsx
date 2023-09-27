@@ -11,8 +11,7 @@ import Cart from "./Components/cartPage/cart";
 import AdminDashboard from "./Components/adminDashboard/adminDashboard";
 import MealPlan from "./Components/mealPlan/mealPlan";
 import RestaurantLoginPage from "./Components/loginPage/restaurantLoginPage/RestaurantLoginPage";
-import CustomerSidebar from "./Components/customerDashboard/customerSidebar/customerSidebar";
-import {CartProvider} from "./Components/cartPage/cartContext"; // Import CartProvider
+import {CartProvider} from "./Components/cartPage/cartContext";
 import OrderOnTheWay from "./Components/customerDashboard/mainDashboard/mainDashboard";
 import AboutUspage from "./Components/aboutUsPage/AboutUsPage";
 import OrderHistory from "./Components/customerDashboard/orderHistory/orderHistory";
@@ -27,7 +26,7 @@ import RestaurantDashboard from "./Components/restaurantDashboard/restaurantDash
 import RestroFood from "./Components/restaurantDashboard/restroFoodItems/restroFoodItems";
 import EditRestro from "./Components/restaurantDashboard/editRestaurantInfo/editRestro";
 import MainDriverDash from "./Components/driverDashboard/mainDriver";
-
+import DietSuggestion from "./Components/dietSuggestions/dietSuggestion";
 
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -84,6 +83,10 @@ function App() {
 
                     {/*// About Us Page*/}
                     <Route path="/aboutUs" element={<AboutUspage/>}/>
+
+                    {/*//Diet Plan Page*/}
+                    <Route path="/diet-plan" element={<DietSuggestion/>}/>
+
 
                     {/*//Food page*/}
                     <Route path="/foodPage" element={<FoodPage/>}/>

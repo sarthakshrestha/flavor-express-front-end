@@ -1,9 +1,10 @@
 /* Styles for the AllRestaurants component */
 .restaurant-info-admin {
     padding: 20px;
-    margin-left: 150px;
-    margin-top: 90px;
-    margin-bottom: 30px;
+    margin-left: 250px;
+    margin-right: 205px;
+    margin-top: 190px;
+    margin-bottom: 390px;
 }
 
 .admin-header h1 {
@@ -15,7 +16,7 @@
 }
 
 .restaurant-info-admin table {
-    width: 100%;
+    width: 1000px;
     border-collapse: collapse;
     background-color: #fff;
     border-radius: 5px;
@@ -28,6 +29,7 @@
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    font-family: "Jost",serif;
 }
 
 .restaurant-info-admin th {
@@ -43,15 +45,6 @@
     background-color: #e0e0e0;
 }
 
-.restaurant-info-admin button {
-    padding: 8px 16px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
 .r2-form {
     position: relative;
@@ -103,12 +96,9 @@
     margin-left: 0;
 }
 
-.restaurant-info-admin button:hover {
-    background-color: #c0392b;
-}
 
 .r-table {
-    width: 100%;
+    width: 1000px;
     border-collapse: collapse;
     margin: 20px 0;
     background-color: #fff;
@@ -120,12 +110,16 @@
 .r-table td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* Add a border-bottom for better separation */
+    font-family: "Jost",serif;
 }
 
 .r-table th {
-    background-color: #f5f5f5;
+    background-color: lightslategray;
     font-weight: bold;
+    font-family: "Poppins",serif;
+    font-size: 16px;
+    color:white;
 }
 
 .r-table tbody tr:nth-child(even) {
@@ -136,25 +130,9 @@
     background-color: #e0e0e0;
 }
 
-.r-table button {
-    padding: 8px 16px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-content: center;
-    justify-content: center;
-}
-
 .r-title{
-    font-family: "DM Sans", serif;
-    font-size: 35px;
-}
-
-.r-table button:hover {
-    background-color: #c0392b;
+    font-size: 52px;
+    font-family: "Jost", sans-serif;
 }
 
 /* Media query to make the table responsive */
@@ -176,4 +154,22 @@
     .restaurant-info-admin button {
         padding: 6px 12px;
     }
+}
+
+.btn-delete{
+    font-family: "DM Sans", 'sans-serif';
+    font-size: 15px;
+    padding: 7px;
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    /*background-color: #3a3737;*/
+    background-color: white;
+    color: red;
 }

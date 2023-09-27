@@ -1,143 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
+import { useCart } from "../cartPage/cartContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from "../../sharedComponents/header/Header";
 import Footer from "../../sharedComponents/footer/Footer";
 import "./mealPlan.css";
-
-const productData = [
-    {
-        id: 1,
-        name: 'Breakfast',
-        description: 'Roti along with boiled vegetables',
-        image: 'p1breakfast.png',
-        nutrition: {
-            calories: 250,
-            protein: 10,
-            carbs: 30,
-            fat: 12,
-        },
-    },
-    {
-        id: 2,
-        name: 'Lunch',
-        description: 'Roti along with boiled vegetables',
-        image: 'p1lunch.png',
-        nutrition: {
-            calories: 300,
-            protein: 15,
-            carbs: 35,
-            fat: 14,
-        },
-    },
-    {
-        id: 3,
-        name: 'Dinner',
-        description: 'Roti along with boiled vegetables',
-        image: 'p1breakfast.png',
-        nutrition: {
-            calories: 280,
-            protein: 12,
-            carbs: 28,
-            fat: 10,
-        },
-    },
-    {
-        id: 4,
-        name: 'Breakfast',
-        description: 'Scrambled eggs with toast',
-        image: 'p1breakfast.png',
-        nutrition: {
-            calories: 320,
-            protein: 18,
-            carbs: 25,
-            fat: 14,
-        },
-    },
-    {
-        id: 5,
-        name: 'Lunch',
-        description: 'Grilled chicken salad',
-        image: 'p1lunch.png',
-        nutrition: {
-            calories: 350,
-            protein: 22,
-            carbs: 15,
-            fat: 16,
-        },
-    },
-    {
-        id: 6,
-        name: 'Dinner',
-        description: 'Salmon with steamed broccoli',
-        image: 'p1breakfast.png',
-        nutrition: {
-            calories: 380,
-            protein: 20,
-            carbs: 20,
-            fat: 18,
-        },
-    },
-    {
-        id: 7,
-        name: 'Breakfast',
-        description: 'Greek yogurt with berries',
-        image: 'p1breakfast.png',
-        nutrition: {
-            calories: 180,
-            protein: 12,
-            carbs: 20,
-            fat: 6,
-        },
-    },
-    {
-        id: 8,
-        name: 'Lunch',
-        description: 'Vegetable stir-fry with tofu',
-        image: 'p1lunch.png',
-        nutrition: {
-            calories: 320,
-            protein: 16,
-            carbs: 30,
-            fat: 14,
-        },
-    },
-    {
-        id: 9,
-        name: 'Dinner',
-        description: 'Spaghetti with marinara sauce',
-        image: 'p1breakfast.png',
-        nutrition: {
-            calories: 350,
-            protein: 12,
-            carbs: 45,
-            fat: 10,
-        },
-    },
-];
+import productData from "./data.json";
 
 export default function MealPlan() {
+    const { addToCart } = useCart();
+    const [selectedPlan, setSelectedPlan] = useState(null);
+
+    const calculatePlanName = (planNumber) => {
+        switch (planNumber) {
+            case 1:
+                return "Veg-Option";
+            case 2:
+                return "Non-Veg Option";
+            case 3:
+                return "Mixed";
+            default:
+                return "Unknown";
+        }
+    };
+
+    const productDataByPlan = {};
+    productData.forEach((product) => {
+        if (!productDataByPlan[product.plan]) {
+            productDataByPlan[product.plan] = [];
+        }
+        productDataByPlan[product.plan].push(product);
+    });
+
+    const handleAddPlanToCart = (planNumber) => {
+        if (selectedPlan !== null) {
+            toast.error("You can only select one meal plan at a time.");
+            return;
+        }
+
+        // Get the products for the specified plan
+        const productsToAdd = productData.filter(
+            (product) => product.plan === planNumber
+        );
+
+        if (productsToAdd.length > 0) {
+            // Calculate the plan name
+            const planName = calculatePlanName(planNumber);
+
+            // Calculate the total price for the plan
+            const totalPrice = productsToAdd.reduce(
+                (total, product) => total + parseFloat(product.price),
+                0
+            );
+
+            // Add the selected plan to the cart as a single item
+            addToCart({
+                id: "meal_plan",
+                name: planName,
+                quantity: 1,
+                totalPrice,
+                products: productsToAdd,
+            });
+
+            setSelectedPlan(planNumber);
+        }
+    };
+
     return (
         <>
-            <Header/>
+            <Header />
             <div className="meal-content">
                 <div className="meal-title">Create a daily meal plan of your choice</div>
                 <div className="meal-restaurant">
-                    Short on time but hungry for great food? <br/> Feast your way through the day with FE-Kitchen's
-                    daily meal
-                    wonders!
+                    Short on time but hungry for great food? <br /> Feast your way through the day with FE-Kitchen's daily meal wonders!
                 </div>
                 <div className="meal-text">
                     Presented in hassle-free, microwave-friendly containers for effortless dining.
                 </div>
+
+                {/* Plan #1 */}
                 <div className="plan-number">
                     <h1 className="plan-title">Plan #1 <span className="veg-option">(Veg-Option)</span></h1>
                 </div>
-
                 <div className="product-cards">
                     {productData.slice(0, 3).map((product) => (
                         <div key={product.id} className="product-card">
                             <img
                                 className="food-image"
-                                src={require(`./images/${product.image}`)}
+                                src={require(`../../Components/mealPlan/images/${product.image}`)}
                                 alt={product.name}
                             />
                             <div className="product-name">{product.name}</div>
@@ -172,7 +122,13 @@ export default function MealPlan() {
                         </div>
                     ))}
                 </div>
-                <button className="plan-add-btn">Add Plan to Cart</button>
+                <div className="add-plan-to-cart">
+                    <button className="add-plan-btn" onClick={() => handleAddPlanToCart(1)}>
+                        Add Plan #1 to Cart
+                    </button>
+                </div>
+
+                {/* Plan #2 */}
                 <div className="plan-number">
                     <h1 className="plan-title">Plan #2 <span className="nonveg-option">(Non-Veg Option)</span></h1>
                 </div>
@@ -181,7 +137,7 @@ export default function MealPlan() {
                         <div key={product.id} className="product-card">
                             <img
                                 className="food-image"
-                                src={require(`./images/${product.image}`)}
+                                src={require(`../../Components/mealPlan/images/${product.image}`)}
                                 alt={product.name}
                             />
                             <div className="product-name">{product.name}</div>
@@ -216,7 +172,13 @@ export default function MealPlan() {
                         </div>
                     ))}
                 </div>
-                <button className="plan-add-btn">Add Plan to Cart</button>
+                <div className="add-plan-to-cart">
+                    <button className="add-plan-btn" onClick={() => handleAddPlanToCart(2)}>
+                        Add Plan #2 to Cart
+                    </button>
+                </div>
+
+                {/* Plan #3 */}
                 <div className="plan-number">
                     <h1 className="plan-title">Plan #3 <span className="nonveg-option">(Mix Option)</span></h1>
                 </div>
@@ -225,7 +187,7 @@ export default function MealPlan() {
                         <div key={product.id} className="product-card">
                             <img
                                 className="food-image"
-                                src={require(`./images/${product.image}`)}
+                                src={require(`../../Components/mealPlan/images/${product.image}`)}
                                 alt={product.name}
                             />
                             <div className="product-name">{product.name}</div>
@@ -260,9 +222,14 @@ export default function MealPlan() {
                         </div>
                     ))}
                 </div>
-                <button className="plan-add-btn">Add Plan to Cart</button>
+                <div className="add-plan-to-cart">
+                    <button className="add-plan-btn" onClick={() => handleAddPlanToCart(3)}>
+                        Add Plan #3 to Cart
+                    </button>
+                </div>
             </div>
-            <Footer/>
+            <Footer />
+            <ToastContainer />
         </>
     );
 }

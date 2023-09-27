@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "name": "Breakfast",
+    "image": "p1lunch.png",
+    "description": "Roti along with boiled vegetables",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 10",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 250,
+      "protein": 10,
+      "carbohydrates": 30,
+      "fat": 12
+    },
+    "plan": 1,
+    "planPrice": 500
+  },
+  {
+    "id": 2,
+    "name": "Lunch",
+    "image": "p1lunch.png",
+    "description": "Roti along with boiled vegetables",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 10",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 300,
+      "protein": 15,
+      "carbohydrates": 35,
+      "fat": 14
+    },
+    "plan": 1,
+    "planPrice": 500
+  },
+  {
+    "id": 3,
+    "name": "Lunch",
+    "image": "p1lunch.png",
+    "description": "Roti along with boiled vegetables",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 10",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 300,
+      "protein": 15,
+      "carbohydrates": 35,
+      "fat": 14
+    },
+    "plan": 1,
+    "planPrice": 500
+  },
+  {
+    "id": 4,
+    "name": "Breakfast",
+    "image": "p1lunch.png",
+    "description": "Scrambled eggs with toast",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Contains Eggs",
+    "price": "Rs. 10",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 320,
+      "protein": 18,
+      "carbohydrates": 25,
+      "fat": 14
+    },
+    "plan": 2,
+    "planPrice": 750
+  },
+  {
+    "id": 5,
+    "name": "Lunch",
+    "image": "p1lunch.png",
+    "description": "Grilled chicken salad",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Contains Chicken",
+    "price": "Rs. 15",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 350,
+      "protein": 22,
+      "carbohydrates": 15,
+      "fat": 16
+    },
+    "plan": 2,
+    "planPrice": 750
+  },
+  {
+    "id": 6,
+    "name": "Breakfast",
+    "image": "p1lunch.png",
+    "description": "Greek yogurt with berries",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 15",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 180,
+      "protein": 12,
+      "carbohydrates": 20,
+      "fat": 6
+    },
+    "plan": 3,
+    "planPrice": 800
+  },
+  {
+    "id": 7,
+    "name": "Breakfast",
+    "image": "p1lunch.png",
+    "description": "Greek yogurt with berries",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 15",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 180,
+      "protein": 12,
+      "carbohydrates": 20,
+      "fat": 6
+    },
+    "plan": 3,
+    "planPrice": 800
+  },
+  {
+    "id": 8,
+    "name": "Breakfast",
+    "image": "p1lunch.png",
+    "description": "Greek yogurt with berries",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 15",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 180,
+      "protein": 12,
+      "carbohydrates": 20,
+      "fat": 6
+    },
+    "plan": 3,
+    "planPrice": 800
+  },
+  {
+    "id": 9,
+    "name": "Breakfast",
+    "image": "p1lunch.png",
+    "description": "Greek yogurt with berries",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 15",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 180,
+      "protein": 12,
+      "carbohydrates": 20,
+      "fat": 6
+    },
+    "plan": 3,
+    "planPrice": 800
+  }
+]

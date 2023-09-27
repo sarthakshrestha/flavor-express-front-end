@@ -103,20 +103,34 @@
     text-align: left;
 }
 
-.plan-add-btn {
-    font-size: 21px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #00a63f;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    transition: all 0.3s ease;
-}
+/*.add-plan-btn {*/
+/*    font-size: 21px;*/
+/*    padding: 10px;*/
+/*    border-radius: 10px;*/
+/*    background-color: #00a63f;*/
+/*    color: white;*/
+/*    font-family: 'DM Sans', sans-serif;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
 
-.plan-add-btn:hover {
-    transform: scale(1.05);
-    background-color: #009933;
+/*.add-plan-btn:hover {*/
+/*    transform: scale(1.05);*/
+/*    background-color: #009933;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+.add-plan-btn {
+    background-color: #007bff; /* Change the background color as needed */
+    color: #fff; /* Change the text color as needed */
+    padding: 10px 20px; /* Adjust the padding as needed */
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-
+.add-plan-btn:hover {
+    background-color: #0056b3; /* Change the hover background color as needed */
+}

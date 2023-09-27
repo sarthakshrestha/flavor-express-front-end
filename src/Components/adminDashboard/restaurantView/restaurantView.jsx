@@ -1,31 +1,13 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Sidebar from "../sideBar/sideBar";
 import "./restaurantView.css";
 import AddRestaurantForm from "./addRestaurantForm";
+import axios from "axios";
 
 function AllRestaurants() {
-    // Hardcoded fake restaurant data
-    const [restaurants, setRestaurants] = useState([
-        {
-            id: 1,
-            name: "Restaurant 1",
-            address: "123 Main Street",
-            phoneNumber: "555-123-4567",
-        },
-        {
-            id: 2,
-            name: "Restaurant 2",
-            address: "456 Elm Street",
-            phoneNumber: "555-987-6543",
-        },
-        {
-            id: 3,
-            name: "Restaurant 3",
-            address: "456 Elm Street",
-            phoneNumber: "555-987-6543",
-        },
-        // Add more fake restaurants here
-    ]);
+    const [data, setData] = useState([]);
+
+    const [restaurants, setRestaurants] = useState([]);
 
     const [newRestaurant, setNewRestaurant] = useState({
         name: "",
@@ -50,10 +32,38 @@ function AllRestaurants() {
         togglePopup();
     };
 
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     const [isPopupOpen, setPopupOpen] = useState(false);
 
     const togglePopup = () => {
         setPopupOpen(!isPopupOpen);
+    };
+
+    // Function to fetch and populate data
+    const fetchData = () => {
+        axios.get('http://localhost:8081/restaurants')
+            .then((response) => {
+                setData(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+    // Function to delete a row
+    const deleteRow = (restaurant_id) => {
+        // Make a DELETE request to your backend API to delete the record with the given ID
+        axios.delete(`http://localhost:8081/restaurants/${restaurant_id}`)
+            .then(() => {
+                // If successful, re-fetch the data to update the table
+                fetchData();
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     };
 
     return (
@@ -75,19 +85,21 @@ function AllRestaurants() {
                                 <th>Name</th>
                                 <th>Address</th>
                                 <th>Phone Number</th>
+                                <th>Email</th>
+                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            {restaurants.map((restaurant) => (
-                                <tr key={restaurant.id}>
-                                    <td>{restaurant.id}</td>
+                            {data.map((restaurant) => (
+                                <tr key={restaurant.restaurant_id}>
+                                    <td>{restaurant.restaurant_id}</td>
                                     <td>{restaurant.name}</td>
                                     <td>{restaurant.address}</td>
                                     <td>{restaurant.phoneNumber}</td>
-                                    <td>
-                                        <button>Delete</button>
-                                    </td>
+                                    <td>{restaurant.email}</td>
+                                    <td>{restaurant.description}</td>
+                                    <td><button className="btn-delete" onClick={() => deleteRow(restaurant.restaurant_id)}>Delete</button></td>
                                 </tr>
                             ))}
                             </tbody>

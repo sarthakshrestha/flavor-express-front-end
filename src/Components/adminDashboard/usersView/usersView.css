@@ -79,7 +79,7 @@
 }
 
 .u-table {
-    width: 100%;
+    width: 1000px;
     border-collapse: collapse;
     margin: 20px 0; /* Add margin to create space around the table */
     background-color: #fff;
@@ -93,6 +93,8 @@
     padding: 7px;
     background-color: #D32F2F;
     color: white;
+    border: none;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
@@ -108,12 +110,15 @@
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid #ddd; /* Add a border-bottom for better separation */
+    font-family: "Jost",serif;
 }
 
 .u-table th {
-    background-color: #f5f5f5;
+    background-color: lightslategray;
     font-weight: bold;
-
+    font-family: "Poppins",serif;
+    font-size: 16px;
+    color:white;
 }
 
 .u-table tbody tr:nth-child(even) {

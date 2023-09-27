@@ -1,0 +1,178 @@
+.suggestion-container {
+    display: flex;
+    font-family: "DM Sans", 'sans-serif';
+  }
+  
+  .logo {
+    width: 150px;
+    height: 105px;
+  }
+  
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .content-container {
+    margin-left: 40px;
+    padding: 45px;
+    width: calc(100% - 200px);
+    position: relative;
+  }
+  
+  .box {
+    display: flex;
+  
+    margin-top: 55px;
+    background-color: #F9E9E9;
+    height: 250px;
+    position: relative;
+  }
+  
+  .text {
+    flex: 1;
+  }
+  
+  .text span {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+  }
+  
+  .text h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .text button {
+    width: 190px;
+    padding: 10px 20px;
+    background-color: #FF5C5C;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 85px;
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  
+  .image-icon {
+    width: auto;
+    height: 234px;
+    border-radius: 13px;
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  .textContainer{
+    font-size: 50px;
+  }
+  .why-important-box {
+    margin-top: 30px;
+    background-color: rgb(79, 76, 76);
+    padding: 52px;
+    position: relative;
+  }
+  
+  .why-important-box .box-content-wrapper {
+    margin-right: 150px; 
+  }
+  
+  .why-important-box .box-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  
+  .why-important-box .box-content {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  
+  .why-important-box .box-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color:black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 999; 
+  }
+
+  ./* Style for the container div */
+  .why-important-box-1 {
+    background-color: #f5f5f5; /* Background color for the container */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 5px; /* Rounded corners for the container */
+  }
+
+/* Style for the title */
+.box-title {
+  font-size: 24px; /* Adjust the title font size */
+  color: #333; /* Title text color */
+}
+
+/* Style for the unordered list */
+.box-content-1 {
+  list-style-type: disc; /* Use disc bullets for the list */
+  padding-left: 20px; /* Add left padding to the list items for indentation */
+  padding: 50px;
+}
+
+
+/* Style for list items */
+.box-content-1 li {
+  margin-top: 32px;
+  font-size: 25px; /* Adjust the font size of list items */
+  color: black; /* List item text color */
+  margin-bottom: 25px; /* Add spacing between list items */
+  font-family: Poppins;
+}
+
+.box-content-wrapper-1{
+  background-color: #F9E9E9;
+  margin-top: 32px;
+  margin-bottom: 13px;
+  padding: 25px;
+}
+
+  /* Style for the closing paragraph */
+.box-content-wrapper-1 p {
+  font-size: 24px; /* Adjust the font size for the closing paragraph */
+  color: black; /* Text color for the closing paragraph */
+  margin-top: 20px; /* Add spacing above the paragraph */
+  margin-left: 20px;
+
+}
+
+/* Optional: Style for links within the content */
+.box-content-1 a {
+  color: #007BFF; /* Link color */
+  text-decoration: underline; /* Underline links */
+}
+
+/* Optional: Hover style for links */
+.box-content-1 a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.bx-title{
+  margin-top: 32px;
+  font-size: 42px;
+  color: black;
+}
+
+.box-button-hide{
+  background-color: black;
+  font-size: 18px;
+  color: white;
+  padding: 12px;
+  margin-left: 80%;
+}

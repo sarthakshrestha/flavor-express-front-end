@@ -8,7 +8,7 @@ import "./mealPlan.css";
 import productData from "./data.json";
 
 export default function MealPlan() {
-    const { addToCart } = useCart();
+    const { addToCart, cartItems } = useCart();
     const [selectedPlan, setSelectedPlan] = useState(null);
 
     const calculatePlanName = (planNumber) => {
@@ -33,7 +33,7 @@ export default function MealPlan() {
     });
 
     const handleAddPlanToCart = (planNumber) => {
-        if (selectedPlan !== null) {
+        if (selectedPlan !== null || cartItems?.length > 0) {
             toast.error("You can only select one meal plan at a time.");
             return;
         }
@@ -49,7 +49,27 @@ export default function MealPlan() {
 
             // Calculate the total price for the plan
             const totalPrice = productsToAdd.reduce(
-                (total, product) => total + parseFloat(product.planPrice),
+                (total, product) => total + parseFloat(product?.planPrice),
+                0
+            );
+
+            const totalCalories = productsToAdd.reduce(
+                (total, product) => total + parseFloat(product?.nutrition?.calories),
+                0
+            );
+
+            const totalProtein = productsToAdd.reduce(
+                (total, product) => total + parseFloat(product?.nutrition?.protein),
+                0
+            );
+
+            const totalCarbs = productsToAdd.reduce(
+                (total, product) => total + parseFloat(product?.nutrition?.carbohydrates),
+                0
+            );
+
+            const totalFat = productsToAdd.reduce(
+                (total, product) => total + parseFloat(product?.nutrition?.fat),
                 0
             );
 
@@ -60,6 +80,10 @@ export default function MealPlan() {
                 quantity: 1,
                 totalPrice,
                 products: productsToAdd,
+                totalCalories: totalCalories,
+                totalProtein: totalProtein,
+                totalCarbs: totalCarbs,
+                totalFat: totalFat,
             });
 
             setSelectedPlan(planNumber);
@@ -111,7 +135,7 @@ export default function MealPlan() {
                                     </tr>
                                     <tr>
                                         <td>Carbs</td>
-                                        <td>{product.nutrition.carbs} g</td>
+                                        <td>{product.nutrition.carbohydrates} g</td>
                                     </tr>
                                     <tr>
                                         <td>Fat</td>
@@ -161,7 +185,7 @@ export default function MealPlan() {
                                     </tr>
                                     <tr>
                                         <td>Carbs</td>
-                                        <td>{product.nutrition.carbs} g</td>
+                                        <td>{product.nutrition.carbohydrates} g</td>
                                     </tr>
                                     <tr>
                                         <td>Fat</td>
@@ -211,7 +235,7 @@ export default function MealPlan() {
                                     </tr>
                                     <tr>
                                         <td>Carbs</td>
-                                        <td>{product.nutrition.carbs} g</td>
+                                        <td>{product.nutrition.carbohydrates} g</td>
                                     </tr>
                                     <tr>
                                         <td>Fat</td>

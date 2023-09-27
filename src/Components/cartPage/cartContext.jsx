@@ -5,21 +5,21 @@ const CartContext = createContext();
 
 export const calculateTotalNutrition = (cartItems) => {
   return cartItems.reduce(
-      (acc, item) => {
-        if (item.nutrition) {
-          acc.calories += (item.nutrition.calories || 0) * item.quantity;
-          acc.protein += (item.nutrition.protein || 0) * item.quantity;
-          acc.carbohydrates += (item.nutrition.carbohydrates || 0) * item.quantity;
-          acc.fat += (item.nutrition.fat || 0) * item.quantity;
-        }
-        return acc;
-      },
-      {
-        calories: 0,
-        protein: 0,
-        carbohydrates: 0,
-        fat: 0,
+    (acc, item) => {
+      if (item.nutrition) {
+        acc.calories += (item.nutrition.calories || 0) * item.quantity;
+        acc.protein += (item.nutrition.protein || 0) * item.quantity;
+        acc.carbohydrates += (item.nutrition.carbohydrates || 0) * item.quantity;
+        acc.fat += (item.nutrition.fat || 0) * item.quantity;
       }
+      return acc;
+    },
+    {
+      calories: 0,
+      protein: 0,
+      carbohydrates: 0,
+      fat: 0,
+    }
   );
 };
 
@@ -37,13 +37,13 @@ export function CartProvider({ children }) {
     setCartItems((prevCartItems) => {
       if (product.id === "meal_plan") {
         const mealPlanIndex = prevCartItems.findIndex(
-            (item) => item.id === "meal_plan"
+          (item) => item.id === "meal_plan"
         );
 
         if (mealPlanIndex !== -1) {
           prevCartItems[mealPlanIndex].quantity += 1;
           prevCartItems[mealPlanIndex].nutrition = calculateTotalNutrition(
-              prevCartItems[mealPlanIndex].items
+            prevCartItems[mealPlanIndex]?.items
           );
         } else {
           product.plan = 1;
@@ -60,27 +60,27 @@ export function CartProvider({ children }) {
   // Function to remove an item from the cart
   const removeFromCart = (itemId) => {
     setCartItems((prevCartItems) =>
-        prevCartItems.filter((item) => item.id !== itemId)
+      prevCartItems.filter((item) => item.id !== itemId)
     );
   };
 
   // Function to increment the quantity of an item in the cart
   const incrementQuantity = (productId) => {
     setCartItems((prevCartItems) =>
-        prevCartItems.map((item) =>
-            item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
-        )
+      prevCartItems.map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+      )
     );
   };
 
   // Function to decrement the quantity of an item in the cart
   const decrementQuantity = (productId) => {
     setCartItems((prevCartItems) =>
-        prevCartItems.map((item) =>
-            item.id === productId && item.quantity > 1
-                ? { ...item, quantity: item.quantity - 1 }
-                : item
-        )
+      prevCartItems.map((item) =>
+        item.id === productId && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
     );
   };
 
@@ -98,8 +98,8 @@ export function CartProvider({ children }) {
   };
 
   return (
-      <CartContext.Provider value={value}>
-        {children}
-      </CartContext.Provider>
+    <CartContext.Provider value={value}>
+      {children}
+    </CartContext.Provider>
   );
 }

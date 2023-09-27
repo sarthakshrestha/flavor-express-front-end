@@ -49,7 +49,7 @@ export default function MealPlan() {
 
             // Calculate the total price for the plan
             const totalPrice = productsToAdd.reduce(
-                (total, product) => total + parseFloat(product.price),
+                (total, product) => total + parseFloat(product.planPrice),
                 0
             );
 
@@ -95,28 +95,28 @@ export default function MealPlan() {
                             <h1 className="table-heading">Nutritional Breakdown</h1>
                             <table className="nutrition-table">
                                 <thead>
-                                <tr>
-                                    <th>Nutrient</th>
-                                    <th>Amount</th>
-                                </tr>
+                                    <tr>
+                                        <th>Nutrient</th>
+                                        <th>Amount</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Calories</td>
-                                    <td>{product.nutrition.calories} kcal</td>
-                                </tr>
-                                <tr>
-                                    <td>Protein</td>
-                                    <td>{product.nutrition.protein} g</td>
-                                </tr>
-                                <tr>
-                                    <td>Carbs</td>
-                                    <td>{product.nutrition.carbs} g</td>
-                                </tr>
-                                <tr>
-                                    <td>Fat</td>
-                                    <td>{product.nutrition.fat} g</td>
-                                </tr>
+                                    <tr>
+                                        <td>Calories</td>
+                                        <td>{product.nutrition.calories} kcal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>{product.nutrition.protein} g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carbs</td>
+                                        <td>{product.nutrition.carbs} g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fat</td>
+                                        <td>{product.nutrition.fat} g</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -145,28 +145,28 @@ export default function MealPlan() {
                             <h1 className="table-heading">Nutritional Breakdown</h1>
                             <table className="nutrition-table">
                                 <thead>
-                                <tr>
-                                    <th>Nutrient</th>
-                                    <th>Amount</th>
-                                </tr>
+                                    <tr>
+                                        <th>Nutrient</th>
+                                        <th>Amount</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Calories</td>
-                                    <td>{product.nutrition.calories} kcal</td>
-                                </tr>
-                                <tr>
-                                    <td>Protein</td>
-                                    <td>{product.nutrition.protein} g</td>
-                                </tr>
-                                <tr>
-                                    <td>Carbs</td>
-                                    <td>{product.nutrition.carbs} g</td>
-                                </tr>
-                                <tr>
-                                    <td>Fat</td>
-                                    <td>{product.nutrition.fat} g</td>
-                                </tr>
+                                    <tr>
+                                        <td>Calories</td>
+                                        <td>{product.nutrition.calories} kcal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>{product.nutrition.protein} g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carbs</td>
+                                        <td>{product.nutrition.carbs} g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fat</td>
+                                        <td>{product.nutrition.fat} g</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -195,28 +195,28 @@ export default function MealPlan() {
                             <h1 className="table-heading">Nutritional Breakdown</h1>
                             <table className="nutrition-table">
                                 <thead>
-                                <tr>
-                                    <th>Nutrient</th>
-                                    <th>Amount</th>
-                                </tr>
+                                    <tr>
+                                        <th>Nutrient</th>
+                                        <th>Amount</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Calories</td>
-                                    <td>{product.nutrition.calories} kcal</td>
-                                </tr>
-                                <tr>
-                                    <td>Protein</td>
-                                    <td>{product.nutrition.protein} g</td>
-                                </tr>
-                                <tr>
-                                    <td>Carbs</td>
-                                    <td>{product.nutrition.carbs} g</td>
-                                </tr>
-                                <tr>
-                                    <td>Fat</td>
-                                    <td>{product.nutrition.fat} g</td>
-                                </tr>
+                                    <tr>
+                                        <td>Calories</td>
+                                        <td>{product.nutrition.calories} kcal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Protein</td>
+                                        <td>{product.nutrition.protein} g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carbs</td>
+                                        <td>{product.nutrition.carbs} g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fat</td>
+                                        <td>{product.nutrition.fat} g</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

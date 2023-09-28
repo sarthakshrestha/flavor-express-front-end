@@ -1,0 +1,121 @@
+/* mealPlanCheckout.css */
+
+/* Main container */
+.mp-checkout-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    align-content: center;
+    position: relative;
+    text-align: center;
+
+}
+
+/* Header styles */
+.mp-checkout-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Selected meal plan table styles */
+.mp-selected-meal-plan {
+    margin-bottom: 20px;
+}
+
+.mp-meal-plan-table {
+    width: 40%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.mp-meal-plan-table th,
+.mp-meal-plan-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.mp-meal-plan-table th {
+    background-color: #3a3737;
+    color: white;
+}
+
+.mp-price-td {
+    text-align: right;
+    background-color: #f1f1f1;
+}
+
+/* Total price and form styles */
+.mp-total-price {
+    margin-bottom: 20px;
+}
+
+.mp-customer-info-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin-left: 30%;
+    position: relative;
+}
+
+.mp-form-group {
+    margin-bottom: 15px;
+}
+
+.mp-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-family: "DM Sans", 'sans-serif';
+}
+
+/*input[type="text"],*/
+/*input[type="email"],*/
+/*textarea {*/
+/*    width: 35%;*/
+/*    padding: 10px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+
+.txt-area {
+    resize: vertical;
+    height: 100px;
+    width: 35%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Action buttons styles */
+.mp-action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mp-proceed-to-payment,
+.mp-cancel-checkout {
+    padding: 12px 20px;
+    background-color: #00a63f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "DM Sans", serif;
+
+}
+
+.mp-cancel-checkout {
+    background-color: #ccc;
+}

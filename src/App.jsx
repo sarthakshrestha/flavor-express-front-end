@@ -27,6 +27,8 @@ import RestroFood from "./Components/restaurantDashboard/restroFoodItems/restroF
 import EditRestro from "./Components/restaurantDashboard/editRestaurantInfo/editRestro";
 import MainDriverDash from "./Components/driverDashboard/mainDriver";
 import DietSuggestion from "./Components/dietSuggestions/dietSuggestion";
+import MealPlanCheckout from "./Components/mealPlanCheckout/mealPlanCheckout";
+
 
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -87,6 +89,8 @@ function App() {
                     {/*//Diet Plan Page*/}
                     <Route path="/diet-plan" element={<DietSuggestion/>}/>
 
+                    {/*//Meal Plan Checkout Page*/}
+                    <Route path="/meal-checkout" element={<MealPlanCheckout/>}/>
 
                     {/*//Food page*/}
                     <Route path="/foodPage" element={<FoodPage/>}/>

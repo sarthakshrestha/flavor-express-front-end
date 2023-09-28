@@ -153,6 +153,28 @@
     color: white;
 }
 
+.subscribe-btn{
+    text-align: center;
+    align-content: center;
+}
+
+.subscribe-to-mealplan{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    font-family: "DM Sans", serif;
+    font-size: 18px;
+    align-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-to-mealplan:hover{
+    background-color: #5A5A5A;
+    color: white;
+}
+
+
+
 
 .checkout-btn{
     background-color: #4CAF50;
@@ -199,10 +221,10 @@ hr.rounded-bar {
 .calculation {
     font-size: 34px;
     font-family: "Poppins", sans-serif;
-    margin-left: 810px;
     position: relative;
     margin-bottom: 4%;
     margin-top: -5%;
+    margin-left: 45%;
 }
 
 .calculation h1 {

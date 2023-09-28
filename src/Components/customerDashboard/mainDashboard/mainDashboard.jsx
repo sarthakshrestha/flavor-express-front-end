@@ -19,7 +19,7 @@ export default function OrderOnTheWay() {
 
     // Calculate the total price
     const totalPrice = order.orderedItems.reduce(
-        (total, item) => total + item.price * item.quantity,
+        (total, product)=> total + parseFloat(),
         0
     );
 

@@ -224,6 +224,11 @@ export default function Cart() {
               </tr>
             </tbody>
           </table>
+          <div className="subscribe-btn">
+            <Link to="/meal-checkout">
+          <button className="subscribe-to-mealplan">Subscribe to Meal Plan</button>
+            </Link>
+          </div>
         </div>
       )}
       <div className="promo-code-box">

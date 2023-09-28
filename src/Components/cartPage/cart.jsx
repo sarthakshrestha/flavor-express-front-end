@@ -125,21 +125,21 @@ export default function Cart() {
         <h1 className="n-heading">Nutritional Breakdown</h1>
         <div className="nutrient">
           <span className="nutrient-label">Calories:</span>
-          <span className="nutrient-value">{mealPlanItem?.totalCalories} {totalNutrition.calories} kcal</span>
+          <span className="nutrient-value">{mealPlanItem?.totalCalories || totalNutrition.calories} kcal</span>
         </div>
         <div className="nutrient">
           <span className="nutrient-label">Protein:</span>
-          <span className="nutrient-value">{mealPlanItem?.totalProtein} {totalNutrition.protein} g</span>
+          <span className="nutrient-value">{mealPlanItem?.totalProtein || totalNutrition.protein} g</span>
         </div>
         <div className="nutrient">
           <span className="nutrient-label">Carbohydrates:</span>
           <span className="nutrient-value">
-            {mealPlanItem?.totalCarbs} {totalNutrition.carbohydrates} g
+            {mealPlanItem?.totalCarbs || totalNutrition.carbohydrates} g
           </span>
         </div>
         <div className="nutrient">
           <span className="nutrient-label">Fat:</span>
-          <span className="nutrient-value">{mealPlanItem?.totalFat} {totalNutrition.fat} g</span>
+          <span className="nutrient-value">{mealPlanItem?.totalFat || totalNutrition.fat} g</span>
         </div>
       </div>
       {!mealPlanItem && <div className="food-cart">

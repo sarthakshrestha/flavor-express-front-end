@@ -15,8 +15,14 @@
 
 /* Header styles */
 .mp-checkout-content h2 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 20px;
+    font-family: "DM Sans", serif;
+}
+
+.mp-checkout-content h3{
+    font-size: 24px;
+    font-family: "DM Sans", serif;
 }
 
 /* Selected meal plan table styles */

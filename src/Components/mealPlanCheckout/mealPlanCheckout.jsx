@@ -42,6 +42,7 @@ export default function MealPlanCheckout() {
                 {mealPlanItem && (
                     <div className="mp-selected-meal-plan">
                         <h3>Selected Meal Plan:</h3>
+                        <br/>
                         <table className="mp-meal-plan-table">
                             <thead>
                             <tr className="mp-first-row">
@@ -68,6 +69,7 @@ export default function MealPlanCheckout() {
                             type="text"
                             id="name"
                             name="name"
+                            placeholder="Your name"
                             value={customerInfo.name}
                             onChange={handleInputChange}
                             required
@@ -79,6 +81,7 @@ export default function MealPlanCheckout() {
                             type="email"
                             id="email"
                             name="email"
+                            placeholder="Your emal"
                             value={customerInfo.email}
                             onChange={handleInputChange}
                             required
@@ -87,6 +90,7 @@ export default function MealPlanCheckout() {
                     <div className="mp-form-group">
                         <label htmlFor="notes">Notes:</label>
                         <textarea
+                            placeholder="Any notes to the driver or food changes?"
                             id="notes"
                             name="notes"
                             className="txt-area"
@@ -98,6 +102,8 @@ export default function MealPlanCheckout() {
                         Subscribe to Meal Plan.
                     </button>
                 </form>
+                <br/>
+                <p style={{fontSize: '19px'}}><span className="smallNote" style={{color: "red"}}>Note:</span> Meal Plans are subscribed on a monthly basis, for any changes or queries please call us at +977 55519234</p>
             </div>
             <Footer />
         </>

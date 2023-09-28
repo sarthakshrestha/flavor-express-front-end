@@ -71,7 +71,7 @@ export default function DietSuggestion() {
                                     <li>Variety: Explore a variety of cuisines and dishes to ensure you get a wide range of nutrients. This can make your dining experience more enjoyable while also providing a diverse array of nutrients.</li>
                                 </ul>
                             )}
-                            <p>By making these healthy choices through a food delivery app, you can maintain better control over your diet, support your nutritional goals, and promote overall well-being.</p>
+                            <p>By making these healthy choices through Flavor Express, you can maintain better control over your diet, support your nutritional goals, and promote overall well-being.</p>
                         </div>
                     </div>
                 </div>

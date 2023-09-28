@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import Header from "../../sharedComponents/header/Header";
 import Footer from "../../sharedComponents/footer/Footer";
-import { useCart } from "../cartPage/cartContext";
-import { calculateTotalNutrition } from "../cartPage/cartContext";
+import {useCart} from "../cartPage/cartContext";
+import {calculateTotalNutrition} from "../cartPage/cartContext";
 import "./checkOutPage.css";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const PRICE_PREFIX = "Rs. ";
 const DELIVERY_CHARGE_PERCENTAGE = 5;
@@ -19,7 +19,7 @@ const calculateDeliveryCharge = (totalPrice) =>
 export default function CheckoutPage() {
 
     const [promoCode, setPromoCode] = useState("");
-    const { cartItems, removeFromCart, decrementQuantity, incrementQuantity } =
+    const {cartItems, removeFromCart, decrementQuantity, incrementQuantity} =
         useCart();
 
     const [totalNutrition, setTotalNutrition] = useState({
@@ -53,7 +53,7 @@ export default function CheckoutPage() {
 
     return (
         <>
-            <Header />
+            <Header/>
             <div className="ck-checkout-container">
                 <div className="ck-cart-summary">
                     <h1>Your Order</h1>
@@ -84,7 +84,7 @@ export default function CheckoutPage() {
                                         <h3>{item.name}</h3>
                                         <p>{item.description}</p>
                                         <p className="ck-allergy">Allergies: {item.allergies}</p>
-                                        <br />
+                                        <br/>
                                         <button
                                             className="ck-remove-item"
                                             onClick={() => removeFromCart(item.id)}
@@ -133,17 +133,15 @@ export default function CheckoutPage() {
                             />
                         </div>
                         <div className="ck-checkout-group">
-                            <label htmlFor="ck-driver">Select Delivery Driver:</label>
-                            <select id="ck-driver" name="driver" required>
-                                <option value="driver1">Driver 1</option>
-                                <option value="driver2">Driver 2</option>
-                            </select>
+                            <label htmlFor="ck-driver">Notes for Delivery:</label>
+                            <input type="text" id="ck-driver" name="notes"
+                                   placeholder="Any notes for the delivery driver?"/>
                         </div>
                         <button className="ck-checkout-btn">Confirm Order</button>
                     </form>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </>
     );
 }

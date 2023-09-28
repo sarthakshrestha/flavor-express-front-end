@@ -127,8 +127,8 @@
   },
   {
     "id": 8,
-    "name": "Breakfast",
-    "image": "p1lunch.png",
+    "name": "Lunch",
+    "image": "p3lunch.png",
     "description": "Greek yogurt with berries",
     "restaurant": "FE-Kitchen",
     "allergies": "Vegetarian",
@@ -145,8 +145,8 @@
   },
   {
     "id": 9,
-    "name": "Breakfast",
-    "image": "p1lunch.png",
+    "name": "Dinner",
+    "image": "p3dinner.png",
     "description": "Greek yogurt with berries",
     "restaurant": "FE-Kitchen",
     "allergies": "Vegetarian",

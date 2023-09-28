@@ -105,6 +105,7 @@ export default function MealPlan() {
                 {/* Plan #1 */}
                 <div className="plan-number">
                     <h1 className="plan-title">Plan #1 <span className="veg-option">(Veg-Option)</span> </h1>
+                    <br/>
                     <p style={{fontFamily: "DM Sans", fontSize: "26px"}}>Price Nrs. 1500</p>
                 </div>
                 <div className="product-cards">
@@ -156,6 +157,8 @@ export default function MealPlan() {
                 {/* Plan #2 */}
                 <div className="plan-number">
                     <h1 className="plan-title">Plan #2 <span className="nonveg-option">(Non-Veg Option)</span></h1>
+                    <br/>
+                    <p style={{fontFamily: "DM Sans", fontSize: "26px"}}>Price Nrs. 1500</p>
                 </div>
                 <div className="product-cards">
                     {productData.slice(3, 6).map((product) => (
@@ -206,6 +209,8 @@ export default function MealPlan() {
                 {/* Plan #3 */}
                 <div className="plan-number">
                     <h1 className="plan-title">Plan #3 <span className="nonveg-option">(Mix Option)</span></h1>
+                    <br/>
+                    <p style={{fontFamily: "DM Sans", fontSize: "26px"}}>Price Nrs. 4000</p>
                 </div>
                 <div className="product-cards">
                     {productData.slice(6, 9).map((product) => (

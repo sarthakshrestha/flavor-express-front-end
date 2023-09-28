@@ -54,9 +54,11 @@
   color: white;
   border: none;
   border-radius: 20px;
+  margin-top: 70px;
   padding: 12px 30px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
   margin-left: 40px;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -65,8 +67,10 @@
   color: white;
   border-radius: 20px;
   padding: 12px 30px;
+  margin-top: 70px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
   margin-left: 40px;
   transition: background-color 0.3s, color 0.3s;
 }

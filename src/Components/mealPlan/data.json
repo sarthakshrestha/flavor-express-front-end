@@ -160,5 +160,23 @@
     },
     "plan": 3,
     "planPrice": 800
+  },
+  {
+    "id": 9,
+    "name": "Breakfast",
+    "image": "p1lunch.png",
+    "description": "Greek yogurt with berries",
+    "restaurant": "FE-Kitchen",
+    "allergies": "Vegetarian",
+    "price": "Rs. 15",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 180,
+      "protein": 12,
+      "carbohydrates": 20,
+      "fat": 6
+    },
+    "plan": 3,
+    "planPrice": 800
   }
 ]

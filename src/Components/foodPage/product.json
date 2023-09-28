@@ -49,9 +49,25 @@
   },
   {
     "id": 4,
-    "name": "Sausage Pizza",
-    "image": "pizza.png",
-    "description": "A mouthwatering pizza with pork sausages.",
+    "name": "Olive Pasta",
+    "image": "olivepasta.png",
+    "description": "Pasta Containing white sauce and olives",
+    "restaurant": "Restaurant Italiano",
+    "allergies": "CONTAINS OLIVES",
+    "price": "Rs. 50",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 750,
+      "protein": 18,
+      "carbohydrates": 55,
+      "fat": 45
+    }
+  },
+  {
+    "id": 5,
+    "name": "Meat Lovers",
+    "image": "meatlover.png",
+    "description": "A mouthwatering pizza filled with meat toppings",
     "restaurant": "Restaurant Zozo Pizza",
     "allergies": "CONTAINS DAIRY PRODUCTS",
     "price": "Rs. 50",
@@ -64,11 +80,27 @@
     }
   },
   {
-    "id": 5,
-    "name": "Sandwich",
-    "image": "pizza.png",
-    "description": "A mouthwatering pizza with pork sausages.",
-    "restaurant": "Restaurant Zozo Pizza",
+    "id": 6,
+    "name": "Berry Cereal",
+    "image": "cereal.png",
+    "description": "Healthy Cereal Topped with raspberry and strawberry",
+    "restaurant": "Break-Fast Cafe",
+    "allergies": "CONTAINS DAIRY PRODUCTS",
+    "price": "Rs. 50",
+    "quantity": 1,
+    "nutrition": {
+      "calories": 750,
+      "protein": 18,
+      "carbohydrates": 55,
+      "fat": 45
+    }
+  },
+  {
+    "id": 7,
+    "name": "Strawberry Shake",
+    "image": "shake.png",
+    "description": "Strawberry Shake: 250 ML",
+    "restaurant": "Break-Fast Cafe",
     "allergies": "CONTAINS DAIRY PRODUCTS",
     "price": "Rs. 50",
     "quantity": 1,

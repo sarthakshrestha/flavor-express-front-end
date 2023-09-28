@@ -80,7 +80,7 @@
 }
 
 .container .products-container .product:hover img {
-    transform: scale(1.4);
+    transform: scale(1.12);
 }
 
 .container .products-container .product h3 {

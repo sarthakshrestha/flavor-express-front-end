@@ -62,9 +62,9 @@
 }
 
 .category_content img {
-    max-width: 100%;
+    width: auto;
     border-radius: 10px;
-    height: 380px;
+    height: 280px;
 }
 
 .category_content .description {

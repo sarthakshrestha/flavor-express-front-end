@@ -16,29 +16,29 @@ export default function PreferredRestaurants() {
           <div className="restaurant-row">
             <div className="restaurant">
               <img src={Restaurant1} alt="restaurant 1" />
-              <p>Restaurant 1</p>
+              <p>Dal Bhat Power Restro</p>
             </div>
             <div className="restaurant">
               <img src={Restaurant2} alt="restaurant 2" />
-              <p>Restaurant 2</p>
+              <p>Momo Fiesta</p>
             </div>
             <div className="restaurant">
               <img src={Restaurant3} alt="restaurant 3" />
-              <p>Restaurant 3</p>
+              <p>Pizzeria</p>
             </div>
           </div>
           <div className="restaurant-row">
             <div className="restaurant">
               <img src={Restaurant4} alt="restaurant 4" />
-              <p>Restaurant 4</p>
+              <p>Chicken Haven</p>
             </div>
             <div className="restaurant">
               <img src={Restaurant5} alt="restaurant 5" />
-              <p>Restaurant 5</p>
+              <p>Burgers-R-Healthy</p>
             </div>
             <div className="restaurant">
               <img src={Restaurant6} alt="restaurant 6" />
-              <p>Restaurant 6</p>
+              <p>WingPress</p>
             </div>
           </div>
         </div>

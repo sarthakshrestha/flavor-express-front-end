@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #e5e5e5;
+  background-color: #f7f7f7;
 }
 
 .preferred_section{
@@ -17,16 +17,20 @@
 .preferred_content h1 {
   font-family: 'Koulen', cursive;
   padding-top: 20px;
-  font-size: 64px;
+  font-size: 92px;
   margin-bottom: 20px;
   margin-top: 100px;
   font-weight: normal;
-  background-color: #2E5A88;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
   color: white;
+  background-color: #999999;
 }
 
 
 .restaurant_list {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,9 +53,9 @@
 }
 
 .restaurant img {
-  height: 250px;
+  height: 310px;
   width: auto;
-  border-radius: 10px;
+  border-radius: 15px;
   object-fit: cover;
   margin-bottom: 12px;
 }
@@ -63,13 +67,13 @@
 }
 
 .restaurant p {
-  font-family: "Jost", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
-  font-size: 32px;
-  padding: 7px;
+  font-size: 33px;
+  padding: 3px;
   /*padding-top: 20px;*/
   border-radius: 13px;
-  color: black;
+  color: #ff4444;
 
 }
 .viewmore {

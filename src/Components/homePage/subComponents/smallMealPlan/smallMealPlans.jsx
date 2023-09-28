@@ -2,14 +2,14 @@ import React from "react";
 import "./SmallMealPlan.css";
 
 import Salad from "./images/meal1.png";
-import Smoothie from "./images/meal1.png";
-import AvocadoToast from "./images/meal1.png";
+import Smoothie from "./images/mango.png";
+import AvocadoToast from "./images/momo.png";
 
 export default function SmallMealPlan() {
     const greenMealOptions = [
         { name: "Green Salad", image: Salad },
-        { name: "Green Smoothie", image: Smoothie },
-        { name: "Avocado Toast", image: AvocadoToast },
+        { name: "Mango Smoothie", image: Smoothie },
+        { name: "Chicken Momo", image: AvocadoToast },
     ];
 
     return (

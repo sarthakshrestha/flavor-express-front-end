@@ -42,7 +42,7 @@ export default function FoodPage() {
             <div className="container">
                 <p className="subText"></p>
                 <h2 className="userLine">Welcome to <span className="flav-flav">Flavor Express</span></h2>
-                <h1 className="headLine">Explore and order mouthwatering meals!</h1>
+                <h1 className="headLine">Embark on a flavorful journey while nourishing your body!</h1>
                 <div className="filter-box">
                     <h1 className="filter-h1">Filter Categories</h1>
                     <br/>

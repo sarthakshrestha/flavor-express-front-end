@@ -130,10 +130,10 @@
 /* Style for list items */
 .box-content-1 li {
   margin-top: 32px;
-  font-size: 25px; /* Adjust the font size of list items */
+  font-size: 17px; /* Adjust the font size of list items */
   color: black; /* List item text color */
   margin-bottom: 25px; /* Add spacing between list items */
-  font-family: Poppins;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .box-content-wrapper-1{
@@ -145,7 +145,7 @@
 
   /* Style for the closing paragraph */
 .box-content-wrapper-1 p {
-  font-size: 24px; /* Adjust the font size for the closing paragraph */
+  font-size: 16px; /* Adjust the font size for the closing paragraph */
   color: black; /* Text color for the closing paragraph */
   margin-top: 20px; /* Add spacing above the paragraph */
   margin-left: 20px;
@@ -173,6 +173,6 @@
   background-color: black;
   font-size: 18px;
   color: white;
-  padding: 12px;
-  margin-left: 80%;
+  padding: 10px 20px;
+  margin-left: 0%;
 }

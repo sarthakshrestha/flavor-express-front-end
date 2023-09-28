@@ -28,7 +28,7 @@ export default function DietSuggestion() {
                         <p className="text">
               <span>
                 <h1 className="textContainer">
-                  We bring your wanted diet<br /> to your desired location
+                   {''}We bring your wanted diet needs<br /> to your desired location
                 </h1>
                 <img src={icon} alt="diet" className="image-icon" />
               </span>
@@ -43,7 +43,7 @@ export default function DietSuggestion() {
                                 </p>
                             ) : (
                                 <p className="box-content">
-                                    Click the button below to learn why nutritious food is important.
+                                    Click the button at the right to learn why nutritious food is important and beneficial to our health.
                                 </p>
                             )}
                             <button className="box-button" onClick={handleButtonClick}>
@@ -53,10 +53,12 @@ export default function DietSuggestion() {
                     </div>
                     <div className="why-important-box-1">
                         <div className="box-content-wrapper-1">
-                            <h2 className="bx-title">What are some healthy choices that can be made?</h2>
-                            <button className="box-button-hide" onClick={handleHealthyChoicesClick}>
-                                {showHealthyChoices ? 'Hide Content' : 'Learn More'}
-                            </button>
+                            <h2 className="bx-title">What are some healthy choices that can be made?
+                                <button className="box-button-hide" onClick={handleHealthyChoicesClick}>
+                                    {showHealthyChoices ? 'Hide Content' : 'Click to know more!'}
+                                </button>
+                            </h2>
+
                             {showHealthyChoices && (
                                 <ul className="box-content-1">
                                     <li>Balanced Meals: Opt for meals that include a balance of protein, carbohydrates, and healthy fats. Look for options that incorporate lean proteins like chicken or tofu, whole grains, and plenty of vegetables.</li>

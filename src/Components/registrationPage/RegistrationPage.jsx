@@ -62,8 +62,7 @@ export default function RegistrationPage() {
         if (validateForm()) {
             // Post data
             const registerData = {
-                firstName: firstName,
-                lastName: lastName,
+                fullName: firstName + lastName,
                 email: email,
                 password: password,
                 address: address,

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, {createContext, useContext, useState, useEffect} from "react";
 
 // Create a context for the shopping cart
 const CartContext = createContext();
@@ -29,7 +29,7 @@ export function useCart() {
 }
 
 // Create a CartProvider component to wrap your app
-export function CartProvider({ children }) {
+export function CartProvider({children}) {
     const [cartItems, setCartItems] = useState([]);
 
     // Function to add an item to the cart
@@ -68,7 +68,7 @@ export function CartProvider({ children }) {
     const incrementQuantity = (productId) => {
         setCartItems((prevCartItems) =>
             prevCartItems.map((item) =>
-                item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+                item.id === productId ? {...item, quantity: item.quantity + 1} : item
             )
         );
     };
@@ -78,11 +78,27 @@ export function CartProvider({ children }) {
         setCartItems((prevCartItems) =>
             prevCartItems.map((item) =>
                 item.id === productId && item.quantity > 1
-                    ? { ...item, quantity: item.quantity - 1 }
+                    ? {...item, quantity: item.quantity - 1}
                     : item
             )
         );
     };
+
+    useEffect(() => {
+        const storedCartItems = localStorage.getItem("cartItems");
+        if (storedCartItems) {
+            setCartItems(JSON.parse(storedCartItems));
+        }
+    }, []); // Make sure to include an empty dependency array to run this effect only once when the component mounts.
+
+    // Function to save cart items to local storage when the cart changes
+    useEffect(() => {
+        // console.log(cartItems);
+        if (cartItems?.length) {
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        }
+    }, [cartItems]);
+
 
     // Calculate the total nutrition based on cart items
     const totalNutrition = calculateTotalNutrition(cartItems);

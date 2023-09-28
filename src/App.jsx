@@ -28,6 +28,7 @@ import EditRestro from "./Components/restaurantDashboard/editRestaurantInfo/edit
 import MainDriverDash from "./Components/driverDashboard/mainDriver";
 import DietSuggestion from "./Components/dietSuggestions/dietSuggestion";
 import MealPlanCheckout from "./Components/mealPlanCheckout/mealPlanCheckout";
+import FAQ from "./Components/faqPage/faqPage";
 
 
 import {ToastContainer} from "react-toastify";
@@ -103,6 +104,9 @@ function App() {
 
                     {/*// Meal Plan Page*/}
                     <Route path="/meal-plans" element={<MealPlan/>}/>
+
+                    {/*// FAQ Page*/}
+                    <Route path="/faq" element={<FAQ/>}/>
 
                     {/*// Non-existent Pages*/}
                     <Route path="*" element={<h1>PageNotFound! :(</h1>}/>

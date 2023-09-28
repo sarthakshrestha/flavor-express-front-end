@@ -197,6 +197,7 @@ export default function Cart() {
       {mealPlanItem && (
         <div className="meal-plan-table">
           <h2>Selected Meal Plan</h2>
+          <br/>
           <table className="meal-plan-table">
             <thead>
               <tr className="first-row">

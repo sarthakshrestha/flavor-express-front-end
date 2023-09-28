@@ -28,6 +28,9 @@ export default function Footer() {
                 <NavLink to="/">Contact Us</NavLink>
               </li>
               <li>
+                <NavLink to="/faq">FAQ Page</NavLink>
+              </li>
+              <li>
                 <NavLink to="/">Terms & Condition</NavLink>
               </li>
               <li>

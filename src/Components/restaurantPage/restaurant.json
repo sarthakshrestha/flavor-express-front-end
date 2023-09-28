@@ -2,33 +2,43 @@
   {
     "id": 1,
     "imageUrl": "restaurant1.png",
-    "name": "Restaurant Name 1",
-    "location": "City 1, Country 1",
-    "cuisine": "Cuisine Type 1",
-    "rating": 4.5
+    "name": "Burger House",
+    "rating": 4.5,
+    "description": "Delicious burgers and more!"
   },
   {
     "id": 2,
-    "imageUrl": "restaurant1.png",
-    "name": "Restaurant Name 2",
-    "location": "City 2, Country 2",
-    "cuisine": "Cuisine Type 2",
-    "rating": 4.2
+    "imageUrl": "restaurant2.png",
+    "name": "Dal Bhat Power",
+    "rating": 4.2,
+    "description": "Authentic Dal Bhat cuisine."
   },
   {
     "id": 3,
-    "imageUrl": "restaurant1.png",
-    "name": "Restaurant Name 3",
-    "location": "City 3, Country 3",
-    "cuisine": "Cuisine Type 3",
-    "rating": 4.8
+    "imageUrl": "restaurant3.jpg",
+    "name": "Newari Khaja Ghar",
+    "rating": 4.8,
+    "description": "Description for Restaurant 3."
   },
   {
     "id": 4,
-    "imageUrl": "restaurant1.png",
-    "name": "Restaurant Name 4",
-    "location": "City 3, Country 3",
-    "cuisine": "Cuisine Type 3",
-    "rating": 4.8
+    "imageUrl": "restaurant4.png",
+    "name": "Momo Mania",
+    "rating": 4.8,
+    "description": "Mitho Momo for Everyone"
+  },
+  {
+    "id": 5,
+    "imageUrl": "restaurant5.png",
+    "name": "Mini India Restro",
+    "rating": 4.8,
+    "description": "Tasty Samosas and Chaat"
+  },
+  {
+    "id": 6,
+    "imageUrl": "restaurant6.png",
+    "name": "Spanish Pasta Ville",
+    "rating": 4.8,
+    "description": "Tasty Samosas and Chaat"
   }
 ]

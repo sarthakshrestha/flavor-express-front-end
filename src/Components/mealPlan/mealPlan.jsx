@@ -104,7 +104,8 @@ export default function MealPlan() {
 
                 {/* Plan #1 */}
                 <div className="plan-number">
-                    <h1 className="plan-title">Plan #1 <span className="veg-option">(Veg-Option)</span></h1>
+                    <h1 className="plan-title">Plan #1 <span className="veg-option">(Veg-Option)</span> </h1>
+                    <p style={{fontFamily: "DM Sans", fontSize: "26px"}}>Price Nrs. 1500</p>
                 </div>
                 <div className="product-cards">
                     {productData.slice(0, 3).map((product) => (

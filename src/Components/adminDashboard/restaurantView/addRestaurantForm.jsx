@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./addRestaurantForm.css";
+import axios from "axios";
 
-function AddRestaurantForm({ onAddRestaurant, togglePopup }) {
+function AddRestaurantForm({togglePopup}) {
     const [newRestaurant, setNewRestaurant] = useState({
         name: "",
         address: "",
@@ -20,36 +21,46 @@ function AddRestaurantForm({ onAddRestaurant, togglePopup }) {
         });
     };
 
-    const handleImageUpload = (event) => {
-        const file = event.target.files[0];
-        if (file && file.type === "image/png") {
-            setNewRestaurant({
-                ...newRestaurant,
-                image: file,
-            });
-        } else {
-            alert("Please only upload .png files.");
-        }
-    };
-
     const handleAddRestaurant = () => {
-        onAddRestaurant(newRestaurant);
-        setNewRestaurant({
-            name: "",
-            address: "",
-            phoneNumber: "",
-            email: "",
-            password: "",
-            description: "",
-            image: null,
-        });
-        togglePopup();
+        const formData = new FormData();
+        formData.append("name", newRestaurant.name);
+        formData.append("address", newRestaurant.address);
+        formData.append("phoneNumber", newRestaurant.phoneNumber);
+        formData.append("email", newRestaurant.email);
+        formData.append("password", newRestaurant.password);
+        formData.append("description", newRestaurant.description);
+        formData.append("image", newRestaurant.image);
+
+        // Create a custom header for the multipart/form-data content type
+        const config = {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        };
+
+        axios.post('http://localhost:8081/restaurants', formData,config)
+            .then((response) => {
+                console.log('Restaurant created successfully:', response.data);
+                // Optionally, you can handle the response or perform other actions after successful creation.
+                setNewRestaurant({
+                    name: "",
+                    address: "",
+                    phoneNumber: "",
+                    email: "",
+                    password: "",
+                    description: "",
+                    image: null,
+                });
+            })
+            .catch((error) => {
+                console.error('Error creating restaurant:', error);
+            });
     };
 
     return (
         <div className="popup-container">
             <div className="popup-box">
-                <form className="rc-form-1">
+                <form className="rc-form-1" onSubmit={handleAddRestaurant}>
                 <span className="close-button" onClick={togglePopup}>
                     &times;
                 </span>
@@ -131,16 +142,15 @@ function AddRestaurantForm({ onAddRestaurant, togglePopup }) {
                                         id="image"
                                         name="image"
                                         accept=".png"
-                                        onChange={handleImageUpload}
-                                    />
+                                        value={newRestaurant.image}
+                                        onChange={handleInputChange}                                      />
                                 </div>
                                 <p className="fm-note">Please only upload .png files.</p>
                             </div>
                             <div className="fm-button-container">
                                 <button
-                                    type="button"
+                                    type="submit"
                                     className="fm-add-button"
-                                    onClick={handleAddRestaurant}
                                 >
                                     Add Restaurant
                                 </button>

@@ -1,61 +1,106 @@
 
 
 /* Styles for the AllRestaurants component */
-.restaurant_info_admin {
+.driver_info_admin {
     padding: 20px;
     margin-left: 250px;
-    margin-top: 90px;
+    margin-right: 205px;
+    margin-top: 190px;
     margin-bottom: 390px;
 }
 
-.admin_header h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: "Jost", sans-serif;
-    font-size: 72px;
-}
-
-.restaurant_info_admin table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.restaurant_info_admin th,
-.restaurant_info_admin td {
+.driver_info_admin th,
+.driver_info_admin td {
     padding: 12px 15px;
     text-align: left;
 }
 
-.restaurant_info_admin th {
+.driver_info_admin th {
     background-color: #f5f5f5;
     font-weight: bold;
     border-bottom: 2px solid #ddd;
 }
 
 
-.restaurant_info_admin tbody tr:nth-child(even) {
+.driver_info_admin tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-.restaurant_info_admin tbody tr:hover {
+.driver_info_admin tbody tr:hover {
     background-color: #e0e0e0;
 }
 
-.restaurant_info_admin button {
-    padding: 8px 16px;
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Media query to make the table responsive */
+@media screen and (max-width: 600px) {
+    .driver_info_admin {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .driver_info_admin th,
+    .driver_info_admin td {
+        padding: 10px 12px;
+    }
+
+    .driver_info_admin button {
+        padding: 6px 12px;
+    }
 }
 
-.restaurant_info_admin button:hover {
-    background-color: #c0392b;
+.d-table {
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    width: 1000px;
+}
+
+.btn-delete{
+    font-family: "DM Sans", 'sans-serif';
+    font-size: 15px;
+    padding: 7px;
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    /*background-color: #3a3737;*/
+    background-color: white;
+    color: red;
+}
+
+.d-table th,
+.d-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Add a border-bottom for better separation */
+    font-family: "Jost",serif;
+}
+
+.d-table th {
+    background-color: lightslategray;
+    font-weight: bold;
+    font-family: "Poppins",serif;
+    font-size: 16px;
+    color:white;
+}
+
+.d-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.d-title{
+    font-size: 52px;
+    font-family: "Jost", sans-serif;
+}
+
+.d-table tbody tr:hover {
+    background-color: #e0e0e0;
 }
 
 /* Add Driver Popup */
@@ -127,40 +172,19 @@
 
 /* Add Driver Button */
 .add-driver-button {
-    background-color: #007bff;
+    padding: 10px 20px;
+    background-color: #e74c3c;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 3px;
-    margin-bottom: 20px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 .add-driver-button:hover {
-    background-color: #0056b3;
+    background-color: darkred;
 }
 
 
-
-
-
-
-
-/* Media query to make the table responsive */
-@media screen and (max-width: 600px) {
-    .restaurant_info_admin {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .restaurant_info_admin th,
-    .restaurant_info_admin td {
-        padding: 10px 12px;
-    }
-
-    .restaurant_info_admin button {
-        padding: 6px 12px;
-    }
-}

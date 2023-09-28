@@ -1,30 +1,9 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Sidebar from "../sideBar/sideBar";
 import "./driverView.css";
+import axios from "axios";
 
 export default function AllDrivers() {
-    // Hardcoded fake restaurant data
-    const fakeDrivers = [
-        {
-            id: 1,
-            name: "Driver 1",
-            address: "123 Main Street",
-            phoneNumber: "555-123-4567",
-        },
-        {
-            id: 2,
-            name: "Driver 2",
-            address: "456 Elm Street",
-            phoneNumber: "555-987-6543",
-        },
-        {
-            id: 3,
-            name: "Driver 3",
-            address: "456 Elm Street",
-            phoneNumber: "555-987-6543",
-        },
-        // Add more fake drivers here
-    ];
 
     // State variable to control the visibility of the add driver popup
     const [showAddDriverPopup, setShowAddDriverPopup] = useState(false);
@@ -43,23 +22,59 @@ export default function AllDrivers() {
 
     // Function to handle form submission
     const handleAddDriver = () => {
-        // Add code here to save driver details
-        console.log("Driver Name:", driverName);
-        console.log("Driver Email:", driverEmail);
-        console.log("Driver Password:", driverPassword);
-        console.log("Driver Address:", driverAddress);
-        console.log("Driver Phone Number:", driverPhoneNumber);
+        // Post data
+        const registerData = {
+            email: driverEmail,
+            password: driverPassword,
+            name: driverName,
+            location: driverAddress,
+            phoneNumber: driverPhoneNumber,
+        };
 
-        // Clear form fields
-        setDriverName("");
-        setDriverEmail("");
-        setDriverPassword("");
-        setDriverAddress("");
-        setDriverPhoneNumber("");
+        axios
+            .post("http://localhost:8081/deliverydrivers", registerData)
+            .then((response) => {
+                console.log(response.data);
+                fetchData();
+            })
+            .catch((error) => {
+                console.error(error);
+            });
 
         // Close the popup
         toggleAddDriverPopup();
     };
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    // Function to fetch and populate data
+    const fetchData = () => {
+        axios.get('http://localhost:8081/deliverydrivers')
+            .then((response) => {
+                setData(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+    // Function to delete a row
+    const deleteRow = (driver_id) => {
+        // Make a DELETE request to your backend API to delete the record with the given ID
+        axios.delete(`http://localhost:8081/deliverydrivers/${driver_id}`)
+            .then(() => {
+                // If successful, re-fetch the data to update the table
+                fetchData();
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
 
     return (
         <>
@@ -68,44 +83,44 @@ export default function AllDrivers() {
                     <Sidebar />
                 </div>
 
-                <div className="restaurant_info_admin">
-                    <div className="admin_header">
-                        <h1>Registered Drivers</h1>
-                        <button className="add-driver-button" onClick={toggleAddDriverPopup}>
-                            Add Driver
-                        </button>
+                <div className="driver_info_admin">
+                    <div className="driver_header">
+                        <h1 className="d-title">Registered Drivers</h1>
                     </div>
-                    <table>
+                    <table className="d-table">
                         <thead>
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Address</th>
+                            <th>Email</th>
                             <th>Phone Number</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {fakeDrivers.map((driver) => (
-                            <tr key={driver.id}>
-                                <td>{driver.id}</td>
-                                <td>{driver.name}</td>
-                                <td>{driver.address}</td>
-                                <td>{driver.phoneNumber}</td>
-                                <td>
-                                    <button>Delete</button>
-                                </td>
+                        {data.map((drivers) => (
+                            <tr key={drivers.driver_id}>
+                                <td>{drivers.driver_id}</td>
+                                <td>{drivers.name}</td>
+                                <td>{drivers.location}</td>
+                                <td>{drivers.email}</td>
+                                <td>{drivers.phoneNumber}</td>
+                                <td><button className="btn-delete" onClick={() => deleteRow(drivers.driver_id)}>Delete</button></td>
                             </tr>
                         ))}
                         </tbody>
                     </table>
+                    <button className="add-driver-button" onClick={toggleAddDriverPopup}>
+                        Add Driver
+                    </button>
                 </div>
             </div>
             {showAddDriverPopup && (
                 <div className="dr-popup">
                     {/* Add Driver Form */}
                     <h2>Add Driver</h2>
-                    <form>
+                    <form onSubmit={handleAddDriver}>
                         <label htmlFor="driverName">Driver Name:</label>
                         <input
                             type="text"
@@ -156,7 +171,7 @@ export default function AllDrivers() {
                             required
                         />
 
-                        <button className="add-driver-button" type="button" onClick={handleAddDriver}>
+                        <button className="add-driver-button" type="submit">
                             Add Driver
                         </button>
                     </form>
@@ -168,3 +183,4 @@ export default function AllDrivers() {
         </>
     );
 }
+

@@ -73,7 +73,7 @@ export function CartProvider({children}) {
         );
     };
 
-    // Function to decrement the quantity of an item in the cart
+    // Decreasing the quantity
     const decrementQuantity = (productId) => {
         setCartItems((prevCartItems) =>
             prevCartItems.map((item) =>
@@ -100,10 +100,10 @@ export function CartProvider({children}) {
     }, [cartItems]);
 
 
-    // Calculate the total nutrition based on cart items
+    // Total Nutrition
     const totalNutrition = calculateTotalNutrition(cartItems);
 
-    // Create the value object to provide to the context
+    // Object Context
     const value = {
         cartItems,
         addToCart,

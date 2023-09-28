@@ -124,6 +124,7 @@
   list-style-type: disc; /* Use disc bullets for the list */
   padding-left: 20px; /* Add left padding to the list items for indentation */
   padding: 50px;
+  margin-top: -42px;
 }
 
 

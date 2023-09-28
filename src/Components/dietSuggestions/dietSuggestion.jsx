@@ -53,12 +53,12 @@ export default function DietSuggestion() {
                     </div>
                     <div className="why-important-box-1">
                         <div className="box-content-wrapper-1">
-                            <h2 className="bx-title">What are some healthy choices that can be made?
-                                <button className="box-button-hide" onClick={handleHealthyChoicesClick}>
-                                    {showHealthyChoices ? 'Hide Content' : 'Click to know more!'}
-                                </button>
-                            </h2>
-
+                            <h2 className="bx-title">What are some healthy choices that can be made?</h2>
+                            <br/>
+                            <button className="box-button-hide" onClick={handleHealthyChoicesClick}>
+                                {showHealthyChoices ? 'Hide Content' : 'Click to know more!'}
+                            </button>
+                            <br/>
                             {showHealthyChoices && (
                                 <ul className="box-content-1">
                                     <li>Balanced Meals: Opt for meals that include a balance of protein, carbohydrates, and healthy fats. Look for options that incorporate lean proteins like chicken or tofu, whole grains, and plenty of vegetables.</li>

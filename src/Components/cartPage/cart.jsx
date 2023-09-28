@@ -142,18 +142,18 @@ export default function Cart() {
           <span className="nutrient-value">{mealPlanItem?.totalFat} {totalNutrition.fat} g</span>
         </div>
       </div>
-      <div className="food-cart">
+      {!mealPlanItem && <div className="food-cart">
         <table className="food-table">
           <thead>
-            <tr className="first-row">
-              <th>S.N</th>
-              <th>Name</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
+          <tr className="first-row">
+            <th>S.N</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
           </thead>
           <tbody>
-            {cartItemsWithoutMealPlan.map((item, index) => (
+          {cartItemsWithoutMealPlan.map((item, index) => (
               <tr className="table-row" key={item.id}>
                 <td>{index + 1}</td>
                 <td>
@@ -163,8 +163,8 @@ export default function Cart() {
                     <p className="allergy">Allergies: {item.allergies}</p>
                     <br />
                     <button
-                      className="remove-item"
-                      onClick={() => removeFromCart(item.id)}
+                        className="remove-item"
+                        onClick={() => removeFromCart(item.id)}
                     >
                       Remove Item
                     </button>
@@ -172,15 +172,15 @@ export default function Cart() {
                 </td>
                 <td>
                   <button
-                    className="quantity-button"
-                    onClick={() => decrementQuantity(item.id)}
+                      className="quantity-button"
+                      onClick={() => decrementQuantity(item.id)}
                   >
                     -
                   </button>
                   <span className="quantity">{item.quantity}</span>
                   <button
-                    className="quantity-button"
-                    onClick={() => incrementQuantity(item.id)}
+                      className="quantity-button"
+                      onClick={() => incrementQuantity(item.id)}
                   >
                     +
                   </button>
@@ -189,11 +189,11 @@ export default function Cart() {
                   Rs. {calculateItemTotalPrice(item)}
                 </td>
               </tr>
-            ))}
+          ))}
           </tbody>
         </table>
         <hr className="rounded" />
-      </div>
+      </div>}
       {mealPlanItem && (
         <div className="meal-plan-table">
           <h2>Selected Meal Plan</h2>
@@ -231,23 +231,28 @@ export default function Cart() {
           </div>
         </div>
       )}
-      <div className="promo-code-box">
-        <input
-          type="text"
-          placeholder="Enter Your Promo Code"
-          value={promoCode}
-          onChange={(e) => setPromoCode(e.target.value)}
-          className="promo-code-input"
-        />
-        <button className="apply-promo-button">Apply</button>
-      </div>
-      <div className="calculation">
-        <h1>Your Total: {PRICE_PREFIX + calculateTotalPrice()}</h1>
-        <p>Note: {DELIVERY_CHARGE_PERCENTAGE}% is for the delivery charge</p>
-        <Link to="/checkout">
-          <button className="checkout-btn">Head to Checkout</button>
-        </Link>
-      </div>
+      {
+        !mealPlanItem &&
+          <div>
+            <div className="promo-code-box">
+              <input
+                  type="text"
+                  placeholder="Enter Your Promo Code"
+                  value={promoCode}
+                  onChange={(e) => setPromoCode(e.target.value)}
+                  className="promo-code-input"
+              />
+              <button className="apply-promo-button">Apply</button>
+            </div>
+            <div className="calculation">
+              <h1>Your Total: {PRICE_PREFIX + calculateTotalPrice()}</h1>
+              <p>Note: {DELIVERY_CHARGE_PERCENTAGE}% is for the delivery charge</p>
+              <Link to="/checkout">
+                <button className="checkout-btn">Head to Checkout</button>
+              </Link>
+            </div>
+          </div>
+      }
       <Footer />
     </>
   );

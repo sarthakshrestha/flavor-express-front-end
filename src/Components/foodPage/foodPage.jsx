@@ -1,17 +1,26 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Header from "../../sharedComponents/header/Header";
 import "./foodPage.css";
 import Footer from "../../sharedComponents/footer/Footer";
 import productsData from "./product.json";
-import {useCart} from "../cartPage/cartContext";
-import {toast, ToastContainer} from "react-toastify";
+import { useCart } from "../cartPage/cartContext";
+import { toast, ToastContainer } from "react-toastify";
 import ProductPopup from "./productPopup";
+import {useLocation} from "react-router-dom";
 
 export default function FoodPage() {
     const [filter, setFilter] = useState("all");
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [searchQuery, setSearchQuery] = useState(""); // State for the search query
+    const location = useLocation();
+    const searchedQuery = new URLSearchParams(location.search).get("search");
+
     const handleFilterChange = (event) => {
         setFilter(event.target.value);
+    };
+
+    const handleSearch = (event) => {
+        setSearchQuery(event.target.value);
     };
 
     const openProductPopup = (product) => {
@@ -23,7 +32,7 @@ export default function FoodPage() {
     };
 
     // Use the useCart hook to access cart-related functions
-    const {cartItems, addToCart} = useCart();
+    const { cartItems, addToCart } = useCart();
 
     const handleAddToCart = (product) => {
         const existingItem = cartItems.find((item) => item.id === product.id);
@@ -33,19 +42,28 @@ export default function FoodPage() {
             toast.info("Item already exists in cart");
         } else {
             // Otherwise, add the item to the cart with a quantity of 1
-            addToCart({...product, quantity: 1});
+            addToCart({ ...product, quantity: 1 });
         }
     };
 
-    return (<>
-            <Header/>
+    // Filter products based on the search query and filter category
+    const filteredProducts = productsData.filter((product) => {
+        const nameMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
+        const categoryMatch = filter === "all" || product.category === filter;
+        const queryMatch = searchedQuery ? product.name.toLowerCase().includes(searchedQuery.toLowerCase()) : true;
+
+        return queryMatch && nameMatch && categoryMatch;
+    });
+
+    return (
+        <>
+            <Header />
             <div className="container">
-                <p className="subText"></p>
                 <h2 className="userLine">Welcome to <span className="flav-flav">Flavor Express</span></h2>
-                <h1 className="headLine">Embark on a flavorful journey while nourishing your body!</h1>
+                <h1 className="headLine">Explore and order mouthwatering meals!</h1>
                 <div className="filter-box">
                     <h1 className="filter-h1">Filter Categories</h1>
-                    <br/>
+                    <br />
                     <label>
                         <input
                             type="radio"
@@ -77,44 +95,51 @@ export default function FoodPage() {
                         Non-Vegetarian
                     </label>
                 </div>
+                <div className="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Search for items"
+                        value={searchQuery}
+                        onChange={handleSearch}
+                    />
+                </div>
+
                 <div className="products-container">
-                    {productsData.map((product) => (<div className="product" key={product.id}>
-                            {/* Use require to import image paths */}
+                    {filteredProducts.map((product) => (
+                        <div className="product" key={product.id}>
                             <img
                                 className="product-image"
-                                src={require(`./images/${product.image}`)}  // Adjust the path to your images
+                                src={require(`./images/${product.image}`)}
                                 alt={product.name}
                             />
                             <h3 className="product-title">{product.name}</h3>
                             <p className="product-description">{product.description}</p>
-                            <br/>
+                            <br />
                             <p className="restaurant-name">Offered by: {product.restaurant}</p>
-                            <br/>
+                            <br />
                             <p className="allergies">{product.allergies}</p>
-                            <br/>
+                            <br />
                             <p className="price">{product.price}</p>
-                            <br/>
+                            <br />
                             <button
                                 className="description-button"
-                                onClick={() => openProductPopup(product)} // Open popup on click
+                                onClick={() => openProductPopup(product)}
                             >
                                 Description
                             </button>
-                            {/* Call the handleAddToCart function to add items to the cart */}
-                            <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>Add to
-                                Cart
+                            <button className="add-to-cart-button" onClick={() => handleAddToCart(product)}>
+                                Add to Cart
                             </button>
-                            <br/>
-                        </div>))}
+                            <br />
+                        </div>
+                    ))}
                 </div>
-                {selectedProduct && ( // Render the popup when a product is selected
-                    <ProductPopup
-                        product={selectedProduct}
-                        onClose={closeProductPopup}
-                    />
+                {selectedProduct && (
+                    <ProductPopup product={selectedProduct} onClose={closeProductPopup} />
                 )}
             </div>
-            <ToastContainer position="top-right" autoClose={3000}/>
-            <Footer/>
-        </>);
+            <ToastContainer position="top-right" autoClose={3000} />
+            <Footer />
+        </>
+    );
 }

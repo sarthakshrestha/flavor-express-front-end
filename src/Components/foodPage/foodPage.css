@@ -288,7 +288,9 @@
         font-size: 55%;
     }
 
-}
+}.search-bar{
+     width: 40%;
+ }
 
 @media (max-width: 768px) {
 

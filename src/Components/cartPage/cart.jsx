@@ -157,6 +157,13 @@ export default function Cart() {
               <tr className="table-row" key={item.id}>
                 <td>{index + 1}</td>
                 <td>
+                  <img
+                      className="food-image"
+                      src={require(`../../Components/foodPage/images/${item.image}`)}
+                      alt={item.name}
+                  />
+                </td>
+                <td>
                   <div className="cart-items">
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>

@@ -22,7 +22,7 @@ export default function SmallMealPlan() {
                 {greenMealOptions.map((option, index) => (
                     <div className="category_box" key={index}>
                         <div className="category_content">
-                            <img src={option.image} alt={`Option ${index + 1}`} />
+                            <img className="tiny-img" src={option.image} alt={`Option ${index + 1}`} />
                             <p>{option.name}</p>
                         </div>
                     </div>

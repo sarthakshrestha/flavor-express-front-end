@@ -109,9 +109,9 @@
   },
   {
     "id": 7,
-    "name": "Pancake With Honey",
+    "name": "Breakfast",
     "image": "p3breakfast.png",
-    "description": "Greek yogurt with berries",
+    "description": "Pancake With Honey",
     "restaurant": "FE-Kitchen",
     "allergies": "Vegetarian",
     "price": "Rs. 15",

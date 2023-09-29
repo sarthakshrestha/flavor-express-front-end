@@ -17,7 +17,7 @@ export default function RestaurantLoginPage() {
         const data = {
             email: emailRef.current.value,
             password: passwordRef.current.value,
-            role: "ROLE_ADMIN",
+            role: "ROLE_RESTAURANT",
         };
 
         axios

@@ -26,12 +26,18 @@ export default function CustomerSidebar() {
                         </Link>
                     </li>
                 </ul>
+                <div className="cm-logout">
+                    <a>Logout </a>
+                </div>
                 <div className="c-info">
                     <h1 className="bottom-title">Powered by</h1>
                     <p>Flavor Express</p>
                 </div>
             </div>
+
+
         </div>
+
     );
 }
 

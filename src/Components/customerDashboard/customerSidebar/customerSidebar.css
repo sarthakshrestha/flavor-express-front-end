@@ -107,3 +107,12 @@
     font-size: 42px;
     color: red;
 }
+
+.cm-logout a{
+    background-color: #444444;
+    color: white;
+    padding: 12px;
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    width: 140px;
+}

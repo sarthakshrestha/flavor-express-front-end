@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./addRestaurantForm.css";
 import axios from "axios";
 
@@ -14,14 +14,26 @@ function AddRestaurantForm({togglePopup}) {
     });
 
     const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setNewRestaurant({
-            ...newRestaurant,
-            [name]: value,
-        });
+
+        if (event.target.name === "image") {
+            const selectedFile = event.target.files[0];
+            console.log(selectedFile)
+            setNewRestaurant({...newRestaurant, image: selectedFile})
+        } else {
+            const {name, value} = event.target;
+            setNewRestaurant({
+                ...newRestaurant,
+                [name]: value,
+            });
+        }
+
     };
 
-    const handleAddRestaurant = () => {
+    const handleAddRestaurant = (event) => {
+        event.preventDefault();
+
+        console.log("checking")
+
         const formData = new FormData();
         formData.append("name", newRestaurant.name);
         formData.append("address", newRestaurant.address);
@@ -38,7 +50,7 @@ function AddRestaurantForm({togglePopup}) {
             },
         };
 
-        axios.post('http://localhost:8081/restaurants', formData,config)
+        axios.post('http://localhost:8081/restaurants', formData, config)
             .then((response) => {
                 console.log('Restaurant created successfully:', response.data);
                 // Optionally, you can handle the response or perform other actions after successful creation.
@@ -142,8 +154,7 @@ function AddRestaurantForm({togglePopup}) {
                                         id="image"
                                         name="image"
                                         accept=".png"
-                                        value={newRestaurant.image}
-                                        onChange={handleInputChange}                                      />
+                                        onChange={handleInputChange}/>
                                 </div>
                                 <p className="fm-note">Please only upload .png files.</p>
                             </div>

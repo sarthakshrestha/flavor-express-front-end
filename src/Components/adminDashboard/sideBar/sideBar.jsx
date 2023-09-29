@@ -71,9 +71,11 @@ function Sidebar() {
                 </div>
             </div>
             <br />
+            <Link to="/">
             <div className="log-out">
                 <button className="logout-btn">Logout</button>
             </div>
+            </Link>
         </nav>
     );
 }

@@ -107,10 +107,12 @@ export default function MealPlanCheckout() {
                     {/*<button type="submit" className="mp-proceed-to-payment">*/}
                     {/*    Subscribe to Meal Plan.*/}
                     {/*</button>*/}
+                    <br/>
                     <button className="mp-proceed-to-payment" onClick={()=>
                     {setPaypal(true)}
-                    }>Subscribe to Meal Plan</button>
+                    }>Subscribe Meal Plan & Pay Through PayPal</button>
                     {paypal && <Checkout amountValue={paypalAmount}/>}
+                    <br/>
                 </form>
                 <br/>
                 <p style={{fontSize: '19px'}}><span className="smallNote" style={{color: "red"}}>Note:</span> Meal Plans are subscribed on a monthly basis, for any changes or queries please call us at +977 55519234</p>

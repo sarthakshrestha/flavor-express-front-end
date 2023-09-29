@@ -142,9 +142,10 @@ export default function CheckoutPage() {
                             <input type="text" id="ck-driver" name="notes"
                                    placeholder="Any notes for the delivery driver?"/>
                         </div>
+                        <br/>
                         <button className="ck-checkout-btn" onClick={()=>
                             {setPayItem(true)}
-                        }>Confirm Order</button>
+                        }> Confirm Order & Pay Through PayPal </button>
                         <br/>
                     {payItem && <Checkout amountValue={paypalAmount}/>}
                     </form>

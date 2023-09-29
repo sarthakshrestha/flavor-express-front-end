@@ -3,6 +3,7 @@ import Header from "../../sharedComponents/header/Header";
 import Footer from "../../sharedComponents/footer/Footer";
 import "./mealPlanCheckout.css";
 import { useCart } from "../cartPage/cartContext";
+import Checkout from "../checkOutPage/paypalPurchase";
 
 const PRICE_PREFIX = "Rs.";
 
@@ -12,6 +13,9 @@ export default function MealPlanCheckout() {
         email: "",
         notes: "",
     });
+
+    const [paypal, setPaypal] = useState(false);
+
 
     // Access the cart items using the useCart hook
     const { cartItems } = useCart();
@@ -33,6 +37,8 @@ export default function MealPlanCheckout() {
         e.preventDefault();
         // Implement your logic to handle the subscription and payment here
     };
+
+    const paypalAmount = mealPlanItem.totalPrice;
 
     return (
         <>
@@ -98,9 +104,13 @@ export default function MealPlanCheckout() {
                             onChange={handleInputChange}
                         />
                     </div>
-                    <button type="submit" className="mp-proceed-to-payment">
-                        Subscribe to Meal Plan.
-                    </button>
+                    {/*<button type="submit" className="mp-proceed-to-payment">*/}
+                    {/*    Subscribe to Meal Plan.*/}
+                    {/*</button>*/}
+                    <button className="mp-proceed-to-payment" onClick={()=>
+                    {setPaypal(true)}
+                    }>Subscribe to Meal Plan</button>
+                    {paypal && <Checkout amountValue={paypalAmount}/>}
                 </form>
                 <br/>
                 <p style={{fontSize: '19px'}}><span className="smallNote" style={{color: "red"}}>Note:</span> Meal Plans are subscribed on a monthly basis, for any changes or queries please call us at +977 55519234</p>

@@ -5,6 +5,7 @@ import {useCart} from "../cartPage/cartContext";
 import {calculateTotalNutrition} from "../cartPage/cartContext";
 import "./checkOutPage.css";
 import {Link} from "react-router-dom";
+import Checkout from "./paypalPurchase";
 
 const PRICE_PREFIX = "Rs. ";
 const DELIVERY_CHARGE_PERCENTAGE = 5;
@@ -21,6 +22,7 @@ export default function CheckoutPage() {
     const [promoCode, setPromoCode] = useState("");
     const {cartItems, removeFromCart, decrementQuantity, incrementQuantity} =
         useCart();
+    const [payItem, setPayItem] = useState(false);
 
     const [totalNutrition, setTotalNutrition] = useState({
         calories: 0,
@@ -45,6 +47,9 @@ export default function CheckoutPage() {
         const nutrition = calculateTotalNutrition(cartItems); // Calculate the nutrition
         setTotalNutrition(nutrition); // Set the total nutrition
     }, [cartItems]);
+
+    const paypalAmount =  calculateTotalPrice();
+
 
     const handlePromoCodeChange = (event) => {
         setPromoCode(event.target.value);
@@ -137,7 +142,11 @@ export default function CheckoutPage() {
                             <input type="text" id="ck-driver" name="notes"
                                    placeholder="Any notes for the delivery driver?"/>
                         </div>
-                        <button className="ck-checkout-btn">Confirm Order</button>
+                        <button className="ck-checkout-btn" onClick={()=>
+                            {setPayItem(true)}
+                        }>Confirm Order</button>
+                        <br/>
+                    {payItem && <Checkout amountValue={paypalAmount}/>}
                     </form>
                 </div>
             </div>

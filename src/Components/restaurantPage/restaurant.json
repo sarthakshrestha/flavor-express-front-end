@@ -18,7 +18,7 @@
     "imageUrl": "restaurant3.jpg",
     "name": "Newari Khaja Ghar",
     "rating": 4.8,
-    "description": "Description for Restaurant 3."
+    "description": "Mouthwatering Newari Food"
   },
   {
     "id": 4,
@@ -39,6 +39,6 @@
     "imageUrl": "restaurant6.png",
     "name": "Spanish Pasta Ville",
     "rating": 4.8,
-    "description": "Tasty Samosas and Chaat"
+    "description": "Delicious Pastas Available"
   }
 ]

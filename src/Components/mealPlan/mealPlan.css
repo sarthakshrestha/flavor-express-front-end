@@ -121,14 +121,15 @@
 
 
 .add-plan-btn {
-    background-color: #007bff; /* Change the background color as needed */
+    background-color: #28a745; /* Change the background color as needed */
     color: #fff; /* Change the text color as needed */
     padding: 10px 20px; /* Adjust the padding as needed */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 21px;
     transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
 }
 
 .add-plan-btn:hover {

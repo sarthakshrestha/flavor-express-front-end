@@ -38,11 +38,11 @@ export default function HeroSection({ onSearch }) {
           </div>
         </div>
         <div className="t-content">
-          <h1 className="heading">Your Cravings, Our Delivery</h1>
+          <h1 className="heading">Flavorful Cravings, Healthy Delivery.</h1>
           <div className="search_bar">
             <div className="search_input">
               <input
-                  type="text"
+                  type="text"e
                   placeholder="Search for Food Items"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -51,7 +51,6 @@ export default function HeroSection({ onSearch }) {
             <button className="search_button" onClick={handleSearch}>
               Search
             </button>
-
             {searchQuery === "" && (
                 <p className="warning-text"></p>
             )}

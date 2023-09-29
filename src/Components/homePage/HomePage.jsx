@@ -8,6 +8,7 @@ import MealPlan from "./subComponents/mealPlan/MealPlan";
 import CustomerReview from "./subComponents/customerReview/CustomerReview";
 import Footer from "../../sharedComponents/footer/Footer";
 import SmallMealPlan from "./subComponents/smallMealPlan/smallMealPlans";
+
 export default function HomePage() {
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -15,16 +16,16 @@ export default function HomePage() {
     const handleSearch = (query) => {
         setSearchQuery(query);
     };
-  return (
-    <div>
-      <HeroSection />
-      <HowWorksSection />
-      <SmallMealPlan/>
-      <LimitedPromos />
-      <PreferredRestaurants />
-      <MealPlan />
-      <CustomerReview />
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <HeroSection/>
+            <HowWorksSection/>
+            <MealPlan/>
+            <SmallMealPlan/>
+            <LimitedPromos/>
+            <PreferredRestaurants/>
+            <CustomerReview/>
+            <Footer/>
+        </div>
+    );
 }

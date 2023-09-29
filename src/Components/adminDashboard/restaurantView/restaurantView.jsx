@@ -40,6 +40,7 @@ function AllRestaurants() {
 
     const togglePopup = () => {
         setPopupOpen(!isPopupOpen);
+        fetchData()
     };
 
     // Function to fetch and populate data

@@ -92,23 +92,25 @@
 
 .heading {
   font-family: "Pacifico", cursive;
-  font-size: 42px;
-  margin-left: 190px;
+  font-size: 52px;
+  margin-left: 215px;
   font-weight: bold;
-  margin-top: -60px;
+  margin-top: -220px;
+  width: 45%;
 }
 
 .search_bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 190px;
+  margin-left: -45px;
   margin-top: 20px;
 }
 
 .search_input {
   position: relative;
-  width: 100%;
+  width: 35%;
+  margin-right: 20px;
 }
 
 input[type="text"] {

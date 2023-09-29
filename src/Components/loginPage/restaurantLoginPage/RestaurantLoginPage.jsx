@@ -1,15 +1,17 @@
 import React, {useRef} from "react";
 import picture from "../images/restaurant.jpg";
 import Footer from "../../../sharedComponents/footer/Footer";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import axios from "axios";
 import Header from "../../../sharedComponents/header/Header";
 import "./RestaurantLoginPage.css";
+import {toast} from "react-toastify";
 
 export default function RestaurantLoginPage() {
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
+    const navigate = useNavigate();
 
     function loginHandle() {
         const data = {
@@ -26,8 +28,15 @@ export default function RestaurantLoginPage() {
                     "FlavorExpressUserToken",
                     JSON.stringify(response.data.jwtToken)
                 );
+                if (response) {
+                    toast.success("Restaurant Login successful!", {
+                        autoClose: 3000,
+                    });
+                    navigate('/restro')
+                }
             })
             .catch((error) => {
+                toast.error("Check Restaurant's Credentials")
                 console.error(error);
             });
     }
@@ -59,9 +68,6 @@ export default function RestaurantLoginPage() {
                             placeholder="password"
                             ref={passwordRef}
                         />
-                    </div>
-                    <div className="forgot-password">
-                        <NavLink to="/registrationPage"> Forgot Password</NavLink>
                     </div>
                     <button className="logInButton" onClick={loginHandle}>
                         Log in

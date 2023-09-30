@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import RestaurantSidebar from "../sideBar/sideBar";
 import "./restroFoodItems.css";
+import axios from "axios";
 
 export default function RestroFood() {
     const [foodItems, setFoodItems] = useState([{
@@ -20,6 +21,41 @@ export default function RestroFood() {
         image: "/path/to/burger-image.jpg",
     }, // Add more food items here
     ]);
+
+    const formData = new FormData();
+    formData.append("name", newFoodItem.name);
+    formData.append("description", newFoodItem.description);
+    formData.append("price", newFoodItem.price);
+    formData.append("category", newFoodItem.category);
+    formData.append("image", newFoodItem.image);
+
+    // Add nutritional information to the formData if needed
+
+    // Send a POST request to your API endpoint
+    axios.post("YOUR_API_ENDPOINT_HERE", formData)
+        .then((response) => {
+            // Handle the success response if needed
+            console.log("Food item added successfully:", response.data);
+
+            // You can also update the local state to display the new item immediately
+            setFoodItems([...foodItems, response.data]);
+
+            // Clear the form fields
+            setNewFoodItem({
+                name: "",
+                description: "",
+                price: "",
+                category: "non-veg",
+                image: null,
+            });
+
+            // Close the popup
+            toggleAddFoodPopup();
+        })
+        .catch((error) => {
+            // Handle errors if the request fails
+            console.error("Error adding food item:", error);
+        });
 
     const [showAddFoodPopup, setShowAddFoodPopup] = useState(false);
 

@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import picture from "../images/picture.jpg";
 import Footer from "../../../sharedComponents/footer/Footer";
 import "./LoginPage.css";
-import { NavLink } from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import axios from "axios";
 import Header from "../../../sharedComponents/header/Header";
 import { toast } from "react-toastify";
@@ -11,6 +11,14 @@ export default function LoginPage() {
     const emailRef = useRef("");
     const passwordRef = useRef("");
     const [loginError, setLoginError] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login status
+    const nav = useNavigate();
+
+    useEffect(() => {
+        // Check if the user is already logged in when the component mounts
+        const userData = localStorage.getItem("UserData");
+        setIsLoggedIn(!!userData); // Set isLoggedIn to true if UserData is present in localStorage
+    }, []);
 
     function loginHandle() {
         const data = {
@@ -31,9 +39,12 @@ export default function LoginPage() {
                         JSON.stringify(response.data.jwtToken)
                     );
                     localStorage.setItem("UserData", JSON.stringify(response.data.person));
+                    setIsLoggedIn(true); // Set isLoggedIn to true when successfully logged in
                     toast.success("Successfully Logged In", {
                         position: toast.POSITION.TOP_RIGHT,
                     });
+                    nav("/foodPage");
+
                 } else {
                     toast.error("Wrong credentials, please check properly", {
                         position: toast.POSITION.TOP_RIGHT,
@@ -46,6 +57,13 @@ export default function LoginPage() {
                     position: toast.POSITION.TOP_RIGHT,
                 });
             });
+    }
+
+    function logoutHandle() {
+        // Clear user data from localStorage and set isLoggedIn to false
+        localStorage.removeItem("FlavorExpressUserToken");
+        localStorage.removeItem("UserData");
+        setIsLoggedIn(false);
     }
 
     return (
@@ -79,7 +97,6 @@ export default function LoginPage() {
                     <button className="logInButton" onClick={loginHandle}>
                         Log in
                     </button>
-                    {loginError && <p className="error-message">{loginError}</p>}
                     <div className="already">
                         <p>
                             Don't have an account?{" "}

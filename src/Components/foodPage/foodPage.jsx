@@ -14,6 +14,7 @@ export default function FoodPage() {
     const [searchQuery, setSearchQuery] = useState(""); // State for the search query
     const location = useLocation();
     const searchedQuery = new URLSearchParams(location.search).get("search");
+    const [products, setProducts] = useState([]);
 
     const handleFilterChange = (event) => {
         setFilter(event.target.value);
@@ -61,40 +62,6 @@ export default function FoodPage() {
             <div className="container">
                 <h2 className="userLine">Welcome to <span className="flav-flav">Flavor Express</span></h2>
                 <h1 className="headLine">Explore and order mouthwatering meals!</h1>
-                {/*<div className="filter-box">*/}
-                {/*    <h1 className="filter-h1">Filter Categories</h1>*/}
-                {/*    <br />*/}
-                {/*    <label>*/}
-                {/*        <input*/}
-                {/*            type="radio"*/}
-                {/*            name="filter"*/}
-                {/*            value="all"*/}
-                {/*            checked={filter === "all"}*/}
-                {/*            onChange={handleFilterChange}*/}
-                {/*        />*/}
-                {/*        All*/}
-                {/*    </label>*/}
-                {/*    <label>*/}
-                {/*        <input*/}
-                {/*            type="radio"*/}
-                {/*            name="filter"*/}
-                {/*            value="veg"*/}
-                {/*            checked={filter === "veg"}*/}
-                {/*            onChange={handleFilterChange}*/}
-                {/*        />*/}
-                {/*        Vegetarian*/}
-                {/*    </label>*/}
-                {/*    <label>*/}
-                {/*        <input*/}
-                {/*            type="radio"*/}
-                {/*            name="filter"*/}
-                {/*            value="nonveg"*/}
-                {/*            checked={filter === "nonveg"}*/}
-                {/*            onChange={handleFilterChange}*/}
-                {/*        />*/}
-                {/*        Non-Vegetarian*/}
-                {/*    </label>*/}
-                {/*</div>*/}
                 <div className="search-bar">
                     <input
                         type="text"

@@ -11,7 +11,7 @@ function AddRestaurantForm({togglePopup}) {
         password: "",
         description: "",
         image: null,
-    });
+    })
 
     const handleInputChange = (event) => {
 

@@ -1,82 +1,102 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 import Sidebar from "./sideBar/sideBar";
 import "./adminDashboard.css";
 import Header from "../../sharedComponents/header/Header";
-
-const jsonData = [{label: "Number of users registered", value: 42}, {
-    label: "Number of orders made",
-    value: 62
-}, {label: "Revenue Made  (in Rs.)", value: 1500}, {label: "Active Restaurants", value: 62},];
-
-const ordersData = [{
-    orderId: "1",
-    customer: "John Doe",
-    restaurantName: "Sample Restaurant",
-    orderDate: "2023-09-20",
-    totalAmount: "$50.00",
-    status: "Pending",
-}, {
-    orderId: "2",
-    customer: "Alice Smith",
-    restaurantName: "Another Restaurant",
-    orderDate: "2023-09-19",
-    totalAmount: "$35.00",
-    status: "Confirmed",
-},];
+import axios from "axios";
 
 export default function AdminDashboard() {
+
+    const [data, setData] = useState([]);
+
+    const [count, setCount] = useState([]);
+
+    useEffect(() => {
+        fetchCount();
+    }, []);
+
+    // Function to fetch and populate data
+    const fetchCount = () => {
+        axios.get('http://localhost:8081/counts')
+            .then((response) => {
+                setCount(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    // Function to fetch and populate data
+    const fetchData = () => {
+        axios.get('http://localhost:8081/customers')
+            .then((response) => {
+                setData(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+
     return (<>
             <div className="center-container">
                 <div className="s-view">
                     <Sidebar/>
                 </div>
-
-                <div className="order-box">
-                    <p className="text-header">At <br/> a glance {''}</p>
-                    {jsonData.map((item, index) => (<div className="innerBox" key={index}>
-                            <div className="number">{item.value}</div>
-                            <h1 className="numUsers">{item.label}</h1>
-                        </div>))}
+                <div className="at_a_glance">
+                    <div className="inner">
+                        <i className="fa-solid fa-money-check-dollar"></i>
+                        <h3>Revenue</h3>
+                        <p>{count ? count.revenue : 'Loading...'}</p>
+                    </div>
+                    <div className="inner">
+                        <i className="fas fa-users"></i>
+                        <h3>Customers</h3>
+                        <p>{count ? count.customers : 'Loading...'}</p>
+                    </div>
+                    <div className="inner">
+                        <i className="fa-solid fa-utensils"></i>
+                        <h3>Restaurants</h3>
+                        <p>{count ? count.restaurants : 'Loading...'}</p>
+                    </div>
+                    <div className="inner">
+                        <i className="fa-solid fa-motorcycle"></i>
+                        <h3>Drivers</h3>
+                        <p>{count ? count.drivers : 'Loading...'}</p>
+                    </div>
                 </div>
-                <div className="table1">
+                <div className="info_admin">
                     <br/>
-                    <h1>Recent Orders</h1>
+                    <h1 className="c-title">Recently Joined</h1>
                     <br/>
-                    <table className="order-table">
+                    <table className="u-table">
                         <thead>
                         <tr>
-                            <th>Order ID</th>
-                            <th>Customer</th>
-                            <th>Restaurant Name</th>
-                            <th>Order Date</th>
-                            <th>Total Amount</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {ordersData.map((order, index) => (<tr key={index}>
-                                <td>{order.orderId}</td>
-                                <td>{order.customer}</td>
-                                <td>{order.restaurantName}</td>
-                                <td>{order.orderDate}</td>
-                                <td>{order.totalAmount}</td>
-                                <td>{order.status}</td>
-                                <td>
-                                    <button className="accept-btn" style={{backgroundColor: 'darkgreen', fontFamily: 'DM Sans'}} onClick={() => handleAction("Accept")}>Accept</button>
-                                    <span style={{ marginRight: '11px' }}></span>
-                                    <button className="reject-btn" style={{backgroundColor: 'red', fontFamily: 'DM Sans'}} onClick={() => handleAction("Reject")}>Reject</button>
-                                </td>
-                            </tr>))}
+                        {data.slice(0,5).map((customer) => (
+                            <tr key={customer.customer_id}>
+                                <td>{customer.customer_id}</td>
+                                <td>{customer.fullName}</td>
+                                <td>{customer.address}</td>
+                                <td>{customer.email}</td>
+                                <td>{customer.phoneNumber}</td>
+                            </tr>
+                        ))}
                         </tbody>
                     </table>
                 </div>
             </div>
         </>);
-}
-
-// Function to handle the action (Accept/Reject)
-function handleAction(action) {
-    alert(`Order ${action}ed`);
 }

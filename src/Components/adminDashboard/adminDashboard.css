@@ -35,12 +35,16 @@
     font-family: "Jost", sans-serif;
 }
 
+.info_admin{
+    margin-top: 300px;
+    margin-right: 450px;
+}
+
 .order-box {
     display: flex;
     gap: 18px;
-    /*left: 18rem;*/
     top: -9rem;
-    left: 2rem;
+    left: 400px;
     position: relative;
     border: 3px solid lightgrey;
     padding: 32px;
@@ -66,13 +70,6 @@
     color: white;
 }
 
-.table1 {
-    margin-top: 19rem;
-    margin-left: -61rem;
-    position: static;
-    /*padding: 20px;*/
-}
-
 .table1 h1{
     margin-top: 1%;
     font-family: 'DM Sans', sans-serif;
@@ -80,31 +77,6 @@
     font-weight: bold;
 }
 
-.table1 .order-table {
-    width: 970px;
-    border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border-radius: 5px;
-    margin-right: 80rem;
-}
-
-.table1 .order-table th,
-.table1 .order-table td {
-    border: 1px solid lightslategray;
-    padding: 6px;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'DM Sans', sans-serif;
-}
-
-.table1 .order-table th {
-    background-color: lightslategray;
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-}
 
 .table1 .order-table tr:nth-child(even) {
     background-color: #f7f7f7;
@@ -112,20 +84,6 @@
 
 .table1 .order-table tr:hover {
     background-color: #e5e5e5;
-}
-
-.table1 .order-table td button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.table1 .order-table td button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
 }
 
 @media screen and (min-width: 1200px) {
@@ -142,4 +100,41 @@
         margin-left: auto; /* Center the table horizontally */
         padding: 10px; /* Adjust the padding for smaller screens */
     }
+}
+
+.at_a_glance{
+    display: flex;
+    position: absolute;
+    top:100px;
+    left: 430px;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#f0f0f0;
+    padding: 50px;
+    border-radius: 10px;
+    width: 1000px;
+    gap: 40px;
+}
+
+.inner{
+    margin-right: 30px;
+    text-align: center;
+}
+
+.inner h3{
+   font-family: "Poppins", sans-serif;
+    font-size: 25px;
+}
+
+.at_a_glance i{
+    font-size: 84px;
+    color: lightslategray;
+}
+
+.at_a_glance p{
+    margin-left: 30px;
+}
+
+.fa-money-check-dollar{
+    width: auto;
 }

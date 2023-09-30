@@ -1,83 +1,51 @@
-import React, { useState } from "react";
+import React from "react";
+import logo from "./Logo2.png";
 import { Link } from "react-router-dom";
 import "./sideBar.css";
 
-function Sidebar() {
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const sidebarLinks = [
-        { label: "Dashboard", icon: "tachometer", to: "/admin" },
-        { label: "Customers", icon: "folder", to: "/admin/customers" },
-        { label: "Restaurants", icon: "message-square-detail", to: "/admin/restaurants" },
-        { label: "Drivers", icon: "bar-chart-square", to: "/admin/drivers" },
-    ];
-
-    const changeLink = (index) => {
-        setActiveIndex(index);
-    };
-
-    const showTooltip = (index) => {
-        const tooltip = document.querySelector(`.tooltip[data-tooltip="${index}"]`);
-        if (tooltip) {
-            tooltip.classList.add("show");
-        }
-    };
-
-    const hideTooltip = (index) => {
-        const tooltip = document.querySelector(`.tooltip[data-tooltip="${index}"]`);
-        if (tooltip) {
-            tooltip.classList.remove("show");
-        }
-    };
-
+export default function CustomerSidebar() {
     return (
-        <nav className="sidebar-nav">
-            <div className="sidebar-top">
-                <h1 className="titleMain">Administrator Dashboard</h1>
-            </div>
-            <div className="sidebar-links">
+        <div>
+            {/* <Header /> */}
+            <div className="sidebar">
+                <h2>Welcome to Admin Dashboard</h2>
                 <ul>
-                    {sidebarLinks.map((link, index) => (
-                        <li className="tooltip-element" data-tooltip={index} key={index}>
-                            <Link
-                                to={link.to}
-                                className={index === activeIndex ? "active" : ""}
-                                data-active={index}
-                                onMouseOver={() => showTooltip(index)}
-                                onMouseOut={() => hideTooltip(index)}
-                            >
-                                <div className="icon">
-                                    <i className={`bx bx-${link.icon}`}></i>
-                                    <i className={`bx bxs-${link.icon}`}></i>
-                                </div>
-                                <span className="link hide">{link.label}</span>
-                            </Link>
-                        </li>
-                    ))}
+                    <li>
+                        <Link to="/admin">
+                            <i className="fas fa-tachometer-alt"></i> Dashboard
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/customers">
+                            <i className="fas fa-users"></i> Customers
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/restaurants">
+                            <i className="fa-solid fa-utensils"></i> Restaurants
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/drivers">
+                            <i className="fa-solid fa-car"></i> Drivers
+                        </Link>
+                    </li>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <li>
+                        <Link to="/">
+                            <i className="fa-solid fa-right-from-bracket"></i> Log Out
+                        </Link>
+                    </li>
                 </ul>
-            </div>
-
-            <div className="sidebar-footer">
-                <a href="#" className="account tooltip-element" data-tooltip="0">
-                    <i className="bx bx-user"></i>
-                </a>
-                <div className="admin-user tooltip-element" data-tooltip="1">
-                    <div className="admin-profile hide">
-                        <div className="admin-info">
-                            <h1 className="bottom-title">Powered by</h1>
-                            <a>Flavor Express</a>
-                        </div>
-                    </div>
+                <div className="c-info">
+                    <h1 className="bottom-title">Powered by</h1>
+                    <p>Flavor Express</p>
                 </div>
             </div>
-            <br />
-            <Link to="/">
-            <div className="log-out">
-                <button className="logout-btn">Logout</button>
-            </div>
-            </Link>
-        </nav>
+        </div>
     );
 }
 
-export default Sidebar;

@@ -57,7 +57,6 @@
     /*background-color: white;*/
     color: white;
     font-size: 17px;
-    border: 1px solid grey;
     padding: 5px 10px;
     border-radius: 15px;
     transition: background-color 0.3s ease;
@@ -66,20 +65,30 @@
 .accountButton:hover {
     background-color: cornflowerblue;
     color: white;
-    border: 1px solid white;
 }
 
 .cartButton:hover {
     background-color: #5A5A5A;
     color: white;
-    border: 1px solid white;
 }
 
+.logoutButton{
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover{
+    background-color: #444444;
+    color: white;
+    border-radius: 15px;
+}
 
 .accountButton{
     background-color: #2E5A88;
     color: black;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .accIcon{

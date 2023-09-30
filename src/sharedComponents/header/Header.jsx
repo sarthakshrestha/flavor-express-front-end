@@ -38,13 +38,13 @@ export default function Header() {
                             <div className="accountButton">
                                 <NavLink to="/customer" className="action-button">Profile<FontAwesomeIcon className="accIcon" icon={faUser} /></NavLink>
                             </div>
-                            <div className="logoutButton">
-                                <button className="action-button" onClick={handleLogout}>
-                                    <NavLink to="/"> Logout <FontAwesomeIcon className="logoutIcon" icon={faSignOutAlt} /></NavLink>
-                                </button>
-                            </div>
                             <div className="cartButton">
                                 <NavLink to="/cart" className="action-button">Cart<FontAwesomeIcon className="cartIcon" icon={faCartShopping} /></NavLink>
+                            </div>
+                            <div className="logoutButton">
+                                <button className="logoutButton" onClick={handleLogout}>
+                                    <NavLink to="/" className="action-button"> Logout <FontAwesomeIcon className="logoutIcon" icon={faSignOutAlt} /></NavLink>
+                                </button>
                             </div>
                         </>
                     ) : (

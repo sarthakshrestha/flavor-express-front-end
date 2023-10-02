@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Header from "../../sharedComponents/header/Header";
 import "./foodPage.css";
 import Footer from "../../sharedComponents/footer/Footer";
@@ -7,6 +7,9 @@ import { useCart } from "../cartPage/cartContext";
 import { toast, ToastContainer } from "react-toastify";
 import ProductPopup from "./productPopup";
 import {useLocation} from "react-router-dom";
+import {getAllRestro} from "../../services/restaurantServices";
+import {getAllFood} from "../../services/foodServices";
+
 
 export default function FoodPage() {
     const [filter, setFilter] = useState("all");
@@ -15,6 +18,21 @@ export default function FoodPage() {
     const location = useLocation();
     const searchedQuery = new URLSearchParams(location.search).get("search");
     const [products, setProducts] = useState([]);
+    const [food, setFood] = useState(null);
+
+    const getFoodData = async () => {
+        try {
+            const allFoodData = await getAllFood(); // Use the imported function
+            console.log(allFoodData);
+            setFood(allFoodData);
+        } catch (error) {
+            console.error("Error fetching food data:", error);
+        }
+    };
+
+    useEffect(() => {
+        getFoodData();
+    }, []);
 
     const handleFilterChange = (event) => {
         setFilter(event.target.value);

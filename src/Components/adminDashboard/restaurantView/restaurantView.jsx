@@ -45,7 +45,7 @@ function AllRestaurants() {
 
     // Function to fetch and populate data
     const fetchData = () => {
-        axios.get('http://localhost:8081/restaurants')
+        axios.get('http://localhost:8081/restaurants/getRestaurants')
             .then((response) => {
                 setData(response.data);
             })

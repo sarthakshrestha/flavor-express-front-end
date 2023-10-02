@@ -29,7 +29,7 @@ import MainDriverDash from "./Components/driverDashboard/mainDriver";
 import DietSuggestion from "./Components/dietSuggestions/dietSuggestion";
 import MealPlanCheckout from "./Components/mealPlanCheckout/mealPlanCheckout";
 import FAQ from "./Components/faqPage/faqPage";
-
+import SuccessPage from "./Components/successPage/successPage";
 
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -69,6 +69,9 @@ function App() {
 
                     {/*//Checkoutpage*/}
                     <Route path="/checkout" element={<CheckoutPage/>}/>
+
+                    {/*//Successpage*/}
+                    <Route path="/success" element={<SuccessPage/>}/>
 
                     {/*// Admin Dashboard*/}
                     <Route path="/admin" element={<AdminDashboard/>}/>

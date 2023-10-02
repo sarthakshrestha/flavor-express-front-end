@@ -13,7 +13,7 @@ export default function AdminLoginPage() {
     let emailRef = useRef("");
     let passwordRef = useRef("");
 
-    const navigate = useNavigate();
+    const nav = useNavigate();
 
     function loginHandle() {
         const data = {
@@ -23,27 +23,36 @@ export default function AdminLoginPage() {
         };
 
         axios
-            .post("http://localhost:8081/auth/login", data)
+            .post("http://localhost:8081/auth/login", data) // Assuming a different endpoint for admin login
             .then((response) => {
                 console.log(response.data.jwtToken);
-                localStorage.setItem(
-                    "FlavorExpressUserToken",
-                    JSON.stringify(response.data.jwtToken)
-                );
-                if (response) {
+                console.log(response);
+
+                if (response.status === 200 && response.data && response.data.jwtToken) {
+                    localStorage.setItem(
+                        "FlavorExpressAdminToken",
+                        JSON.stringify(response.data.jwtToken)
+                    );
+                    // Add your additional logic here for a successful admin login
                     toast.success("Admin Login successful!", {
                         autoClose: 3000,
                     });
-                    navigate('/admin')
+                    nav('/admin'); // Navigate to the admin dashboard
+                } else {
+                    // Handle unsuccessful admin login (e.g., incorrect password)
+                    toast.error("Wrong credentials, please check properly", {
+                        position: toast.POSITION.TOP_RIGHT,
+                    });
                 }
             })
             .catch((error) => {
-                toast.error("Login failed. Please check your credentials.")
                 console.error(error);
+                // Handle other errors (e.g., network issues)
+                toast.error("Admin login failed. Please check your credentials.");
             });
     }
 
-    return (
+        return (
         <>
             <Header/>
             <div className="loginbody">

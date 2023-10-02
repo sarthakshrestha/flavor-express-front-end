@@ -4,7 +4,8 @@ import Footer from '../../sharedComponents/footer/Footer';
 import logoImage from '../../sharedComponents/footer/Logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './dietSuggestion.css';
-import icon from './dieticon.png';
+import icon from './img.png';
+import icon2 from "./zzz.png";
 
 export default function DietSuggestion() {
     const [showContent, setShowContent] = useState(false);
@@ -23,7 +24,7 @@ export default function DietSuggestion() {
             <Header />
             <div className="suggestion-container">
                 <div className="content-container">
-                    <h1 className="title">Suggestions</h1>
+                    <h1 className="title">Diet Advice</h1>
                     <div className="box">
                         <p className="text">
               <span>
@@ -53,25 +54,26 @@ export default function DietSuggestion() {
                     </div>
                     <div className="why-important-box-1">
                         <div className="box-content-wrapper-1">
-                            <h2 className="bx-title">What are some healthy choices that can be made?</h2>
+                            <h2 className="bx-title">What are some healthy choices that can be made?<img src={icon2} alt="diet" className="icon-2" /></h2>
                             <br/>
                             <button className="box-button-hide" onClick={handleHealthyChoicesClick}>
-                                {showHealthyChoices ? 'Hide Content' : 'Click to know more!'}
+                                {showHealthyChoices ? 'Hide Content' : 'Learn More!'}
                             </button>
                             <br/>
                             {showHealthyChoices && (
                                 <ul className="box-content-1">
-                                    <li>Balanced Meals: Opt for meals that include a balance of protein, carbohydrates, and healthy fats. Look for options that incorporate lean proteins like chicken or tofu, whole grains, and plenty of vegetables.</li>
-                                    <li>Portion Control: Pay attention to portion sizes when ordering. Many food delivery apps offer different portion size options, so choose a smaller portion or share a larger one to avoid overeating.</li>
-                                    <li>Nutritional Information: Use the app's nutritional information to make informed choices. Check for details like calories, fat content, sodium levels, and sugar content to make healthier selections.</li>
-                                    <li>Customization: Take advantage of customization options if available. Request modifications like extra veggies, less oil, or sauce on the side to tailor your meal to your dietary preferences and restrictions.</li>
-                                    <li>Dietary Preferences: Filter or search for meals that align with your dietary preferences, such as vegetarian, vegan, gluten-free, or low-carb options.</li>
-                                    <li>Hydration: Don't forget to order beverages wisely. Opt for water, herbal tea, or low-calorie options instead of sugary sodas or excessive fruit juices.</li>
-                                    <li>Limit Sugary Treats: While it's okay to indulge occasionally, try to limit sugary desserts and snacks. If you have a sweet tooth, consider ordering smaller dessert portions or sharing them with others.</li>
-                                    <li>Mindful Eating: Practice mindful eating by savoring your meal and paying attention to hunger cues. Avoid distractions like TV or screens while eating to prevent overeating.</li>
-                                    <li>Special Diets: If you have specific dietary requirements, such as managing blood sugar levels or heart health, look for menu items that align with your needs. Many apps offer diabetic-friendly or heart-healthy meal options.</li>
-                                    <li>Variety: Explore a variety of cuisines and dishes to ensure you get a wide range of nutrients. This can make your dining experience more enjoyable while also providing a diverse array of nutrients.</li>
+                                    <li>Opt for balanced meals: Protein, carbs, healthy fats.</li>
+                                    <li>Control portions: Choose smaller sizes or share.</li>
+                                    <li>Use nutritional info: Check calories, fats, sugar, etc.</li>
+                                    <li>Customize orders: Modify to fit dietary needs.</li>
+                                    <li>Filter dietary preferences: Vegetarian, vegan, etc.</li>
+                                    <li>Choose healthier beverages: Water, herbal tea.</li>
+                                    <li>Limit sugary treats: Share desserts occasionally.</li>
+                                    <li>Practice mindful eating: No distractions.</li>
+                                    <li>Find special diet options: Diabetic-friendly, etc.</li>
+                                    <li>Explore diverse cuisines for variety.</li>
                                 </ul>
+
                             )}
                             <p>By making these healthy choices through Flavor Express, you can maintain better control over your diet, support your nutritional goals, and promote overall well-being.</p>
                         </div>

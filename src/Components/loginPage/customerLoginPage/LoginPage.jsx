@@ -33,33 +33,32 @@ export default function LoginPage() {
                 console.log(response.data.jwtToken);
                 console.log(response);
 
-                if (response.data && response.data.jwtToken) {
+                if (response.status === 200 && response.data && response.data.jwtToken) {
                     localStorage.setItem(
                         "FlavorExpressUserToken",
                         JSON.stringify(response.data.jwtToken)
                     );
-                    localStorage.setItem("UserData", JSON.stringify(response.data.person));
-                    setIsLoggedIn(true); // Set isLoggedIn to true when successfully logged in
-                    toast.success("Successfully Logged In", {
-                        position: toast.POSITION.TOP_RIGHT,
+                    // Add your additional logic here for a successful login
+                    toast.success("Admin Login successful!", {
+                        autoClose: 3000,
                     });
-                    nav("/foodPage");
-
+                    nav('/admin');
                 } else {
+                    // Handle unsuccessful login (e.g., incorrect password)
                     toast.error("Wrong credentials, please check properly", {
                         position: toast.POSITION.TOP_RIGHT,
                     });
                 }
             })
             .catch((error) => {
-                console.error("Error:", error);
-                toast.error("Wrong credentials, please check again", {
-                    position: toast.POSITION.TOP_RIGHT,
-                });
+                console.error(error);
+                // Handle other errors (e.g., network issues)
+                toast.error("Login failed. Please check your credentials.");
             });
     }
 
-    function logoutHandle() {
+
+        function logoutHandle() {
         // Clear user data from localStorage and set isLoggedIn to false
         localStorage.removeItem("FlavorExpressUserToken");
         localStorage.removeItem("UserData");

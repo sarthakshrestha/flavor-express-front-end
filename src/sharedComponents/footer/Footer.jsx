@@ -11,6 +11,7 @@ export default function Footer() {
         </div>
         <div className="footer_right">
           <div className="footer_column">
+            {/* <p>Deploy push</p> */}
             <h3>Quick Links</h3>
             <ul>
               <li>
